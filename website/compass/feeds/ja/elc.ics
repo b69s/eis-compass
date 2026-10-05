@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//Enishi International School//EIS Compass//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:EIS コンパス — ELC
+X-WR-CALNAME:EIS コンパス — 幼稚部
 X-WR-TIMEZONE:Asia/Tokyo
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
@@ -16,8 +16,8 @@ SUMMARY:お気に入りの本を持ってくる日
 DESCRIPTION:お気に入りの本を家から持ってきて、クラス
  メートと紹介し合います。読書の楽しさを分かち合い
  、友達のおすすめから新しい本に出会うきっかけとな
- る行事です。\n\n対象：初等部\, ELC\nhttps://enishi.ac.jp/EIS
- Compass.html#/event/2026-09-01-bring-your-favourite-book-day
+ る行事です。\n\n対象：小学部\, 幼稚部\nhttps://enishi.ac.
+ jp/EISCompass.html#/event/2026-09-01-bring-your-favourite-book-day
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-09-01-bring-your-fav
  ourite-book-day
 TRANSP:TRANSPARENT
@@ -31,8 +31,8 @@ SUMMARY:コンセプト・コン（グローバルな視野）
 DESCRIPTION:プロジェクト、発表、活動を通して、グロー
  バルな視点について計画的に学び理解を深めます。好
  奇心、共感力、国際的な視野を育む行事です。\n\n対
- 象：初等部\, ELC\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-
- 09-14-concept-con-global-mindedness
+ 象：小学部\, 幼稚部\nhttps://enishi.ac.jp/EISCompass.html#/event
+ /2026-09-14-concept-con-global-mindedness
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-09-14-concept-con-gl
  obal-mindedness
 TRANSP:TRANSPARENT
@@ -46,8 +46,8 @@ SUMMARY:コーヒーアワー
 DESCRIPTION:保護者の皆様が、和やかな雰囲気の中で学校
  管理職や他のご家庭と交流できる場です。コミュニテ
  ィを築き、学校の情報を得る絶好の機会です。\n\n対
- 象：ELC（保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#
- /event/2026-09-18-coffee-hour
+ 象：幼稚部（保護者参加可）\nhttps://enishi.ac.jp/EISCompass
+ .html#/event/2026-09-18-coffee-hour
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-09-18-coffee-hour
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -117,11 +117,11 @@ UID:2026-10-19-elc-primary-curriculum-night@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
-SUMMARY:ELC・初等部カリキュラム説明会
+SUMMARY:幼稚部・小学部カリキュラム説明会
 DESCRIPTION:カリキュラム、教室での日課、今年度の学習
  目標についてご紹介します。家庭と学校の連携を深め
- る行事です。\n\n対象：初等部\, ELC\nhttps://enishi.ac.jp/EIS
- Compass.html#/event/2026-10-19-elc-primary-curriculum-night
+ る行事です。\n\n対象：小学部\, 幼稚部\nhttps://enishi.ac.
+ jp/EISCompass.html#/event/2026-10-19-elc-primary-curriculum-night
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-19-elc-primary-cu
  rriculum-night
 TRANSP:TRANSPARENT
@@ -171,15 +171,15 @@ UID:2026-11-04-elc-sports-day-rehearsal-1@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
-SUMMARY:ELC運動会リハーサル #1
+SUMMARY:幼稚部運動会リハーサル #1
 DESCRIPTION:運動会に向けた練習では、さまざまな運動、
  チームゲーム、リレー、種目のリハーサルに取り組み
  ます。進行の流れ、安全面のルール、応援の仕方を学
  びながら、チームワーク、協調性、スポーツマンシッ
  プ、体力を養います。練習を通して自信をつけ、運動
- 会当日に力を発揮できるよう準備します。\n\n対象：EL
- C\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-11-04-elc-sports-day
- -rehearsal-1
+ 会当日に力を発揮できるよう準備します。\n\n対象：
+ 幼稚部\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-11-04-elc-sp
+ orts-day-rehearsal-1
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-04-elc-sports-day
  -rehearsal-1
 TRANSP:TRANSPARENT
@@ -202,15 +202,15 @@ UID:2026-11-11-elc-sports-day-rehearsal-2@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
-SUMMARY:ELC運動会リハーサル #2
+SUMMARY:幼稚部運動会リハーサル #2
 DESCRIPTION:運動会に向けた練習では、さまざまな運動、
  チームゲーム、リレー、種目のリハーサルに取り組み
  ます。進行の流れ、安全面のルール、応援の仕方を学
  びながら、チームワーク、協調性、スポーツマンシッ
  プ、体力を養います。練習を通して自信をつけ、運動
- 会当日に力を発揮できるよう準備します。\n\n対象：EL
- C\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-11-11-elc-sports-day
- -rehearsal-2
+ 会当日に力を発揮できるよう準備します。\n\n対象：
+ 幼稚部\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-11-11-elc-sp
+ orts-day-rehearsal-2
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-11-elc-sports-day
  -rehearsal-2
 TRANSP:TRANSPARENT
@@ -220,14 +220,14 @@ UID:2026-11-14-elc-sports-day@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261115
-SUMMARY:ELC運動会
+SUMMARY:幼稚部運動会
 DESCRIPTION:運動会では、さまざまな競技、リレー、チー
  ム対抗戦、協力ゲームに参加します。体を動かすこと
  と健全な競争を楽しみながら、チームワーク、粘り強
  さ、スポーツマンシップ、愛校心を発揮します。自分
  に挑戦し、仲間を応援し、コミュニティ全体で達成感
- を味わう楽しい一日です。\n\n対象：ELC\nhttps://enishi.ac.
- jp/EISCompass.html#/event/2026-11-14-elc-sports-day
+ を味わう楽しい一日です。\n\n対象：幼稚部\nhttps://enis
+ hi.ac.jp/EISCompass.html#/event/2026-11-14-elc-sports-day
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-14-elc-sports-day
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -239,8 +239,8 @@ DTEND;VALUE=DATE:20261118
 SUMMARY:ファウンデーション校外学習
 DESCRIPTION:年少の子どもたちが、年齢に合った校外学習
  に出かけ、体験を通して教室での学びを深めます。\n\
- n対象：ELC（保護者参加可）\nhttps://enishi.ac.jp/EISCompass.h
- tml#/event/2026-11-17-foundation-field-trip
+ n対象：幼稚部（保護者参加可）\nhttps://enishi.ac.jp/EISCom
+ pass.html#/event/2026-11-17-foundation-field-trip
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-17-foundation-fie
  ld-trip
 TRANSP:TRANSPARENT
@@ -262,9 +262,9 @@ DTEND;VALUE=DATE:20261126
 SUMMARY:冬のアートコンテスト
 DESCRIPTION:美術の先生と取り組んできた作品を作品展で
  発表します。選ばれた作品は校内に展示され、学校コ
- ミュニティで共に称えます。\n\n対象：初等部\, ELC（
- 保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-
- 11-24-winter-art-contest
+ ミュニティで共に称えます。\n\n対象：小学部\, 幼稚
+ 部（保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event
+ /2026-11-24-winter-art-contest
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-24-winter-art-con
  test
 TRANSP:TRANSPARENT
@@ -275,11 +275,11 @@ DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:保護者モーニング参観 #1
-DESCRIPTION:ELC・初等部の保護者の皆様をお招きし、朝の
- 授業をご参観いただき、お子様と一緒に朝の日課を体
- 験していただきます。\n\n対象：初等部\, ELC（保護者
- 参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-11-27-par
- ents-morning-1
+DESCRIPTION:幼稚部・小学部の保護者の皆様をお招きし、
+ 朝の授業をご参観いただき、お子様と一緒に朝の日課
+ を体験していただきます。\n\n対象：小学部\, 幼稚部
+ （保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/20
+ 26-11-27-parents-morning-1
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-27-parents-mornin
  g-1
 TRANSP:TRANSPARENT
@@ -305,9 +305,9 @@ DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:ウィンターパーティー（イーグルネスト）
 DESCRIPTION:イーグルネストごとに、楽しい活動やゲーム
- を通して仲間と交流し、季節を祝います。初等部生徒
- 会が主催します。\n\n対象：初等部\, ELC\nhttps://enishi.ac.
- jp/EISCompass.html#/event/2026-12-16-winter-party-eagle-nest
+ を通して仲間と交流し、季節を祝います。小学部生徒
+ 会が主催します。\n\n対象：小学部\, 幼稚部\nhttps://enis
+ hi.ac.jp/EISCompass.html#/event/2026-12-16-winter-party-eagle-nest
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-12-16-winter-party-e
  agle-nest
 TRANSP:TRANSPARENT
@@ -321,8 +321,8 @@ SUMMARY:イーグルバックス・ストア
 DESCRIPTION:獲得したイーグルバックスを使って、ごほう
  びや特別なアイテムと交換できます。前向きな行動、
  責任感、目標設定を後押しする取り組みです。\n\n対
- 象：初等部\, ELC\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-
- 12-18-eagle-bucks-store
+ 象：小学部\, 幼稚部\nhttps://enishi.ac.jp/EISCompass.html#/event
+ /2026-12-18-eagle-bucks-store
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-12-18-eagle-bucks-st
  ore
 TRANSP:TRANSPARENT
@@ -383,9 +383,9 @@ DTSTART;VALUE=DATE:20270127
 DTEND;VALUE=DATE:20270128
 SUMMARY:防災校外学習
 DESCRIPTION:自然災害や緊急時の対応に関する体験型学習
- を通して、防災と安全について学びます。\n\n対象：EL
- C\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-01-27-natural-disast
- er-field-trip
+ を通して、防災と安全について学びます。\n\n対象：
+ 幼稚部\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-01-27-natura
+ l-disaster-field-trip
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-27-natural-disast
  er-field-trip
 TRANSP:TRANSPARENT
@@ -398,8 +398,8 @@ DTEND;VALUE=DATE:20270206
 SUMMARY:コンセプト・コン（言語）
 DESCRIPTION:学びと創造性を示す発表、パフォーマンス、
  プロジェクトを通して、言語とコミュニケーションを
- 祝います。\n\n対象：初等部\, ELC\nhttps://enishi.ac.jp/EISCom
- pass.html#/event/2027-02-01-concept-con-language
+ 祝います。\n\n対象：小学部\, 幼稚部\nhttps://enishi.ac.jp/
+ EISCompass.html#/event/2027-02-01-concept-con-language
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-02-01-concept-con-la
  nguage
 TRANSP:TRANSPARENT
@@ -421,8 +421,8 @@ DTEND;VALUE=DATE:20270223
 SUMMARY:ワールド・シンキング・デー
 DESCRIPTION:国際理解とつながりを祝いながら、さまざま
  な文化や伝統、地球市民としてのあり方について学び
- ます。\n\n対象：初等部\, ELC\nhttps://enishi.ac.jp/EISCompass.h
- tml#/event/2027-02-22-world-thinking-day
+ ます。\n\n対象：小学部\, 幼稚部\nhttps://enishi.ac.jp/EISCom
+ pass.html#/event/2027-02-22-world-thinking-day
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-02-22-world-thinking
  -day
 TRANSP:TRANSPARENT
@@ -442,11 +442,11 @@ DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270226
 DTEND;VALUE=DATE:20270227
 SUMMARY:保護者モーニング参観 #2
-DESCRIPTION:ELC・初等部の保護者の皆様をお招きし、朝の
- 授業をご参観いただき、お子様と一緒に朝の日課を体
- 験していただきます。\n\n対象：初等部\, ELC（保護者
- 参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-02-26-par
- ents-morning-2
+DESCRIPTION:幼稚部・小学部の保護者の皆様をお招きし、
+ 朝の授業をご参観いただき、お子様と一緒に朝の日課
+ を体験していただきます。\n\n対象：小学部\, 幼稚部
+ （保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/20
+ 27-02-26-parents-morning-2
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-02-26-parents-mornin
  g-2
 TRANSP:TRANSPARENT
@@ -459,9 +459,9 @@ DTEND;VALUE=DATE:20270227
 SUMMARY:イーグル・トーク
 DESCRIPTION:短いプレゼンテーションを通して考えや経験
  、学びを共有し、自信、コミュニケーション力、リー
- ダーシップを育みます。\n\n対象：初等部\, ELC（保護
- 者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-02-26-
- eagle-talks
+ ダーシップを育みます。\n\n対象：小学部\, 幼稚部（
+ 保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-
+ 02-26-eagle-talks
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-02-26-eagle-talks
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -488,8 +488,8 @@ SUMMARY:イーグルバックス・ストア
 DESCRIPTION:獲得したイーグルバックスを使って、ごほう
  びや特別なアイテムと交換できます。前向きな行動、
  責任感、目標設定を後押しする取り組みです。\n\n対
- 象：初等部\, ELC\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-
- 03-19-eagle-bucks-store
+ 象：小学部\, 幼稚部\nhttps://enishi.ac.jp/EISCompass.html#/event
+ /2027-03-19-eagle-bucks-store
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-19-eagle-bucks-st
  ore
 TRANSP:TRANSPARENT
@@ -543,9 +543,9 @@ DTSTART;VALUE=DATE:20270415
 DTEND;VALUE=DATE:20270416
 SUMMARY:ワールド・アート・デー
 DESCRIPTION:アート活動や展示を通して創造性を祝い、さ
- まざまな芸術様式や文化に触れます。\n\n対象：初等
- 部\, ELC（保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#
- /event/2027-04-15-world-art-day
+ まざまな芸術様式や文化に触れます。\n\n対象：小学
+ 部\, 幼稚部（保護者参加可）\nhttps://enishi.ac.jp/EISCompass
+ .html#/event/2027-04-15-world-art-day
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-04-15-world-art-day
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -593,9 +593,9 @@ DTEND;VALUE=DATE:20270521
 SUMMARY:起業家デー
 DESCRIPTION:創造性、金融リテラシー、問題解決、起業家
  精神について学びながら、ビジネスのアイデアを考え
- 、発表します。\n\n対象：初等部\, ELC（保護者参加可
- ）\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-05-19-entrepreneur
- s-day
+ 、発表します。\n\n対象：小学部\, 幼稚部（保護者参
+ 加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-05-19-entrep
+ reneurs-day
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-05-19-entrepreneurs-
  day
 TRANSP:TRANSPARENT
@@ -607,8 +607,8 @@ DTSTART;VALUE=DATE:20270521
 DTEND;VALUE=DATE:20270522
 SUMMARY:合同校外学習
 DESCRIPTION:協働、探究、実社会での学びを促す合同の学
- 習体験に参加します。\n\n対象：初等部\, ELC\nhttps://enis
- hi.ac.jp/EISCompass.html#/event/2027-05-21-collective-field-trip
+ 習体験に参加します。\n\n対象：小学部\, 幼稚部\nhttps:
+ //enishi.ac.jp/EISCompass.html#/event/2027-05-21-collective-field-trip
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-05-21-collective-fie
  ld-trip
 TRANSP:TRANSPARENT
@@ -621,8 +621,8 @@ DTEND;VALUE=DATE:20270529
 SUMMARY:コンセプト・コン（未来への視点）
 DESCRIPTION:探究型のプロジェクトや発表を通して、未来
  の可能性、イノベーション、現実の課題の解決策につ
- いて考えます。\n\n対象：初等部\, ELC\nhttps://enishi.ac.jp/
- EISCompass.html#/event/2027-05-24-concept-con-future-focus
+ いて考えます。\n\n対象：小学部\, 幼稚部\nhttps://enishi.
+ ac.jp/EISCompass.html#/event/2027-05-24-concept-con-future-focus
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-05-24-concept-con-fu
  ture-focus
 TRANSP:TRANSPARENT
@@ -676,8 +676,8 @@ SUMMARY:イーグルバックス・ストア
 DESCRIPTION:獲得したイーグルバックスを使って、ごほう
  びや特別なアイテムと交換できます。前向きな行動、
  責任感、目標設定を後押しする取り組みです。\n\n対
- 象：初等部\, ELC\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-
- 06-17-eagle-bucks-store
+ 象：小学部\, 幼稚部\nhttps://enishi.ac.jp/EISCompass.html#/event
+ /2027-06-17-eagle-bucks-store
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-17-eagle-bucks-st
  ore
 TRANSP:TRANSPARENT
@@ -691,9 +691,9 @@ SUMMARY:幼稚部・5年生 卒業式
 DESCRIPTION:学びの歩みにおける大切な節目を祝う卒業式
  に参加します。生徒の成長と成果、そして次のステー
  ジへの準備が整ったことを、ご家族、教職員、学校コ
- ミュニティが一堂に会して祝福します。\n\n対象：初
- 等部\, ELC（保護者参加可）\nhttps://enishi.ac.jp/EISCompass.ht
- ml#/event/2027-06-18-kindergarten-and-grade-5-graduation
+ ミュニティが一堂に会して祝福します。\n\n対象：小
+ 学部\, 幼稚部（保護者参加可）\nhttps://enishi.ac.jp/EISComp
+ ass.html#/event/2027-06-18-kindergarten-and-grade-5-graduation
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-18-kindergarten-a
  nd-grade-5-graduation
 TRANSP:TRANSPARENT
@@ -703,13 +703,13 @@ UID:2027-06-18-primary-elc-year-end-performance@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270618
 DTEND;VALUE=DATE:20270619
-SUMMARY:初等部・ELC 年度末発表会
+SUMMARY:小学部・幼稚部 年度末発表会
 DESCRIPTION:音楽、ダンス、演劇などのパフォーマンスを
  通して、学び、創造性、才能を披露します。一年の締
  めくくりを祝い、その成果をご家族や学校コミュニテ
- ィと分かち合う機会です。\n\n対象：初等部\, ELC（保
- 護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-06-
- 18-primary-elc-year-end-performance
+ ィと分かち合う機会です。\n\n対象：小学部\, 幼稚部
+ （保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/20
+ 27-06-18-primary-elc-year-end-performance
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-18-primary-elc-ye
  ar-end-performance
 TRANSP:TRANSPARENT
