@@ -37,7 +37,7 @@ Unsaved admin work is kept in that browser's local storage until you publish or 
 
 ## Notes
 
-- Photos: upload new ones to `compass/images/events/` (WebP or JPEG, about 1200 px wide, under 150 KB) and put the path in the `image` column.
+- Photos: upload new ones to `compass/images/events/` (WebP or JPEG, about 1200 px wide, under 150 KB) and put the path in the `image` column. Photos appear as small thumbnails in the lists; the large photo in the event view is only shown when the file is at least 600 px wide (most current photos are ~200 px, so they show as thumbnails only).
 - Times are optional (`15:00` or `15:00-17:00`). Without a time, events are all-day everywhere, including in the feeds.
 - Google Calendar refreshes subscribed feeds slowly (up to about 24 h). Apple Calendar refreshes more often.
 - The page uses system fonts (Hiragino / Yu Gothic / Noto for Japanese), so there are no font downloads.

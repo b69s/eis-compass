@@ -38,6 +38,7 @@ button{cursor:pointer}
 a{color:var(--navy-2)}
 img{max-width:100%;display:block}
 :focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:6px}
+[hidden]{display:none!important}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
 
@@ -77,7 +78,7 @@ img{max-width:100%;display:block}
 .fhint{font-size:12.5px;color:var(--ink-3);margin-top:4px;min-height:1em}
 
 /* ---------- main ---------- */
-main{padding:16px 0 40px}
+main.wrap{padding-top:20px;padding-bottom:64px}
 .view{max-width:760px;margin:0 auto}
 .hero{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;border-radius:var(--radius);padding:18px 18px 16px;margin-bottom:16px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;border:18px solid rgba(83,195,240,.18)}
@@ -201,6 +202,7 @@ dialog{border:0;padding:0;border-radius:18px;max-width:560px;width:calc(100% - 2
 dialog::backdrop{background:rgba(10,22,52,.5)}
 .dlg-x{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font-size:22px;line-height:1;color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.15);z-index:2}
 .sheet-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--off)}
+.sheet-gap{height:44px}
 .dlg-body{padding:18px 20px 20px}
 .dlg-body h2{margin:6px 0 4px;font-size:22px;line-height:1.3}
 .when{font-weight:650;color:var(--navy-2);margin:0 0 10px}
@@ -977,7 +979,7 @@ function openSheet(e) {
     (L(e.location) ? '<dt>' + T('place') + '</dt><dd>' + esc(L(e.location)) + '</dd>' : '');
   var was = e.status === 'changed' && e.prevStart ? ' <span class="badge chg">' + esc(T('was', { d: fmtDay(e.prevStart) })) + '</span>' : '';
   document.getElementById('sheet-content').innerHTML =
-    (e.image ? '<img class="sheet-img" src="' + esc(e.image) + '" alt="">' : '<div style="height:44px"></div>') +
+    (e.image ? '<img class="sheet-img" src="' + esc(e.image) + '" alt="" hidden>' : '') + '<div class="sheet-gap"></div>' +
     '<div class="dlg-body"><div class="tags">' + badges(e) + was + '</div>' +
     '<h2 id="sheet-title">' + esc(L(e.title)) + '</h2><p class="when">' + esc(e.end === e.start ? fmtLong(e.start) : fmtRange(e.start, e.end)) + '</p>' +
     '<div class="tags">' + tags(e) + '</div>' +
@@ -986,6 +988,12 @@ function openSheet(e) {
     '<div class="actions"><a class="btn" target="_blank" rel="noopener" href="' + esc(googleUrl(e)) + '">' + T('addGoogle') + '</a>' +
     '<button type="button" class="btn" data-act="ics" data-id="' + esc(e.id) + '">' + T('addIcs') + '</button>' +
     '<button type="button" class="btn primary wide" data-act="share" data-id="' + esc(e.id) + '">' + T('share') + '</button></div></div>';
+  // Only show the photo when it is sharp enough for the large view (thumbnails in lists are unaffected).
+  var img = sheet.querySelector('.sheet-img');
+  if (img) {
+    var reveal = function () { if (img.naturalWidth >= 600) { img.hidden = false; sheet.querySelector('.sheet-gap').hidden = true; } };
+    if (img.complete) reveal(); else img.addEventListener('load', reveal);
+  }
   sheet.querySelector('.dlg-x').setAttribute('aria-label', T('close'));
   if (!sheet.open) sheet.showModal();
   sheet.scrollTop = 0;
