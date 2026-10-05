@@ -871,10 +871,6 @@ function renderInfo() {
       I.olympiads.items.map(function (o) { return '<tr><td>' + (o.logo ? '<img src="' + esc(o.logo) + '" alt="" loading="lazy">' : '') + '</td><td><b>' + esc(L(o.name)) + '</b><small>' + esc(L(o.subjects)) + '</small></td><td>' + esc(L(o.when)) + '<small>' + esc(L(o.format)) + '</small></td></tr>'; }).join('') +
       '</tbody></table><div class="note">' + rich(L(I.olympiads.note)) + '</div></section>';
   }
-  if (I.contact) {
-    var c = I.contact;
-    h += '<section class="card"><h2>' + T('contact') + '</h2><p>' + esc(L(c.address)) + '<br><a href="tel:' + esc(c.phone.replace(/[^\d+]/g, '')) + '">' + esc(c.phone) + '</a> · <a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a><br><a href="' + esc(c.web) + '">' + esc(c.web.replace(/^https?:\/\//, '')) + '</a></p></section>';
-  }
   return h + '</div>';
 }
 
