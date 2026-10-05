@@ -41,7 +41,7 @@ UID:2026-08-17-orientation-week-welfare-briefing@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20260817
 DTEND;VALUE=DATE:20260822
-SUMMARY:オリエンテーション週間・生活指導説明会
+SUMMARY:オリエンテーション週間・学校生活説明会
 DESCRIPTION:学校のプログラム、期待されること、コミュ
  ニティについて学びます。全員が必要な情報を得て、
  つながりを感じ、準備万端で新年度をスタートできる
@@ -110,7 +110,7 @@ UID:2026-09-01-bring-your-favourite-book-day@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20260902
-SUMMARY:お気に入りの本を持ってくる日
+SUMMARY:お気に入りの本を持ってこよう！
 DESCRIPTION:お気に入りの本を家から持ってきて、クラス
  メートと紹介し合います。読書の楽しさを分かち合い
  、友達のおすすめから新しい本に出会うきっかけとな
@@ -141,7 +141,7 @@ DTSTART;VALUE=DATE:20260909
 DTEND;VALUE=DATE:20260910
 SUMMARY:タイピング大会
 DESCRIPTION:キーボード操作のスキル、正確さ、自信を高
- めることを目的とした、親善タイピング大会に参加し
+ めることを目的とした、校内タイピング大会に参加し
  ます。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/e
  vent/2026-09-09-speed-typing-competition
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-09-09-speed-typing-c
@@ -166,11 +166,11 @@ UID:2026-09-14-friendly-basketball-tournament-internal@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260919
-SUMMARY:校内バスケットボール親善大会
-DESCRIPTION:校内でのバスケットボール親善大会に参加し
- 、チームワーク、スポーツマンシップ、愛校心を育み
- ます。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/e
- vent/2026-09-14-friendly-basketball-tournament-internal
+SUMMARY:校内バスケットボール大会
+DESCRIPTION:校内バスケットボール大会に参加し、チーム
+ ワーク、スポーツマンシップ、愛校心を育みます。\n\
+ n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-09
+ -14-friendly-basketball-tournament-internal
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-09-14-friendly-baske
  tball-tournament-internal
 TRANSP:TRANSPARENT
@@ -180,7 +180,7 @@ UID:2026-09-14-concept-con-global-mindedness@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260919
-SUMMARY:コンセプト・コン（グローバルな視野）
+SUMMARY:コンセプト・コン（国際的な視野）
 DESCRIPTION:プロジェクト、発表、活動を通して、グロー
  バルな視点について計画的に学び理解を深めます。好
  奇心、共感力、国際的な視野を育む行事です。\n\n対
@@ -279,7 +279,7 @@ UID:2026-10-03-dp-rafting-trip@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
-SUMMARY:DPラフティング
+SUMMARY:DPラフティング体験
 DESCRIPTION:DP生徒がラフティングに参加し、仲間との絆
  を深め、チームワークを高め、教室の外で共に過ごす
  時間を楽しみます。\n\n対象：高等部\nhttps://enishi.ac.jp/
@@ -293,7 +293,7 @@ UID:2026-10-07-career-support-and-mental-health-round-table@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
-SUMMARY:進路支援・メンタルヘルス座談会
+SUMMARY:進路・メンタルヘルス座談会
 DESCRIPTION:専門家や関係者との対話を通して、IBでの大
  学入試、国内外の総合型選抜の戦略について学び、将
  来の進学やキャリアの可能性を探る説明会です。\n\n
@@ -398,7 +398,7 @@ UID:2026-10-21-college-fair@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-SUMMARY:大学フェア
+SUMMARY:大学進学フェア
 DESCRIPTION:国内外の複数の大学の担当者が来校し、各大
  学のプログラムや入学機会を紹介する特別イベントで
  す。全生徒・保護者が参加でき、近隣のインターナシ
@@ -441,7 +441,7 @@ UID:2026-10-26-toyota-college-trip@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261027
-SUMMARY:豊田高専 見学
+SUMMARY:豊田高専見学
 DESCRIPTION:8年生が理科の授業と関連したカリキュラムに
  基づく学習として、豊田高専を訪問します。\n\n対象
  ：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-10-26-toy
@@ -469,8 +469,7 @@ UID:2026-10-31-international-mindedness-festival@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
-SUMMARY:インターナショナル・マインドネス・フェステ
- ィバル
+SUMMARY:国際理解フェスティバル
 DESCRIPTION:保護者の皆様を含む学校コミュニティ全体で
  、コミュニティと文化、そして共に過ごす学校生活を
  祝う終日行事「IMF」に参加します。\n\n対象：全校（
@@ -512,7 +511,7 @@ UID:2026-11-05-toyota-museum-field-trip@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-SUMMARY:トヨタ博物館 校外学習
+SUMMARY:トヨタ博物館校外学習
 DESCRIPTION:9年生が近くのトヨタの博物館を訪れ、授業で
  学んだ機械について展示を見学しながらメモを取りま
  す。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/even
@@ -527,7 +526,8 @@ UID:2026-11-06-extracurricular-activities-autumn-cas-project-su@enishi.ac
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
-SUMMARY:課外活動：秋のCAS・プロジェクト支援フェア
+SUMMARY:課外活動：秋のCAS・プロジェクトサポートフェ
+ ア
 DESCRIPTION:中等部PTAの支援による行事で、地域でのさま
  ざまなボランティアやCASプロジェクトの機会について
  知ることができます。MYP・DP生徒が対象です。\n\n対象
@@ -602,11 +602,11 @@ UID:2026-11-16-friendly-soccer-tournament-internal@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261121
-SUMMARY:校内サッカー親善大会
-DESCRIPTION:校内でのサッカー親善大会に参加し、チーム
- ワーク、スポーツマンシップ、愛校心を育みます。\n\
- n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-11
- -16-friendly-soccer-tournament-internal
+SUMMARY:校内サッカー大会
+DESCRIPTION:校内サッカー大会に参加し、チームワーク、
+ スポーツマンシップ、愛校心を育みます。\n\n対象：
+ 中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-11-16-friend
+ ly-soccer-tournament-internal
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-16-friendly-socce
  r-tournament-internal
 TRANSP:TRANSPARENT
@@ -668,7 +668,7 @@ UID:2026-11-27-parents-morning-1@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
-SUMMARY:保護者モーニング参観 #1
+SUMMARY:朝の授業参観 #1
 DESCRIPTION:幼稚部・小学部の保護者の皆様をお招きし、
  朝の授業をご参観いただき、お子様と一緒に朝の日課
  を体験していただきます。\n\n対象：小学部\, 幼稚部
@@ -683,7 +683,7 @@ UID:2026-11-27-teacher-appreciation-day@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
-SUMMARY:教員感謝デー
+SUMMARY:教職員感謝デー
 DESCRIPTION:学校コミュニティ全体で、教員の献身、思い
  やり、支えに感謝を伝える日です。\n\n対象：全校\nhtt
  ps://enishi.ac.jp/EISCompass.html#/event/2026-11-27-teacher-appreciation
@@ -807,7 +807,8 @@ UID:2026-12-18-tea-party-pta-for-all@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
-SUMMARY:ティーパーティー／PTA（どなたでも）
+SUMMARY:PTAティーパーティー（どなたでも参加できます
+ ）
 DESCRIPTION:軽食を楽しみながら、PTA、教職員、コミュニ
  ティの皆様と交流していただける集いです。\n\n対象
  ：PTA（保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/ev
@@ -837,12 +838,12 @@ UID:2026-12-19-end-of-term-1-activity-sleep-over-program-g6-10@enishi.ac.
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
-SUMMARY:第1学期末行事 お泊まりプログラム：G6–10
-DESCRIPTION:6～10年生が学校でのお泊まりプログラムに参
- 加し、共に活動しながら仲間づくりを行い、第1学期
- の終わりを祝います。\n\n対象：中等部\nhttps://enishi.ac.
- jp/EISCompass.html#/event/2026-12-19-end-of-term-1-activity-sleep-over-p
- rogram-g6-10
+SUMMARY:第1学期末行事：宿泊プログラム（G6–10）
+DESCRIPTION:6～10年生が校内での宿泊プログラムに参加し
+ 、共に活動しながら仲間づくりを行い、第1学期の終
+ わりを祝います。\n\n対象：中等部\nhttps://enishi.ac.jp/EIS
+ Compass.html#/event/2026-12-19-end-of-term-1-activity-sleep-over-program
+ -g6-10
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-12-19-end-of-term-1-
  activity-sleep-over-program-g6-10
 TRANSP:TRANSPARENT
@@ -903,7 +904,7 @@ UID:2027-01-14-g10-parent-info-session-high-school-subject-choi@enishi.ac
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270114
 DTEND;VALUE=DATE:20270115
-SUMMARY:G10保護者説明会（高等部の科目選択）
+SUMMARY:G10保護者向け説明会（高等部科目選択）
 DESCRIPTION:10年生の保護者の皆様を対象に、DPの科目選択
  と、お子様の次のステージの学びを計画するためのガ
  イダンスを行います。\n\n対象：中等部（保護者参加
@@ -931,7 +932,7 @@ UID:2027-01-23-alumni-talk@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
-SUMMARY:卒業生講話
+SUMMARY:卒業生トーク
 DESCRIPTION:卒業生が自身の経験やアドバイスを生徒に伝
  え、卒業後の生活や将来の進路について話します。\n\
  n対象：高等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-01
@@ -972,11 +973,11 @@ UID:2027-02-01-friendly-volleyball-tournament-internal@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270206
-SUMMARY:校内バレーボール親善大会
-DESCRIPTION:校内でのバレーボール親善大会に参加し、チ
- ームワーク、スポーツマンシップ、愛校心を育みます
- 。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2
- 027-02-01-friendly-volleyball-tournament-internal
+SUMMARY:校内バレーボール大会
+DESCRIPTION:校内バレーボール大会に参加し、チームワー
+ ク、スポーツマンシップ、愛校心を育みます。\n\n対
+ 象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-02-01-
+ friendly-volleyball-tournament-internal
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-02-01-friendly-volle
  yball-tournament-internal
 TRANSP:TRANSPARENT
@@ -1010,8 +1011,8 @@ UID:2027-02-18-career-support-second-career-roundtable-and-care@enishi.ac
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270218
 DTEND;VALUE=DATE:20270219
-SUMMARY:進路支援：セカンドキャリア座談会・キャリア
- フェア
+SUMMARY:進路支援：第2回キャリア座談会・キャリアフェ
+ ア
 DESCRIPTION:専門家や関係者との対話を通して、生徒と保
  護者の皆様がIBでの大学入試、国内外の総合型選抜の
  戦略について学び、将来の進学やキャリアの可能性を
@@ -1092,7 +1093,7 @@ UID:2027-02-26-parents-morning-2@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270226
 DTEND;VALUE=DATE:20270227
-SUMMARY:保護者モーニング参観 #2
+SUMMARY:朝の授業参観 #2
 DESCRIPTION:幼稚部・小学部の保護者の皆様をお招きし、
  朝の授業をご参観いただき、お子様と一緒に朝の日課
  を体験していただきます。\n\n対象：小学部\, 幼稚部
@@ -1219,7 +1220,8 @@ UID:2027-03-19-tea-party-pta-for-all@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
-SUMMARY:ティーパーティー／PTA（どなたでも）
+SUMMARY:PTAティーパーティー（どなたでも参加できます
+ ）
 DESCRIPTION:PTAとコミュニティクラブが主催する交流会で
  す。教職員や生徒も参加でき、さまざまなお茶や軽食
  、和やかな会話を楽しめます。\n\n対象：PTA（保護者
@@ -1402,7 +1404,7 @@ UID:2027-04-22-biology-ia-prep-field-trip-shore-ecosystem@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270422
 DTEND;VALUE=DATE:20270423
-SUMMARY:生物IA準備 校外学習：海岸の生態系
+SUMMARY:生物IA準備校外学習：海岸生態系調査
 DESCRIPTION:11・12年生の生物履修者が海岸の生態系を訪れ
  、フィールドワークでのデータ収集や研究手法の練習
  を通して、生物の内部評価（IA）に向けた準備を行い
@@ -1417,7 +1419,7 @@ UID:2027-04-23-g12-celebration@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270423
 DTEND;VALUE=DATE:20270424
-SUMMARY:G12お祝い行事
+SUMMARY:G12修了記念イベント
 DESCRIPTION:卒業を前に、12年生がグラデュエーション・
  ウォークに参加し、学校コミュニティ全体でお祝いし
  ます。\n\n対象：高等部\nhttps://enishi.ac.jp/EISCompass.html#/e
@@ -1508,11 +1510,11 @@ UID:2027-05-17-friendly-basketball-tournament-internal@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270517
 DTEND;VALUE=DATE:20270522
-SUMMARY:校内バスケットボール親善大会
-DESCRIPTION:校内でのバスケットボール親善大会に参加し
- 、チームワーク、スポーツマンシップ、愛校心を育み
- ます。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/e
- vent/2027-05-17-friendly-basketball-tournament-internal
+SUMMARY:校内バスケットボール大会
+DESCRIPTION:校内バスケットボール大会に参加し、チーム
+ ワーク、スポーツマンシップ、愛校心を育みます。\n\
+ n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-05
+ -17-friendly-basketball-tournament-internal
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-05-17-friendly-baske
  tball-tournament-internal
 TRANSP:TRANSPARENT
@@ -1522,7 +1524,7 @@ UID:2027-05-19-entrepreneurs-day@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270519
 DTEND;VALUE=DATE:20270521
-SUMMARY:起業家デー
+SUMMARY:アントレプレナーシップ・デー
 DESCRIPTION:創造性、金融リテラシー、問題解決、起業家
  精神について学びながら、ビジネスのアイデアを考え
  、発表します。\n\n対象：小学部\, 幼稚部（保護者参
@@ -1550,7 +1552,7 @@ UID:2027-05-22-saturday-school-last-day-event@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270522
 DTEND;VALUE=DATE:20270523
-SUMMARY:土曜校 最終日イベント
+SUMMARY:土曜校最終日イベント
 DESCRIPTION:土曜校の最終日を、校内でのレクリエーショ
  ン活動とともにリラックスして過ごし、お祝いします
  。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2
@@ -1564,7 +1566,7 @@ UID:2027-05-24-concept-con-future-focus@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270524
 DTEND;VALUE=DATE:20270529
-SUMMARY:コンセプト・コン（未来への視点）
+SUMMARY:コンセプト・コン（未来を考える）
 DESCRIPTION:探究型のプロジェクトや発表を通して、未来
  の可能性、イノベーション、現実の課題の解決策につ
  いて考えます。\n\n対象：小学部\, 幼稚部\nhttps://enishi.
@@ -1578,7 +1580,7 @@ UID:2027-05-28-g12-graduation-with-performances@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270528
 DTEND;VALUE=DATE:20270529
-SUMMARY:G12卒業式（パフォーマンス付き）
+SUMMARY:G12卒業式・記念パフォーマンス
 DESCRIPTION:12年生が、生徒によるパフォーマンスを交え
  た式典で、学校コミュニティ全体とともに卒業を祝い
  ます。\n\n対象：高等部（保護者参加可）\nhttps://enishi.
@@ -1592,7 +1594,7 @@ UID:2027-06-03-celebration-of-learning-prep@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270603
 DTEND;VALUE=DATE:20270604
-SUMMARY:学びの発表会 準備
+SUMMARY:学びの発表会準備
 DESCRIPTION:学びの発表会に向けて、学習スペースの整理
  、展示の設営、資料の準備を行い、教室や共用エリア
  で来場者をお迎えできるよう整えます。ご家族やお客
@@ -1674,7 +1676,7 @@ UID:2027-06-18-kindergarten-and-grade-5-graduation@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270618
 DTEND;VALUE=DATE:20270619
-SUMMARY:幼稚部・5年生 卒業式
+SUMMARY:幼稚部・5年生卒業式
 DESCRIPTION:学びの歩みにおける大切な節目を祝う卒業式
  に参加します。生徒の成長と成果、そして次のステー
  ジへの準備が整ったことを、ご家族、教職員、学校コ
@@ -1690,7 +1692,7 @@ UID:2027-06-18-primary-elc-year-end-performance@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270618
 DTEND;VALUE=DATE:20270619
-SUMMARY:小学部・幼稚部 年度末発表会
+SUMMARY:小学部・幼稚部年度末発表会
 DESCRIPTION:音楽、ダンス、演劇などのパフォーマンスを
  通して、学び、創造性、才能を披露します。一年の締
  めくくりを祝い、その成果をご家族や学校コミュニテ

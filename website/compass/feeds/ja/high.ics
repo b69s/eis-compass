@@ -94,7 +94,7 @@ UID:2026-10-03-dp-rafting-trip@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
-SUMMARY:DPラフティング
+SUMMARY:DPラフティング体験
 DESCRIPTION:DP生徒がラフティングに参加し、仲間との絆
  を深め、チームワークを高め、教室の外で共に過ごす
  時間を楽しみます。\n\n対象：高等部\nhttps://enishi.ac.jp/
@@ -108,7 +108,7 @@ UID:2026-10-07-career-support-and-mental-health-round-table@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
-SUMMARY:進路支援・メンタルヘルス座談会
+SUMMARY:進路・メンタルヘルス座談会
 DESCRIPTION:専門家や関係者との対話を通して、IBでの大
  学入試、国内外の総合型選抜の戦略について学び、将
  来の進学やキャリアの可能性を探る説明会です。\n\n
@@ -170,7 +170,7 @@ UID:2026-10-21-college-fair@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
-SUMMARY:大学フェア
+SUMMARY:大学進学フェア
 DESCRIPTION:国内外の複数の大学の担当者が来校し、各大
  学のプログラムや入学機会を紹介する特別イベントで
  す。全生徒・保護者が参加でき、近隣のインターナシ
@@ -200,8 +200,7 @@ UID:2026-10-31-international-mindedness-festival@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
-SUMMARY:インターナショナル・マインドネス・フェステ
- ィバル
+SUMMARY:国際理解フェスティバル
 DESCRIPTION:保護者の皆様を含む学校コミュニティ全体で
  、コミュニティと文化、そして共に過ごす学校生活を
  祝う終日行事「IMF」に参加します。\n\n対象：全校（
@@ -260,7 +259,7 @@ UID:2026-11-27-teacher-appreciation-day@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
-SUMMARY:教員感謝デー
+SUMMARY:教職員感謝デー
 DESCRIPTION:学校コミュニティ全体で、教員の献身、思い
  やり、支えに感謝を伝える日です。\n\n対象：全校\nhtt
  ps://enishi.ac.jp/EISCompass.html#/event/2026-11-27-teacher-appreciation
@@ -350,7 +349,7 @@ UID:2027-01-23-alumni-talk@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
-SUMMARY:卒業生講話
+SUMMARY:卒業生トーク
 DESCRIPTION:卒業生が自身の経験やアドバイスを生徒に伝
  え、卒業後の生活や将来の進路について話します。\n\
  n対象：高等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-01
@@ -373,8 +372,8 @@ UID:2027-02-18-career-support-second-career-roundtable-and-care@enishi.ac
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270218
 DTEND;VALUE=DATE:20270219
-SUMMARY:進路支援：セカンドキャリア座談会・キャリア
- フェア
+SUMMARY:進路支援：第2回キャリア座談会・キャリアフェ
+ ア
 DESCRIPTION:専門家や関係者との対話を通して、生徒と保
  護者の皆様がIBでの大学入試、国内外の総合型選抜の
  戦略について学び、将来の進学やキャリアの可能性を
@@ -481,7 +480,7 @@ UID:2027-04-22-biology-ia-prep-field-trip-shore-ecosystem@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270422
 DTEND;VALUE=DATE:20270423
-SUMMARY:生物IA準備 校外学習：海岸の生態系
+SUMMARY:生物IA準備校外学習：海岸生態系調査
 DESCRIPTION:11・12年生の生物履修者が海岸の生態系を訪れ
  、フィールドワークでのデータ収集や研究手法の練習
  を通して、生物の内部評価（IA）に向けた準備を行い
@@ -496,7 +495,7 @@ UID:2027-04-23-g12-celebration@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270423
 DTEND;VALUE=DATE:20270424
-SUMMARY:G12お祝い行事
+SUMMARY:G12修了記念イベント
 DESCRIPTION:卒業を前に、12年生がグラデュエーション・
  ウォークに参加し、学校コミュニティ全体でお祝いし
  ます。\n\n対象：高等部\nhttps://enishi.ac.jp/EISCompass.html#/e
@@ -546,7 +545,7 @@ UID:2027-05-28-g12-graduation-with-performances@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270528
 DTEND;VALUE=DATE:20270529
-SUMMARY:G12卒業式（パフォーマンス付き）
+SUMMARY:G12卒業式・記念パフォーマンス
 DESCRIPTION:12年生が、生徒によるパフォーマンスを交え
  た式典で、学校コミュニティ全体とともに卒業を祝い
  ます。\n\n対象：高等部（保護者参加可）\nhttps://enishi.
@@ -560,7 +559,7 @@ UID:2027-06-03-celebration-of-learning-prep@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270603
 DTEND;VALUE=DATE:20270604
-SUMMARY:学びの発表会 準備
+SUMMARY:学びの発表会準備
 DESCRIPTION:学びの発表会に向けて、学習スペースの整理
  、展示の設営、資料の準備を行い、教室や共用エリア
  で来場者をお迎えできるよう整えます。ご家族やお客

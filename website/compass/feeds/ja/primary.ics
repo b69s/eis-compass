@@ -26,7 +26,7 @@ UID:2026-08-17-orientation-week-welfare-briefing@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20260817
 DTEND;VALUE=DATE:20260822
-SUMMARY:オリエンテーション週間・生活指導説明会
+SUMMARY:オリエンテーション週間・学校生活説明会
 DESCRIPTION:学校のプログラム、期待されること、コミュ
  ニティについて学びます。全員が必要な情報を得て、
  つながりを感じ、準備万端で新年度をスタートできる
@@ -55,7 +55,7 @@ UID:2026-09-01-bring-your-favourite-book-day@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20260902
-SUMMARY:お気に入りの本を持ってくる日
+SUMMARY:お気に入りの本を持ってこよう！
 DESCRIPTION:お気に入りの本を家から持ってきて、クラス
  メートと紹介し合います。読書の楽しさを分かち合い
  、友達のおすすめから新しい本に出会うきっかけとな
@@ -70,7 +70,7 @@ UID:2026-09-14-concept-con-global-mindedness@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260919
-SUMMARY:コンセプト・コン（グローバルな視野）
+SUMMARY:コンセプト・コン（国際的な視野）
 DESCRIPTION:プロジェクト、発表、活動を通して、グロー
  バルな視点について計画的に学び理解を深めます。好
  奇心、共感力、国際的な視野を育む行事です。\n\n対
@@ -204,8 +204,7 @@ UID:2026-10-31-international-mindedness-festival@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
-SUMMARY:インターナショナル・マインドネス・フェステ
- ィバル
+SUMMARY:国際理解フェスティバル
 DESCRIPTION:保護者の皆様を含む学校コミュニティ全体で
  、コミュニティと文化、そして共に過ごす学校生活を
  祝う終日行事「IMF」に参加します。\n\n対象：全校（
@@ -266,7 +265,7 @@ UID:2026-11-27-parents-morning-1@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
-SUMMARY:保護者モーニング参観 #1
+SUMMARY:朝の授業参観 #1
 DESCRIPTION:幼稚部・小学部の保護者の皆様をお招きし、
  朝の授業をご参観いただき、お子様と一緒に朝の日課
  を体験していただきます。\n\n対象：小学部\, 幼稚部
@@ -281,7 +280,7 @@ UID:2026-11-27-teacher-appreciation-day@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
-SUMMARY:教員感謝デー
+SUMMARY:教職員感謝デー
 DESCRIPTION:学校コミュニティ全体で、教員の献身、思い
  やり、支えに感謝を伝える日です。\n\n対象：全校\nhtt
  ps://enishi.ac.jp/EISCompass.html#/event/2026-11-27-teacher-appreciation
@@ -488,7 +487,7 @@ UID:2027-02-26-parents-morning-2@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270226
 DTEND;VALUE=DATE:20270227
-SUMMARY:保護者モーニング参観 #2
+SUMMARY:朝の授業参観 #2
 DESCRIPTION:幼稚部・小学部の保護者の皆様をお招きし、
  朝の授業をご参観いただき、お子様と一緒に朝の日課
  を体験していただきます。\n\n対象：小学部\, 幼稚部
@@ -722,7 +721,7 @@ UID:2027-05-19-entrepreneurs-day@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270519
 DTEND;VALUE=DATE:20270521
-SUMMARY:起業家デー
+SUMMARY:アントレプレナーシップ・デー
 DESCRIPTION:創造性、金融リテラシー、問題解決、起業家
  精神について学びながら、ビジネスのアイデアを考え
  、発表します。\n\n対象：小学部\, 幼稚部（保護者参
@@ -750,7 +749,7 @@ UID:2027-05-24-concept-con-future-focus@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270524
 DTEND;VALUE=DATE:20270529
-SUMMARY:コンセプト・コン（未来への視点）
+SUMMARY:コンセプト・コン（未来を考える）
 DESCRIPTION:探究型のプロジェクトや発表を通して、未来
  の可能性、イノベーション、現実の課題の解決策につ
  いて考えます。\n\n対象：小学部\, 幼稚部\nhttps://enishi.
@@ -764,7 +763,7 @@ UID:2027-06-03-celebration-of-learning-prep@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270603
 DTEND;VALUE=DATE:20270604
-SUMMARY:学びの発表会 準備
+SUMMARY:学びの発表会準備
 DESCRIPTION:学びの発表会に向けて、学習スペースの整理
  、展示の設営、資料の準備を行い、教室や共用エリア
  で来場者をお迎えできるよう整えます。ご家族やお客
@@ -833,7 +832,7 @@ UID:2027-06-18-kindergarten-and-grade-5-graduation@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270618
 DTEND;VALUE=DATE:20270619
-SUMMARY:幼稚部・5年生 卒業式
+SUMMARY:幼稚部・5年生卒業式
 DESCRIPTION:学びの歩みにおける大切な節目を祝う卒業式
  に参加します。生徒の成長と成果、そして次のステー
  ジへの準備が整ったことを、ご家族、教職員、学校コ
@@ -849,7 +848,7 @@ UID:2027-06-18-primary-elc-year-end-performance@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270618
 DTEND;VALUE=DATE:20270619
-SUMMARY:小学部・幼稚部 年度末発表会
+SUMMARY:小学部・幼稚部年度末発表会
 DESCRIPTION:音楽、ダンス、演劇などのパフォーマンスを
  通して、学び、創造性、才能を披露します。一年の締
  めくくりを祝い、その成果をご家族や学校コミュニテ

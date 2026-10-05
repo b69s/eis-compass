@@ -101,8 +101,7 @@ UID:2026-10-31-international-mindedness-festival@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
-SUMMARY:インターナショナル・マインドネス・フェステ
- ィバル
+SUMMARY:国際理解フェスティバル
 DESCRIPTION:保護者の皆様を含む学校コミュニティ全体で
  、コミュニティと文化、そして共に過ごす学校生活を
  祝う終日行事「IMF」に参加します。\n\n対象：全校（
@@ -148,7 +147,7 @@ UID:2026-11-27-teacher-appreciation-day@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
-SUMMARY:教員感謝デー
+SUMMARY:教職員感謝デー
 DESCRIPTION:学校コミュニティ全体で、教員の献身、思い
  やり、支えに感謝を伝える日です。\n\n対象：全校\nhtt
  ps://enishi.ac.jp/EISCompass.html#/event/2026-11-27-teacher-appreciation
@@ -162,7 +161,8 @@ UID:2026-12-18-tea-party-pta-for-all@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
-SUMMARY:ティーパーティー／PTA（どなたでも）
+SUMMARY:PTAティーパーティー（どなたでも参加できます
+ ）
 DESCRIPTION:軽食を楽しみながら、PTA、教職員、コミュニ
  ティの皆様と交流していただける集いです。\n\n対象
  ：PTA（保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/ev
@@ -257,7 +257,8 @@ UID:2027-03-19-tea-party-pta-for-all@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
-SUMMARY:ティーパーティー／PTA（どなたでも）
+SUMMARY:PTAティーパーティー（どなたでも参加できます
+ ）
 DESCRIPTION:PTAとコミュニティクラブが主催する交流会で
  す。教職員や生徒も参加でき、さまざまなお茶や軽食
  、和やかな会話を楽しめます。\n\n対象：PTA（保護者
@@ -350,7 +351,7 @@ UID:2027-06-03-celebration-of-learning-prep@enishi.ac.jp
 DTSTAMP:20261005T000000Z
 DTSTART;VALUE=DATE:20270603
 DTEND;VALUE=DATE:20270604
-SUMMARY:学びの発表会 準備
+SUMMARY:学びの発表会準備
 DESCRIPTION:学びの発表会に向けて、学習スペースの整理
  、展示の設営、資料の準備を行い、教室や共用エリア
  で来場者をお迎えできるよう整えます。ご家族やお客
