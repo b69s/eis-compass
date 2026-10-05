@@ -1,0 +1,822 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Enishi International School//EIS Compass//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:EIS コンパス — 中等部
+X-WR-TIMEZONE:Asia/Tokyo
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:2026-08-17-student-orientation-program@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20260817
+DTEND;VALUE=DATE:20260818
+SUMMARY:生徒オリエンテーション
+DESCRIPTION:校則、日々の手順、セーフガーディング、カ
+ ウンセリング、生徒支援、進学カウンセリングについ
+ て確認するオリエンテーションに参加します。\n\n対
+ 象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-08-17-
+ student-orientation-program
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-08-17-student-orient
+ ation-program
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-08-24-book-drive@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+SUMMARY:本の寄付活動
+DESCRIPTION:コミュニティの読書活動を応援するため、ご
+ 家庭で読み終えた本のご寄付をお願いします。寄付い
+ ただいた本は、生徒たちが本と出会い、楽しむ機会を
+ 広げます。\n\n対象：中等部（保護者参加可）\nhttps://e
+ nishi.ac.jp/EISCompass.html#/event/2026-08-24-book-drive
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-08-24-book-drive
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-09-speed-typing-competition@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:タイピング大会
+DESCRIPTION:キーボード操作のスキル、正確さ、自信を高
+ めることを目的とした、親善タイピング大会に参加し
+ ます。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/e
+ vent/2026-09-09-speed-typing-competition
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-09-09-speed-typing-c
+ ompetition
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-14-friendly-basketball-tournament-internal@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260919
+SUMMARY:校内バスケットボール親善大会
+DESCRIPTION:校内でのバスケットボール親善大会に参加し
+ 、チームワーク、スポーツマンシップ、愛校心を育み
+ ます。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/e
+ vent/2026-09-14-friendly-basketball-tournament-internal
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-09-14-friendly-baske
+ tball-tournament-internal
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2026-09-21-20260921@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:敬老の日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2026-09-22-20260922@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+SUMMARY:学校休日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-25-open-campus@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:オープンキャンパス
+DESCRIPTION:学校の日常の様子にご関心のある方は、通常
+ 授業時間中の校内見学にご参加いただけます。\n\n対
+ 象：全校\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-09-25-ope
+ n-campus
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-09-25-open-campus
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-28-spirit-week@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20261001
+SUMMARY:スピリットウィーク
+DESCRIPTION:ウェルビーイング（心身の健康）への意識を
+ 高めることを目的とした全校行事です。\n\n対象：全
+ 校\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-09-28-spirit-week
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-09-28-spirit-week
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2026-10-12-20261012@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:スポーツの日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2026-10-13-20261016@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261017
+SUMMARY:中間休暇
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-19-parent-teacher-conferences@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:保護者面談
+DESCRIPTION:保護者の皆様が各担当教員と個別に面談し、
+ お子様の成長、強み、今後の課題についてお話ししま
+ す。当日、生徒は登校しません。\n\n対象：全校（保
+ 護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-10-
+ 19-parent-teacher-conferences
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-19-parent-teacher
+ -conferences
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-20-secondary-curriculum-night@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:中等部カリキュラム説明会
+DESCRIPTION:中等部の保護者の皆様を対象に、6～10年生の
+ 各教科で求められること、学習目標、評価、生徒への
+ 支援についてご説明します。\n\n対象：中等部\nhttps://e
+ nishi.ac.jp/EISCompass.html#/event/2026-10-20-secondary-curriculum-night
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-20-secondary-curr
+ iculum-night
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-toyota-college-trip@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
+SUMMARY:豊田高専 見学
+DESCRIPTION:8年生が理科の授業と関連したカリキュラムに
+ 基づく学習として、豊田高専を訪問します。\n\n対象
+ ：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-10-26-toy
+ ota-college-trip
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-26-toyota-college
+ -trip
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-international-mindedness-festival@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+SUMMARY:インターナショナル・マインドネス・フェステ
+ ィバル
+DESCRIPTION:保護者の皆様を含む学校コミュニティ全体で
+ 、コミュニティと文化、そして共に過ごす学校生活を
+ 祝う終日行事「IMF」に参加します。\n\n対象：全校（
+ 保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-
+ 10-31-international-mindedness-festival
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-31-international-
+ mindedness-festival
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2026-11-03-20261103@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:文化の日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-05-toyota-museum-field-trip@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:トヨタ博物館 校外学習
+DESCRIPTION:9年生が近くのトヨタの博物館を訪れ、授業で
+ 学んだ機械について展示を見学しながらメモを取りま
+ す。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/even
+ t/2026-11-05-toyota-museum-field-trip
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-05-toyota-museum-
+ field-trip
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-06-extracurricular-activities-autumn-cas-project-su@enishi.ac
+ .jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:課外活動：秋のCAS・プロジェクト支援フェア
+DESCRIPTION:中等部PTAの支援による行事で、地域でのさま
+ ざまなボランティアやCASプロジェクトの機会について
+ 知ることができます。MYP・DP生徒が対象です。\n\n対象
+ ：中等部（保護者参加可）\nhttps://enishi.ac.jp/EISCompass.ht
+ ml#/event/2026-11-06-extracurricular-activities-autumn-cas-project-su
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-06-extracurricula
+ r-activities-autumn-cas-project-su
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-09-wellbeing-week@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261114
+SUMMARY:ウェルビーイング週間
+DESCRIPTION:ウェルビーイング（心身の健康）への意識を
+ 高めることを目的とした全校行事です。\n\n対象：全
+ 校\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-11-09-wellbeing-we
+ ek
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-09-wellbeing-week
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-16-friendly-soccer-tournament-internal@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261121
+SUMMARY:校内サッカー親善大会
+DESCRIPTION:校内でのサッカー親善大会に参加し、チーム
+ ワーク、スポーツマンシップ、愛校心を育みます。\n\
+ n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-11
+ -16-friendly-soccer-tournament-internal
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-16-friendly-socce
+ r-tournament-internal
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-20-gifu-kakamigahara-air-and-space-museum@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:岐阜かかみがはら航空宇宙博物館
+DESCRIPTION:航空宇宙博物館を訪れ、歴史を通じた飛行機
+ のデザインを分析する実習に取り組みます。\n\n対象
+ ：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-11-20-gif
+ u-kakamigahara-air-and-space-museum
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-20-gifu-kakamigah
+ ara-air-and-space-museum
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2026-11-23-20261123@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+SUMMARY:勤労感謝の日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-27-teacher-appreciation-day@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:教員感謝デー
+DESCRIPTION:学校コミュニティ全体で、教員の献身、思い
+ やり、支えに感謝を伝える日です。\n\n対象：全校\nhtt
+ ps://enishi.ac.jp/EISCompass.html#/event/2026-11-27-teacher-appreciation
+ -day
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-27-teacher-apprec
+ iation-day
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-28-2026-enishi-futsal-tournament@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:2026 Enishiフットサル大会
+DESCRIPTION:本校にて複数校が参加する中学生フットサル
+ 大会を開催します。\n\n対象：中等部\nhttps://enishi.ac.jp/
+ EISCompass.html#/event/2026-11-28-2026-enishi-futsal-tournament
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-11-28-2026-enishi-fu
+ tsal-tournament
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-10-choir-and-orchestra-concert@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:合唱・オーケストラコンサート
+DESCRIPTION:合唱クラスとオーケストラクラブが、練習を
+ 重ねてきた曲目をご家族、友人、教員の前で演奏しま
+ す。\n\n対象：中等部（保護者参加可）\nhttps://enishi.ac.
+ jp/EISCompass.html#/event/2026-12-10-choir-and-orchestra-concert
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-12-10-choir-and-orch
+ estra-concert
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-16-industry-visit-tech-company@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+SUMMARY:企業訪問（テクノロジー企業）
+DESCRIPTION:地元のテクノロジー企業を訪問し、現代の職
+ 場を直接知るとともに、テクノロジーやイノベーショ
+ ン分野のキャリアについて考えます。\n\n対象：中等
+ 部\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-12-16-industry-vis
+ it-tech-company
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-12-16-industry-visit
+ -tech-company
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-end-of-term-1-activity-sleep-over-program-g6-10@enishi.ac.
+ jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:第1学期末行事 お泊まりプログラム：G6–10
+DESCRIPTION:6～10年生が学校でのお泊まりプログラムに参
+ 加し、共に活動しながら仲間づくりを行い、第1学期
+ の終わりを祝います。\n\n対象：中等部\nhttps://enishi.ac.
+ jp/EISCompass.html#/event/2026-12-19-end-of-term-1-activity-sleep-over-p
+ rogram-g6-10
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-12-19-end-of-term-1-
+ activity-sleep-over-program-g6-10
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2026-12-21-20261225@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261226
+SUMMARY:学校休日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2026-12-28-20261231@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20261228
+DTEND;VALUE=DATE:20270101
+SUMMARY:学校休日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-01-01-20270101@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:元日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-01-04-20270106@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270107
+SUMMARY:学校休日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-14-g10-parent-info-session-high-school-subject-choi@enishi.ac
+ .jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270115
+SUMMARY:G10保護者説明会（高等部の科目選択）
+DESCRIPTION:10年生の保護者の皆様を対象に、DPの科目選択
+ と、お子様の次のステージの学びを計画するためのガ
+ イダンスを行います。\n\n対象：中等部（保護者参加
+ 可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-01-14-g10-paren
+ t-info-session-high-school-subject-choi
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-14-g10-parent-inf
+ o-session-high-school-subject-choi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-22-open-campus@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270122
+DTEND;VALUE=DATE:20270123
+SUMMARY:オープンキャンパス
+DESCRIPTION:学校の日常の様子にご関心のある方は、通常
+ 授業時間中の校内見学にご参加いただけます。\n\n対
+ 象：全校\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-01-22-ope
+ n-campus
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-22-open-campus
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-30-model-united-nations-event-mun@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270130
+DTEND;VALUE=DATE:20270131
+SUMMARY:模擬国連（MUN）
+DESCRIPTION:模擬国連に参加し、現実の課題について議論
+ することで、スピーチ力、調査力、協働する力、国際
+ 的な意識を育みます。\n\n対象：中等部\nhttps://enishi.ac.
+ jp/EISCompass.html#/event/2027-01-30-model-united-nations-event-mun
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-30-model-united-n
+ ations-event-mun
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-01-friendly-volleyball-tournament-internal@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270206
+SUMMARY:校内バレーボール親善大会
+DESCRIPTION:校内でのバレーボール親善大会に参加し、チ
+ ームワーク、スポーツマンシップ、愛校心を育みます
+ 。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2
+ 027-02-01-friendly-volleyball-tournament-internal
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-02-01-friendly-volle
+ yball-tournament-internal
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-02-11-20270211@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270211
+DTEND;VALUE=DATE:20270212
+SUMMARY:建国記念の日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-22-secondary-sports-day-rehearsal-1@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270222
+DTEND;VALUE=DATE:20270223
+SUMMARY:中等部運動会リハーサル #1
+DESCRIPTION:中等部の生徒が、種目の流れ、チーム編成、
+ 活動のルールを練習し、運動会に向けて準備します。
+ \n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2027
+ -02-22-secondary-sports-day-rehearsal-1
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-02-22-secondary-spor
+ ts-day-rehearsal-1
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-02-23-20270223@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270223
+DTEND;VALUE=DATE:20270224
+SUMMARY:天皇誕生日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-05-higashiyama-zoo-botanical-garden@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270305
+DTEND;VALUE=DATE:20270306
+SUMMARY:東山動植物園
+DESCRIPTION:7年生が理科の学習の一環として東山動植物園
+ を訪れ、観察や実物を通して学びを深めます。\n\n対
+ 象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-03-05-
+ higashiyama-zoo-botanical-garden
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-05-higashiyama-zo
+ o-botanical-garden
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-12-secondary-sports-day-rehearsal-2@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270312
+DTEND;VALUE=DATE:20270313
+SUMMARY:中等部運動会リハーサル #2
+DESCRIPTION:中等部の生徒が、種目の流れ、チーム編成、
+ 活動のルールを練習し、運動会に向けて準備します。
+ \n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2027
+ -03-12-secondary-sports-day-rehearsal-2
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-12-secondary-spor
+ ts-day-rehearsal-2
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-18-japanese-culture-day@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270318
+DTEND;VALUE=DATE:20270319
+SUMMARY:日本文化デー
+DESCRIPTION:学校コミュニティとともにさまざまな体験型
+ の活動に取り組み、日本文化への理解と関心を深めま
+ す。\n\n対象：全校（保護者参加可）\nhttps://enishi.ac.jp/
+ EISCompass.html#/event/2027-03-18-japanese-culture-day
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-18-japanese-cultu
+ re-day
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-20-end-of-term-2-activity-g6-8@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270320
+DTEND;VALUE=DATE:20270322
+SUMMARY:第2学期末行事：G6–8
+DESCRIPTION:第2学期の終わりを祝い、校外のキャンプ施設
+ での一泊キャンプに参加します。\n\n対象：中等部\nhtt
+ ps://enishi.ac.jp/EISCompass.html#/event/2027-03-20-end-of-term-2-activi
+ ty-g6-8
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-20-end-of-term-2-
+ activity-g6-8
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-03-21-20270321@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270321
+DTEND;VALUE=DATE:20270322
+SUMMARY:春分の日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-03-22-20270326@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270322
+DTEND;VALUE=DATE:20270327
+SUMMARY:学校休日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-03-29-20270329@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270329
+DTEND;VALUE=DATE:20270330
+SUMMARY:教職員準備日（授業なし）
+DESCRIPTION:授業なし
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-30-parent-teacher-conferences@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270330
+DTEND;VALUE=DATE:20270331
+SUMMARY:保護者面談
+DESCRIPTION:保護者の皆様が各担当教員と個別に面談し、
+ お子様の成長、強み、今後の課題についてお話ししま
+ す。当日、生徒は登校しません。\n\n対象：全校（保
+ 護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-03-
+ 30-parent-teacher-conferences
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-30-parent-teacher
+ -conferences
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-31-secondary-sports-day-rehearsal-3@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:中等部運動会リハーサル #3
+DESCRIPTION:中等部の生徒が、種目の流れ、チーム編成、
+ 活動のルールを練習し、運動会に向けて準備します。
+ \n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2027
+ -03-31-secondary-sports-day-rehearsal-3
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-31-secondary-spor
+ ts-day-rehearsal-3
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-03-sports-day@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270403
+DTEND;VALUE=DATE:20270404
+SUMMARY:運動会
+DESCRIPTION:運動会に参加し、チームゲーム、運動競技、
+ 応援などの行事に取り組みます。\n\n対象：中等部（
+ 保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-
+ 04-03-sports-day
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-04-03-sports-day
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-21-hackathon-hour-of-code@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270421
+DTEND;VALUE=DATE:20270422
+SUMMARY:ハッカソン（Hour of Code）
+DESCRIPTION:Hour of Codeチャレンジに参加し、創造性と問題
+ 解決力を生かして簡単なプログラミング作品を作りま
+ す。楽しく支え合う環境の中で、コンピュテーショナ
+ ル・シンキング、チームワーク、テクノロジーへの自
+ 信を育みます。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCom
+ pass.html#/event/2027-04-21-hackathon-hour-of-code
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-04-21-hackathon-hour
+ -of-code
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-27-choir-and-orchestra-concert@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270427
+DTEND;VALUE=DATE:20270428
+SUMMARY:合唱・オーケストラコンサート
+DESCRIPTION:合唱クラスとオーケストラクラブが、練習を
+ 重ねてきた曲目をご家族、友人、教員の前で演奏しま
+ す。\n\n対象：中等部（保護者参加可）\nhttps://enishi.ac.
+ jp/EISCompass.html#/event/2027-04-27-choir-and-orchestra-concert
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-04-27-choir-and-orch
+ estra-concert
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-30-science-fair@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270430
+DTEND;VALUE=DATE:20270501
+SUMMARY:サイエンスフェア
+DESCRIPTION:理科のプロジェクトや探究の成果を学校コミ
+ ュニティに発表し、研究、創造性、科学的思考を披露
+ します。\n\n対象：中等部（保護者参加可）\nhttps://enis
+ hi.ac.jp/EISCompass.html#/event/2027-04-30-science-fair
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-04-30-science-fair
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-05-03-20270503@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270503
+DTEND;VALUE=DATE:20270504
+SUMMARY:憲法記念日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-05-04-20270504@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270504
+DTEND;VALUE=DATE:20270505
+SUMMARY:みどりの日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-05-05-20270505@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270505
+DTEND;VALUE=DATE:20270506
+SUMMARY:こどもの日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-05-06-20270507@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270506
+DTEND;VALUE=DATE:20270508
+SUMMARY:学校休日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-17-friendly-basketball-tournament-internal@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270522
+SUMMARY:校内バスケットボール親善大会
+DESCRIPTION:校内でのバスケットボール親善大会に参加し
+ 、チームワーク、スポーツマンシップ、愛校心を育み
+ ます。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/e
+ vent/2027-05-17-friendly-basketball-tournament-internal
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-05-17-friendly-baske
+ tball-tournament-internal
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-22-saturday-school-last-day-event@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270522
+DTEND;VALUE=DATE:20270523
+SUMMARY:土曜校 最終日イベント
+DESCRIPTION:土曜校の最終日を、校内でのレクリエーショ
+ ン活動とともにリラックスして過ごし、お祝いします
+ 。\n\n対象：中等部\nhttps://enishi.ac.jp/EISCompass.html#/event/2
+ 027-05-22-saturday-school-last-day-event
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-05-22-saturday-schoo
+ l-last-day-event
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-06-03-celebration-of-learning-prep@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270603
+DTEND;VALUE=DATE:20270604
+SUMMARY:学びの発表会 準備
+DESCRIPTION:学びの発表会に向けて、学習スペースの整理
+ 、展示の設営、資料の準備を行い、教室や共用エリア
+ で来場者をお迎えできるよう整えます。ご家族やお客
+ 様にとって魅力的で温かな空間づくりにつながります
+ 。\n\n対象：全校\nhttps://enishi.ac.jp/EISCompass.html#/event/2027
+ -06-03-celebration-of-learning-prep
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-03-celebration-of
+ -learning-prep
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-06-04-celebration-of-learning@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270604
+DTEND;VALUE=DATE:20270605
+SUMMARY:学びの発表会
+DESCRIPTION:PYPX、MYPX、CAS、EE、TOK、ファウンデーション～
+ 4年生のプロジェクトなど、生徒の作品や展示を通し
+ て学校コミュニティ全体で学びを祝います。\n\n対象
+ ：全校（保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#
+ /event/2027-06-04-celebration-of-learning
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-04-celebration-of
+ -learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-06-06-20270607@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270606
+DTEND;VALUE=DATE:20270608
+SUMMARY:学校休日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-06-19-end-of-term-3-activity-g6-10@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270619
+DTEND;VALUE=DATE:20270620
+SUMMARY:第3学期末行事：G6–10
+DESCRIPTION:第3学期の終わりを祝い、名古屋近郊への日帰
+ り校外活動に参加します。\n\n対象：中等部\nhttps://enis
+ hi.ac.jp/EISCompass.html#/event/2027-06-19-end-of-term-3-activity-g6-10
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-19-end-of-term-3-
+ activity-g6-10
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-06-21-20270621@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270621
+DTEND;VALUE=DATE:20270622
+SUMMARY:教職員準備日（授業なし）
+DESCRIPTION:授業なし
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-06-22-parent-teacher-conferences@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270622
+DTEND;VALUE=DATE:20270624
+SUMMARY:保護者面談
+DESCRIPTION:保護者の皆様が各担当教員と個別に面談し、
+ お子様の成長、強み、今後の課題についてお話ししま
+ す。期間中、生徒は登校しません。\n\n対象：全校（
+ 保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-
+ 06-22-parent-teacher-conferences
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-22-parent-teacher
+ -conferences
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-06-24-20270625@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270624
+DTEND;VALUE=DATE:20270626
+SUMMARY:教職員準備日（授業なし）
+DESCRIPTION:授業なし
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-06-28-summer-school@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270628
+DTEND;VALUE=DATE:20270725
+SUMMARY:サマースクール
+DESCRIPTION:英語で楽しく過ごすサマーキャンプに参加し
+ 、新たなことに挑戦しながら友情や人とのつながりを
+ 育みます。\n\n対象：全校\nhttps://enishi.ac.jp/EISCompass.html
+ #/event/2027-06-28-summer-school
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-28-summer-school
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-07-19-20270719@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270719
+DTEND;VALUE=DATE:20270720
+SUMMARY:海の日（休校）
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:closure-2027-07-26-20270730@enishi.ac.jp
+DTSTAMP:20261005T000000Z
+DTSTART;VALUE=DATE:20270726
+DTEND;VALUE=DATE:20270731
+SUMMARY:学校休日
+DESCRIPTION:休校
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

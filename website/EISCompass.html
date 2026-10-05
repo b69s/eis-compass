@@ -1,0 +1,1162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#002e7a">
+<!--META:START-->
+<title>EIS Compass 2026–2027 — Enishi International School Events Calendar</title>
+<meta name="description" content="Events, holidays and activities at Enishi International School, Nagoya — ELC through High School. EIS コンパス：イベント・活動カレンダー（2026–2027）">
+<link rel="canonical" href="https://enishi.ac.jp/EISCompass.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Enishi International School">
+<meta property="og:title" content="EIS Compass 2026–2027 — Enishi International School Events Calendar">
+<meta property="og:description" content="Events, holidays and activities at Enishi International School, Nagoya — ELC through High School. EIS コンパス：イベント・活動カレンダー（2026–2027）">
+<meta property="og:url" content="https://enishi.ac.jp/EISCompass.html">
+<meta property="og:image" content="https://enishi.ac.jp/compass/images/site/og.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<!--META:END-->
+<link rel="icon" href="compass/images/site/eis-logo.png">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --navy:#002e7a; --navy-2:#1d4a9a; --sky:#53c3f0; --orange:#ff9933; --red:#c4291e;
+  --ink:#1a2238; --ink-2:#4b5775; --ink-3:#5f6984; --line:#e3e7ef; --line-2:#d3d9e4;
+  --bg:#f4f6fa; --card:#fff; --off:#eef1f6; --national:#fff4d6; --school:#e8eefc; --noclass:#f1ecf9;
+  --radius:14px; --shadow:0 1px 2px rgba(16,30,70,.06),0 2px 8px rgba(16,30,70,.06);
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI",Meiryo,"Noto Sans JP",sans-serif;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman","Hiragino Mincho ProN","Yu Mincho",serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:150px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--sans)}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:var(--navy-2)}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+
+/* ---------- header ---------- */
+.hdr{background:var(--navy);color:#fff;position:sticky;top:0;z-index:30}
+.hdr-row{display:flex;align-items:center;gap:12px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;min-width:0;margin-right:auto}
+.brand img{width:36px;height:auto}
+.brand b{font-family:var(--serif);font-size:22px;font-weight:700;letter-spacing:.01em;white-space:nowrap}
+.brand small{display:block;font-size:11px;color:var(--sky);letter-spacing:.08em;text-transform:uppercase;font-weight:600;line-height:1}
+.seg{display:inline-flex;background:rgba(255,255,255,.12);border-radius:999px;padding:3px}
+.seg button{border:0;background:none;color:#dfe8ff;padding:5px 11px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--navy)}
+.icon-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.35);background:none;color:#fff;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;white-space:nowrap}
+.icon-btn svg{width:16px;height:16px}
+.stripe{height:4px;background:linear-gradient(90deg,var(--sky) 0 33.3%,var(--orange) 33.3% 66.6%,var(--red) 66.6%)}
+.tabs{background:#fff;border-bottom:1px solid var(--line)}
+.tabs .wrap{display:flex;gap:4px}
+.tab{flex:1 1 0;max-width:180px;border:0;background:none;padding:12px 8px 10px;font-weight:650;color:var(--ink-3);border-bottom:3px solid transparent;font-size:15px}
+.tab[aria-selected="true"]{color:var(--navy);border-bottom-color:var(--orange)}
+
+/* ---------- filter bar ---------- */
+.fbar{background:#fff;border-bottom:1px solid var(--line);padding:10px 0 8px}
+.search{position:relative}
+.search input{width:100%;border:1px solid var(--line-2);border-radius:999px;padding:9px 38px 9px 38px;background:var(--bg);font-size:15px}
+.search input:focus{background:#fff}
+.search svg{position:absolute;left:12px;top:50%;width:18px;height:18px;transform:translateY(-50%);color:var(--ink-3)}
+.search .clear{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:none;width:30px;height:30px;border-radius:50%;color:var(--ink-3);font-size:18px;line-height:1}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:8px 0 2px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);background:#fff;border-radius:999px;padding:5px 11px;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--c,#999)}
+.chip[aria-pressed="true"]{background:var(--c,var(--navy));border-color:var(--c,var(--navy));color:#fff}
+.chip[aria-pressed="true"] i{background:#fff}
+.chip.all[aria-pressed="true"]{--c:var(--navy)}
+.chip.par{--c:#0e7c8a}
+.fhint{font-size:12.5px;color:var(--ink-3);margin-top:4px;min-height:1em}
+
+/* ---------- main ---------- */
+main{padding:16px 0 40px}
+.view{max-width:760px;margin:0 auto}
+.hero{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;border-radius:var(--radius);padding:18px 18px 16px;margin-bottom:16px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;border:18px solid rgba(83,195,240,.18)}
+.hero .d{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--sky);font-weight:700}
+.hero h1{margin:2px 0 10px;font:700 26px/1.2 var(--serif)}
+.dayoff{display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.1);border-radius:10px;padding:10px 12px;font-size:14.5px}
+.dayoff b{color:#fff}
+.dayoff .k{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:#ffd29e;font-weight:700;display:block}
+.dayoff svg{flex:0 0 22px;height:22px;color:var(--orange)}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;margin:22px 2px 8px}
+.sec-h h2{margin:0;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:750}
+.sec-h span{font-size:12.5px;color:var(--ink-3)}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.dg{display:flex;border-top:1px solid var(--line)}
+.dg:first-child{border-top:0}
+.dg-date{flex:0 0 58px;text-align:center;padding:12px 0 8px;border-right:1px solid var(--line)}
+.dg-date .dw{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--ink-3);text-transform:uppercase}
+.dg-date .dn{display:block;font-size:22px;font-weight:750;line-height:1.1;color:var(--ink)}
+.dg-date .mo{display:block;font-size:11px;color:var(--ink-3);font-weight:600}
+.dg.is-today .dg-date .dn{color:#fff;background:var(--orange);border-radius:50%;width:34px;height:34px;line-height:34px;margin:2px auto 0;font-size:18px}
+.dg.flash{animation:flash 1.6s ease}
+@keyframes flash{0%,40%{background:#fff4e5}100%{background:transparent}}
+.dg-items{flex:1;min-width:0}
+.ev{display:flex;width:100%;text-align:left;border:0;background:none;padding:11px 14px 11px 12px;gap:10px;align-items:flex-start;border-top:1px solid var(--line)}
+.ev:first-child{border-top:0}
+button.ev:hover{background:#f8faff}
+.ev-bar{flex:0 0 4px;align-self:stretch;border-radius:3px;background:var(--bar)}
+.ev-main{flex:1;min-width:0}
+.ev-t{font-weight:650;font-size:15.5px;line-height:1.35}
+.ev.cancelled .ev-t{text-decoration:line-through;color:var(--ink-3)}
+.ev-m{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:3px;font-size:13px;color:var(--ink-3);align-items:center}
+.ev-thumb{flex:0 0 52px;height:52px;border-radius:8px;object-fit:cover;background:var(--off)}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.badge{display:inline-block;font-size:11px;font-weight:750;letter-spacing:.03em;padding:2px 7px;border-radius:999px;background:var(--off);color:var(--ink-2);text-transform:uppercase}
+.badge.par{background:#e0f3f5;color:#0b6672}
+.badge.chg{background:#fff1e0;color:#a94f00}
+.badge.can{background:#fde8e6;color:#a3241a}
+.badge.tbc{background:#eef1f6;color:#4b5775}
+.badge.upd{background:#e6f6ec;color:#1f7a3a}
+.badge.nc{background:#ede7f7;color:#5b3c99}
+.closure{display:flex;gap:10px;align-items:center;padding:10px 14px 10px 12px;border-top:1px solid var(--line);font-size:14.5px;color:var(--ink-2)}
+.closure:first-child{border-top:0}
+.closure .ev-bar{background:repeating-linear-gradient(45deg,#c9d2e3 0 3px,transparent 3px 6px)}
+.closure.national{background:var(--national)}
+.closure.school{background:var(--school)}
+.closure.noclass{background:var(--noclass)}
+.closure b{font-weight:650;color:var(--ink)}
+.empty{padding:28px 18px;text-align:center;color:var(--ink-3)}
+.empty button{margin-top:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line-2);background:#fff;border-radius:10px;padding:10px 14px;font-weight:650;font-size:14.5px;color:var(--navy);text-decoration:none}
+.btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn svg{width:18px;height:18px}
+.more{display:flex;justify-content:center;margin-top:14px}
+
+/* ---------- calendar tab ---------- */
+.cal-layout{display:grid;gap:16px}
+.mnav{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.mnav h2{margin:0 auto 0 0;font:700 24px/1.2 var(--serif);color:var(--navy)}
+.mnav h2 small{display:block;font:600 12px/1.4 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--orange)}
+.round{width:38px;height:38px;border-radius:50%;border:1px solid var(--line-2);background:#fff;display:inline-flex;align-items:center;justify-content:center;color:var(--navy)}
+.round:disabled{opacity:.35;cursor:default}
+.round svg{width:18px;height:18px}
+.mpills{display:flex;gap:6px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:none}
+.mpills::-webkit-scrollbar{display:none}
+.mpill{flex:0 0 auto;border:1px solid var(--line-2);background:#fff;border-radius:999px;padding:4px 11px;font-size:13px;font-weight:650;color:var(--ink-2)}
+.mpill[aria-current="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.mpill.now{border-color:var(--orange)}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));background:var(--line);gap:1px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.grid .wd{background:#fff;text-align:center;font-size:11.5px;font-weight:700;letter-spacing:.05em;color:var(--ink-3);padding:7px 0;text-transform:uppercase}
+.cell{background:#fff;min-height:54px;border:0;padding:5px 3px 4px;display:flex;flex-direction:column;align-items:center;gap:3px;text-align:left;position:relative}
+.cell.off{background:#fafbfd;color:#b4bccd;cursor:default}
+.cell.we{background:#fbfcfe}
+.cell.national{background:var(--national)}
+.cell.school{background:var(--school)}
+.cell.noclass{background:var(--noclass)}
+.cell .n{font-size:13.5px;font-weight:650;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%}
+.cell.today .n{background:var(--orange);color:#fff}
+.cell .dots{display:flex;gap:3px;flex-wrap:wrap;justify-content:center;max-width:40px}
+.cell .dots i{width:7px;height:7px;border-radius:50%;background:var(--c)}
+.cell .term{position:absolute;top:3px;right:3px;font-size:9.5px;font-weight:800;color:var(--orange)}
+.cell .names,.cell .hl{display:none}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--ink-3);margin:10px 2px 0}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px;border:1px solid var(--line-2)}
+
+/* ---------- info tab ---------- */
+.info h2{font:700 24px/1.25 var(--serif);color:var(--navy);margin:0 0 10px}
+.info h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:18px 0 8px}
+.info .card{padding:18px}
+.info .card+.card{margin-top:14px}
+.info p{margin:0 0 12px}
+.letter .sig{font-weight:700;margin:0}
+.letter .role{color:var(--ink-3);font-size:14px}
+.letter-img{width:100%;aspect-ratio:16/7;object-fit:cover;border-radius:10px;margin-bottom:14px}
+.values{display:flex;justify-content:center;gap:10px;margin:6px 0 4px;flex-wrap:wrap}
+.values span{font-weight:800;letter-spacing:.14em;padding:6px 14px;border-radius:999px;color:#fff;font-size:14px}
+.motto{text-align:center;font:italic 600 20px/1.35 var(--serif);color:var(--navy);margin:8px 0 0}
+.pillrow{display:flex;flex-wrap:wrap;gap:8px}
+.pillrow span{padding:5px 12px;border-radius:999px;font-weight:700;font-size:13.5px;color:#fff}
+.hc{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.hc div{border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.hc .f{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--orange)}
+.hc b{display:block;font-size:15px;margin:2px 0}
+.hc small{color:var(--ink-3);font-size:13px}
+.note{font-size:13.5px;color:var(--ink-3);background:var(--bg);border-radius:10px;padding:10px 12px;margin-top:12px}
+.oly{width:100%;border-collapse:collapse;font-size:14.5px}
+.oly td{padding:10px 6px;border-top:1px solid var(--line);vertical-align:middle}
+.oly img{width:44px;height:44px;object-fit:contain}
+.oly small{display:block;color:var(--ink-3);font-size:12.5px}
+.toggle-more{border:0;background:none;color:var(--navy-2);font-weight:700;padding:0}
+
+/* ---------- footer ---------- */
+footer{background:var(--navy);color:#cfdaf5;font-size:13.5px;padding:24px 0 calc(24px + env(safe-area-inset-bottom))}
+footer b{color:#fff}
+footer a{color:#fff}
+footer .row{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* ---------- dialogs ---------- */
+dialog{border:0;padding:0;border-radius:18px;max-width:560px;width:calc(100% - 24px);box-shadow:0 20px 60px rgba(0,20,60,.3);color:var(--ink)}
+dialog::backdrop{background:rgba(10,22,52,.5)}
+.dlg-x{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font-size:22px;line-height:1;color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.15);z-index:2}
+.sheet-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--off)}
+.dlg-body{padding:18px 20px 20px}
+.dlg-body h2{margin:6px 0 4px;font-size:22px;line-height:1.3}
+.when{font-weight:650;color:var(--navy-2);margin:0 0 10px}
+.dlg-body .tags{display:flex;flex-wrap:wrap;gap:6px 12px;margin-bottom:12px}
+.desc{margin:0 0 14px;color:var(--ink-2)}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14.5px;margin:0 0 14px}
+.facts dt{color:var(--ink-3)}
+.facts dd{margin:0}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.actions .btn{font-size:14px;padding:10px 8px}
+.actions .btn.wide{grid-column:1/-1}
+.feeds{list-style:none;padding:0;margin:12px 0}
+.feeds li{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;padding:10px 0;border-top:1px solid var(--line)}
+.feeds li>span{flex:1 1 100%;font-weight:650}
+.feeds li>span small{display:block;font-weight:400;color:var(--ink-3);font-size:12.5px}
+.feeds .btn{padding:6px 10px;font-size:13px}
+.opt{margin:14px 0}
+.opt legend{font-weight:700;font-size:14px;margin-bottom:6px;padding:0}
+.opt fieldset{border:0;padding:0;margin:0}
+.opt label{display:inline-flex;align-items:center;gap:6px;margin:0 14px 6px 0;font-size:15px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;opacity:0;transition:.25s;z-index:60;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media (max-width:640px){
+  dialog.sheet{margin:auto 0 0;width:100%;max-width:none;border-radius:18px 18px 0 0;max-height:92vh}
+  .brand small{display:none}
+  .brand b{font-size:20px}
+  .seg button{padding:5px 9px}
+  .icon-btn span{display:none}
+  .icon-btn{padding:7px}
+}
+@media (min-width:900px){
+  .cal-layout{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);align-items:start}
+  .cal-left{position:sticky;top:180px}
+  .cell{min-height:92px;align-items:stretch}
+  .cell .n{align-self:flex-start}
+  .cell .dots{display:none}
+  .cell .names{display:flex;flex-direction:column;gap:2px;width:100%}
+  .cell .names span{display:block;font-size:11px;line-height:1.25;padding:1px 4px;border-radius:4px;background:color-mix(in srgb,var(--c) 14%,#fff);border-left:3px solid var(--c);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+  .cell .names em{font-style:normal;font-size:10.5px;color:var(--ink-3);padding-left:4px}
+  .cell .hl{display:block;font-size:10px;font-weight:700;color:#8a6a00;text-transform:uppercase;letter-spacing:.02em;line-height:1.2;padding:0 2px}
+  .cell.school .hl{color:#30508f}
+  .cell.noclass .hl{color:#5b3c99}
+  .view.wide{max-width:none}
+}
+
+/* ---------- static (no-JS) agenda ---------- */
+.js #static-agenda{display:none}
+#static-agenda{max-width:760px;margin:0 auto;padding:16px}
+#static-agenda h2{font:700 22px/1.3 var(--serif);color:var(--navy);margin:24px 0 8px}
+#static-agenda ul{list-style:none;padding:0;margin:0;background:#fff;border-radius:12px;box-shadow:var(--shadow)}
+#static-agenda li{padding:10px 14px;border-top:1px solid var(--line)}
+#static-agenda li:first-child{border-top:0}
+#static-agenda time{font-weight:700;color:var(--navy-2);margin-right:8px}
+#static-agenda .ja{display:block;color:var(--ink-3);font-size:14px}
+#static-agenda .aud{display:block;font-size:12.5px;color:var(--ink-3)}
+html:not(.js) #app-ui{display:none}
+
+/* ---------- print ---------- */
+#print{display:none}
+@media print{
+  @page{size:A4 landscape;margin:9mm}
+  body{background:#fff}
+  body>*:not(#print){display:none!important}
+  #print{display:block;font-size:8.5pt;color:#111}
+  .pp{page-break-after:always;break-after:page;height:189mm;display:flex;flex-direction:column}
+  .pp:last-child{page-break-after:auto;break-after:auto}
+  .pp-h{display:flex;align-items:center;gap:10px;border-bottom:2.5pt solid var(--navy);padding-bottom:5pt;margin-bottom:6pt}
+  .pp-h img{width:30pt}
+  .pp-h .t{font:700 16pt/1.1 var(--serif);color:var(--navy)}
+  .pp-h .t small{display:block;font:600 7.5pt var(--sans);letter-spacing:.08em;text-transform:uppercase;color:#555}
+  .pp-h .m{margin-left:auto;text-align:right;font:700 20pt/1 var(--serif);color:var(--navy)}
+  .pp-h .m small{display:block;font:700 8pt var(--sans);color:var(--orange);letter-spacing:.08em;text-transform:uppercase;margin-top:3pt}
+  .pp-b{flex:1;display:grid;grid-template-columns:1.75fr 1fr;gap:8pt;min-height:0}
+  .pg{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:auto;border:.6pt solid #b9c2d3;border-radius:4pt;overflow:hidden;align-content:stretch}
+  .pg .wd{background:var(--navy);color:#fff;text-align:center;font-weight:700;font-size:7pt;padding:2pt 0;letter-spacing:.06em}
+  .pg .c{border-top:.6pt solid #d5dbe6;border-left:.6pt solid #d5dbe6;padding:2pt 2.5pt;min-height:0;overflow:hidden;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .pg .c:nth-child(7n+1){border-left:0}
+  .pg .c.off{background:#f5f6f9;color:#aab}
+  .pg .c.national{background:var(--national)}
+  .pg .c.school{background:var(--school)}
+  .pg .c.noclass{background:var(--noclass)}
+  .pg .c b{font-size:8.5pt}
+  .pg .c .h{display:block;font-size:6.2pt;font-weight:700;text-transform:uppercase;color:#7a5c00}
+  .pg .c .e{display:block;font-size:6.6pt;line-height:1.2;border-left:2pt solid var(--c);padding-left:2pt;margin-top:1.5pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .pg .c .e .j{display:block;font-size:5.8pt;color:#555}
+  .pg .c .mr{font-size:6pt;color:#666}
+  .pl{border:.6pt solid #b9c2d3;border-radius:4pt;padding:5pt 6pt;overflow:hidden}
+  .pl h4{margin:0 0 3pt;font-size:8pt;letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+  .pl .r{display:flex;gap:5pt;padding:2pt 0;border-top:.4pt solid #e2e6ee;line-height:1.25}
+  .pl .r:first-of-type{border-top:0}
+  .pl .r .d{flex:0 0 46pt;font-weight:700;color:var(--navy-2)}
+  .pl .r .x{flex:1}
+  .pl .r .x i{display:inline-block;width:5pt;height:5pt;border-radius:50%;margin-right:2pt;background:var(--c);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .pl .r .x .j{display:block;color:#555;font-size:7pt}
+  .pl .r.cl{color:#555;font-style:italic}
+  .pp-f{display:flex;justify-content:space-between;gap:10pt;margin-top:5pt;font-size:6.8pt;color:#555;border-top:.6pt solid #d5dbe6;padding-top:3pt}
+  .pp-f .lg span{display:inline-flex;align-items:center;gap:2pt;margin-right:6pt}
+  .pp-f .lg i{width:6pt;height:6pt;border-radius:50%;background:var(--c);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<a class="sr" href="#main">Skip to content</a>
+<div id="app-ui">
+<header class="hdr">
+  <div class="wrap hdr-row">
+    <a class="brand" href="#/upcoming" aria-label="EIS Compass home">
+      <img src="compass/images/site/eis-logo.png" alt="" width="36" height="38">
+      <span><small id="h-sub">2026–2027</small><b>EIS Compass</b></span>
+    </a>
+    <div class="seg" role="group" aria-label="Language / 言語">
+      <button type="button" data-lang="en" lang="en">EN</button>
+      <button type="button" data-lang="ja" lang="ja">日本語</button>
+    </div>
+    <button type="button" class="icon-btn" id="btn-sub">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>
+      <span data-t="subscribe">Subscribe</span>
+    </button>
+  </div>
+  <div class="stripe"></div>
+</header>
+<nav class="tabs" aria-label="Sections">
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" data-tab="upcoming" data-t="upcoming">Upcoming</button>
+    <button class="tab" role="tab" data-tab="calendar" data-t="calendar">Calendar</button>
+    <button class="tab" role="tab" data-tab="info" data-t="info">About</button>
+  </div>
+</nav>
+<div class="fbar" id="fbar">
+  <div class="wrap">
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <label class="sr" for="q" data-t="search">Search events</label>
+      <input id="q" type="search" autocomplete="off" enterkeyhint="search">
+      <button class="clear" type="button" id="q-clear" hidden aria-label="Clear">×</button>
+    </div>
+    <div class="chips" id="chips" role="group"></div>
+    <div class="fhint" id="fhint" aria-live="polite"></div>
+  </div>
+</div>
+<main id="main" class="wrap" tabindex="-1">
+  <div id="view" class="view"></div>
+</main>
+<footer>
+  <div class="wrap row">
+    <div><b>Enishi International School</b><br><span id="f-addr"></span><br><a id="f-tel"></a> · <a id="f-mail"></a></div>
+    <div><span id="f-upd"></span><br><span id="f-off"></span></div>
+  </div>
+</footer>
+</div>
+
+<!--STATIC:START-->
+<div id="static-agenda">
+<h1>EIS Compass 2026–2027 — Events &amp; Activities Calendar <span lang="ja">イベント・活動カレンダー</span></h1>
+<p>Enishi International School, Nagoya. Last updated 5 October 2026 / <span lang="ja">最終更新 2026年10月5日</span></p>
+<h2>August 2026 <span lang="ja">2026年8月</span></h2>
+<ul>
+<li><time datetime="2026-08-12">12 Aug</time><a href="#/event/2026-08-12-book-drive">Book Drive</a> <span class="ja" lang="ja">8月12日 本の寄付活動</span><span class="aud">Primary</span></li>
+<li><time datetime="2026-08-17">17 Aug</time><a href="#/event/2026-08-17-student-orientation-program">Student Orientation Program</a> <span class="ja" lang="ja">8月17日 生徒オリエンテーション</span><span class="aud">Secondary</span></li>
+<li><time datetime="2026-08-17">17 Aug–21 Aug</time><a href="#/event/2026-08-17-orientation-week-welfare-briefing">Orientation Week &amp; Welfare Briefing</a> <span class="ja" lang="ja">8月17日〜8月21日 オリエンテーション週間・生活指導説明会</span><span class="aud">Primary</span></li>
+<li><time datetime="2026-08-22">22 Aug</time><a href="#/event/2026-08-22-sat-test-1">SAT Test #1</a> <span class="ja" lang="ja">8月22日 SAT試験 第1回</span><span class="aud">High School</span></li>
+<li><time datetime="2026-08-24">24 Aug</time><a href="#/event/2026-08-24-book-drive">Book Drive</a> <span class="ja" lang="ja">8月24日 本の寄付活動</span><span class="aud">Secondary · Parents invited</span></li>
+<li><time datetime="2026-08-24">24 Aug</time><a href="#/event/2026-08-24-jigsaw-competition">Jigsaw Competition</a> <span class="ja" lang="ja">8月24日 ジグソーパズル大会</span><span class="aud">Primary</span></li>
+<li><time datetime="2026-08-28">28 Aug</time><a href="#/event/2026-08-28-movie-night">Movie Night</a> <span class="ja" lang="ja">8月28日 ムービーナイト</span><span class="aud">Community Club · Parents invited</span></li>
+</ul>
+<h2>September 2026 <span lang="ja">2026年9月</span></h2>
+<ul>
+<li><time datetime="2026-09-01">1 Sep</time><a href="#/event/2026-09-01-bring-your-favourite-book-day">Bring Your Favourite Book Day</a> <span class="ja" lang="ja">9月1日 お気に入りの本を持ってくる日</span><span class="aud">Primary · ELC</span></li>
+<li><time datetime="2026-09-04">4 Sep</time><a href="#/event/2026-09-04-art-workshop">Art Workshop</a> <span class="ja" lang="ja">9月4日 アートワークショップ</span><span class="aud">Community Club · Parents invited</span></li>
+<li><time datetime="2026-09-09">9 Sep</time><a href="#/event/2026-09-09-speed-typing-competition">Speed Typing Competition</a> <span class="ja" lang="ja">9月9日 タイピング大会</span><span class="aud">Secondary</span></li>
+<li><time datetime="2026-09-12">12 Sep</time><a href="#/event/2026-09-12-sat-test-2">SAT Test #2</a> <span class="ja" lang="ja">9月12日 SAT試験 第2回</span><span class="aud">High School</span></li>
+<li><time datetime="2026-09-14">14 Sep–18 Sep</time><a href="#/event/2026-09-14-friendly-basketball-tournament-internal">Friendly Basketball Tournament (Internal)</a> <span class="ja" lang="ja">9月14日〜9月18日 校内バスケットボール親善大会</span><span class="aud">Secondary</span></li>
+<li><time datetime="2026-09-14">14 Sep–18 Sep</time><a href="#/event/2026-09-14-concept-con-global-mindedness">Concept Con (Global Mindedness)</a> <span class="ja" lang="ja">9月14日〜9月18日 コンセプト・コン（グローバルな視野）</span><span class="aud">Primary · ELC</span></li>
+<li><time datetime="2026-09-18">18 Sep</time><a href="#/event/2026-09-18-coffee-hour">Coffee Hour</a> <span class="ja" lang="ja">9月18日 コーヒーアワー</span><span class="aud">ELC · Parents invited</span></li>
+<li><time datetime="2026-09-21">21 Sep</time>Respect for the Aged Day <span class="ja" lang="ja">9月21日 敬老の日</span></li>
+<li><time datetime="2026-09-22">22 Sep</time>School Holiday <span class="ja" lang="ja">9月22日 学校休日</span></li>
+<li><time datetime="2026-09-25">25 Sep</time><a href="#/event/2026-09-25-open-campus">Open Campus</a> <span class="ja" lang="ja">9月25日 オープンキャンパス</span><span class="aud">Whole School</span></li>
+<li><time datetime="2026-09-28">28 Sep–30 Sep</time><a href="#/event/2026-09-28-spirit-week">Spirit Week</a> <span class="ja" lang="ja">9月28日〜9月30日 スピリットウィーク</span><span class="aud">Whole School</span></li>
+</ul>
+<h2>October 2026 <span lang="ja">2026年10月</span></h2>
+<ul>
+<li><time datetime="2026-10-03">3 Oct</time><a href="#/event/2026-10-03-world-tea-party">World Tea Party</a> <span class="ja" lang="ja">10月3日 ワールド・ティーパーティー</span><span class="aud">Community Club · Parents invited</span></li>
+<li><time datetime="2026-10-03">3 Oct</time><a href="#/event/2026-10-03-sat-test-3">SAT Test #3</a> <span class="ja" lang="ja">10月3日 SAT試験 第3回</span><span class="aud">High School</span></li>
+<li><time datetime="2026-10-03">3 Oct</time><a href="#/event/2026-10-03-dp-rafting-trip">DP Rafting Trip</a> <span class="ja" lang="ja">10月3日 DPラフティング</span><span class="aud">High School</span></li>
+<li><time datetime="2026-10-07">7 Oct</time><a href="#/event/2026-10-07-career-support-and-mental-health-round-table">Career Support and Mental Health Round Table</a> <span class="ja" lang="ja">10月7日 進路支援・メンタルヘルス座談会</span><span class="aud">High School · Parents invited</span></li>
+<li><time datetime="2026-10-09">9 Oct</time><a href="#/event/2026-10-09-high-school-curriculum-night">High School Curriculum Night</a> <span class="ja" lang="ja">10月9日 高等部カリキュラム説明会</span><span class="aud">High School</span></li>
+<li><time datetime="2026-10-09">9 Oct</time><a href="#/event/2026-10-09-eagle-bucks-store">Eagle Bucks Store</a> <span class="ja" lang="ja">10月9日 イーグルバックス・ストア</span><span class="aud">Primary</span></li>
+<li><time datetime="2026-10-12">12 Oct</time>Sports Day (National Holiday) <span class="ja" lang="ja">10月12日 スポーツの日</span></li>
+<li><time datetime="2026-10-13">13 Oct–16 Oct</time>Mid-Term Break <span class="ja" lang="ja">10月13日〜10月16日 中間休暇</span></li>
+<li><time datetime="2026-10-19">19 Oct</time><a href="#/event/2026-10-19-elc-primary-curriculum-night">ELC &amp; Primary Curriculum Night</a> <span class="ja" lang="ja">10月19日 ELC・初等部カリキュラム説明会</span><span class="aud">Primary · ELC</span></li>
+<li><time datetime="2026-10-19">19 Oct</time><a href="#/event/2026-10-19-parent-teacher-conferences">Parent Teacher Conferences</a> <span class="ja" lang="ja">10月19日 保護者面談</span><span class="aud">Whole School · Parents invited</span></li>
+<li><time datetime="2026-10-20">20 Oct</time><a href="#/event/2026-10-20-secondary-curriculum-night">Secondary Curriculum Night</a> <span class="ja" lang="ja">10月20日 中等部カリキュラム説明会</span><span class="aud">Secondary</span></li>
+<li><time datetime="2026-10-21">21 Oct</time><a href="#/event/2026-10-21-college-fair">College Fair</a> <span class="ja" lang="ja">10月21日 大学フェア</span><span class="aud">High School · Parents invited</span></li>
+<li><time datetime="2026-10-23">23 Oct</time><a href="#/event/2026-10-23-nagoya-university-biology-laboratory-visit">Nagoya University Biology Laboratory Visit</a> <span class="ja" lang="ja">10月23日 名古屋大学 生物学研究室訪問</span><span class="aud">High School</span></li>
+<li><time datetime="2026-10-25">25 Oct</time><a href="#/event/2026-10-25-pta-picnic">PTA Picnic</a> <span class="ja" lang="ja">10月25日 PTAピクニック</span><span class="aud">PTA</span></li>
+<li><time datetime="2026-10-26">26 Oct</time><a href="#/event/2026-10-26-toyota-college-trip">Toyota College Trip</a> <span class="ja" lang="ja">10月26日 豊田高専 見学</span><span class="aud">Secondary</span></li>
+<li><time datetime="2026-10-30">30 Oct</time><a href="#/event/2026-10-30-sensory-wonderland">Sensory Wonderland</a> <span class="ja" lang="ja">10月30日 センサリー・ワンダーランド</span><span class="aud">Primary</span></li>
+<li><time datetime="2026-10-31">31 Oct</time><a href="#/event/2026-10-31-international-mindedness-festival">International Mindedness Festival</a> <span class="ja" lang="ja">10月31日 インターナショナル・マインドネス・フェスティバル</span><span class="aud">Whole School · Parents invited</span></li>
+</ul>
+<h2>November 2026 <span lang="ja">2026年11月</span></h2>
+<ul>
+<li><time datetime="2026-11-03">3 Nov</time>Culture Day <span class="ja" lang="ja">11月3日 文化の日</span></li>
+<li><time datetime="2026-11-04">4 Nov</time><a href="#/event/2026-11-04-elc-sports-day-rehearsal-1">ELC Sports Day Rehearsal #1</a> <span class="ja" lang="ja">11月4日 ELC運動会リハーサル #1</span><span class="aud">ELC</span></li>
+<li><time datetime="2026-11-05">5 Nov</time><a href="#/event/2026-11-05-toyota-museum-field-trip">Toyota Museum Field Trip</a> <span class="ja" lang="ja">11月5日 トヨタ博物館 校外学習</span><span class="aud">Secondary</span></li>
+<li><time datetime="2026-11-06">6 Nov</time><a href="#/event/2026-11-06-extracurricular-activities-autumn-cas-project-su">Extracurricular Activities: Autumn CAS &amp; Project Support Fair</a> <span class="ja" lang="ja">11月6日 課外活動：秋のCAS・プロジェクト支援フェア</span><span class="aud">Secondary · Parents invited</span></li>
+<li><time datetime="2026-11-07">7 Nov</time><a href="#/event/2026-11-07-sat-test-4">SAT Test #4</a> <span class="ja" lang="ja">11月7日 SAT試験 第4回</span><span class="aud">High School</span></li>
+<li><time datetime="2026-11-09">9 Nov–13 Nov</time><a href="#/event/2026-11-09-wellbeing-week">Wellbeing Week</a> <span class="ja" lang="ja">11月9日〜11月13日 ウェルビーイング週間</span><span class="aud">Whole School</span></li>
+<li><time datetime="2026-11-11">11 Nov</time><a href="#/event/2026-11-11-elc-sports-day-rehearsal-2">ELC Sports Day Rehearsal #2</a> <span class="ja" lang="ja">11月11日 ELC運動会リハーサル #2</span><span class="aud">ELC</span></li>
+<li><time datetime="2026-11-14">14 Nov</time><a href="#/event/2026-11-14-elc-sports-day">ELC Sports Day</a> <span class="ja" lang="ja">11月14日 ELC運動会</span><span class="aud">ELC</span></li>
+<li><time datetime="2026-11-16">16 Nov–20 Nov</time><a href="#/event/2026-11-16-friendly-soccer-tournament-internal">Friendly Soccer Tournament (Internal)</a> <span class="ja" lang="ja">11月16日〜11月20日 校内サッカー親善大会</span><span class="aud">Secondary</span></li>
+<li><time datetime="2026-11-17">17 Nov</time><a href="#/event/2026-11-17-foundation-field-trip">Foundation Field Trip</a> <span class="ja" lang="ja">11月17日 ファウンデーション校外学習</span><span class="aud">ELC · Parents invited</span></li>
+<li><time datetime="2026-11-20">20 Nov</time><a href="#/event/2026-11-20-gifu-kakamigahara-air-and-space-museum">Gifu Kakamigahara Air and Space Museum</a> <span class="ja" lang="ja">11月20日 岐阜かかみがはら航空宇宙博物館</span><span class="aud">Secondary</span></li>
+<li><time datetime="2026-11-23">23 Nov</time>Labor Thanksgiving Day <span class="ja" lang="ja">11月23日 勤労感謝の日</span></li>
+<li><time datetime="2026-11-24">24 Nov–25 Nov</time><a href="#/event/2026-11-24-winter-art-contest">Winter Art Contest</a> <span class="ja" lang="ja">11月24日〜11月25日 冬のアートコンテスト</span><span class="aud">Primary · ELC · Parents invited</span></li>
+<li><time datetime="2026-11-27">27 Nov</time><a href="#/event/2026-11-27-parents-morning-1">Parents Morning #1</a> <span class="ja" lang="ja">11月27日 保護者モーニング参観 #1</span><span class="aud">Primary · ELC · Parents invited</span></li>
+<li><time datetime="2026-11-27">27 Nov</time><a href="#/event/2026-11-27-teacher-appreciation-day">Teacher Appreciation Day</a> <span class="ja" lang="ja">11月27日 教員感謝デー</span><span class="aud">Whole School</span></li>
+<li><time datetime="2026-11-28">28 Nov</time><a href="#/event/2026-11-28-2026-enishi-futsal-tournament">2026 - Enishi Futsal Tournament</a> <span class="ja" lang="ja">11月28日 2026 Enishiフットサル大会</span><span class="aud">Secondary</span></li>
+</ul>
+<h2>December 2026 <span lang="ja">2026年12月</span></h2>
+<ul>
+<li><time datetime="2026-12-03">3 Dec–4 Dec</time><a href="#/event/2026-12-03-grade-3-4-musical">Grade 3, 4 Musical</a> <span class="ja" lang="ja">12月3日〜12月4日 3・4年生ミュージカル</span><span class="aud">Primary · Parents invited</span></li>
+<li><time datetime="2026-12-05">5 Dec</time><a href="#/event/2026-12-05-sat-test-5">SAT Test #5</a> <span class="ja" lang="ja">12月5日 SAT試験 第5回</span><span class="aud">High School</span></li>
+<li><time datetime="2026-12-10">10 Dec</time><a href="#/event/2026-12-10-choir-and-orchestra-concert">Choir and Orchestra Concert</a> <span class="ja" lang="ja">12月10日 合唱・オーケストラコンサート</span><span class="aud">Secondary · Parents invited</span></li>
+<li><time datetime="2026-12-11">11 Dec</time><a href="#/event/2026-12-11-silent-auction">Silent Auction</a> <span class="ja" lang="ja">12月11日 サイレントオークション</span><span class="aud">Primary · Parents invited</span></li>
+<li><time datetime="2026-12-16">16 Dec</time><a href="#/event/2026-12-16-industry-visit-tech-company">Industry Visit (Tech Company)</a> <span class="ja" lang="ja">12月16日 企業訪問（テクノロジー企業）</span><span class="aud">Secondary</span></li>
+<li><time datetime="2026-12-16">16 Dec</time><a href="#/event/2026-12-16-winter-party-eagle-nest">Winter Party (Eagle Nest)</a> <span class="ja" lang="ja">12月16日 ウィンターパーティー（イーグルネスト）</span><span class="aud">Primary · ELC</span></li>
+<li><time datetime="2026-12-17">17 Dec</time><a href="#/event/2026-12-17-talent-day">Talent Day</a> <span class="ja" lang="ja">12月17日 タレントデー</span><span class="aud">Primary · Parents invited</span></li>
+<li><time datetime="2026-12-18">18 Dec</time><a href="#/event/2026-12-18-tea-party-pta-for-all">Tea Party / PTA for all</a> <span class="ja" lang="ja">12月18日 ティーパーティー／PTA（どなたでも）</span><span class="aud">PTA · Parents invited</span></li>
+<li><time datetime="2026-12-18">18 Dec</time><a href="#/event/2026-12-18-eagle-bucks-store">Eagle Bucks Store</a> <span class="ja" lang="ja">12月18日 イーグルバックス・ストア</span><span class="aud">Primary · ELC</span></li>
+<li><time datetime="2026-12-19">19 Dec</time><a href="#/event/2026-12-19-end-of-term-1-activity-sleep-over-program-g6-10">End of Term 1 Activity-Sleep Over Program: G6-10</a> <span class="ja" lang="ja">12月19日 第1学期末行事 お泊まりプログラム：G6–10</span><span class="aud">Secondary</span></li>
+<li><time datetime="2026-12-21">21 Dec–23 Dec</time><a href="#/event/2026-12-21-winter-study-camp-g11-12">Winter Study Camp: G11-12</a> <span class="ja" lang="ja">12月21日〜12月23日 冬季学習合宿：G11–12</span><span class="aud">High School</span></li>
+<li><time datetime="2026-12-21">21 Dec–25 Dec</time>School Holiday <span class="ja" lang="ja">12月21日〜12月25日 学校休日</span></li>
+<li><time datetime="2026-12-28">28 Dec–31 Dec</time>School Holiday <span class="ja" lang="ja">12月28日〜12月31日 学校休日</span></li>
+</ul>
+<h2>January 2027 <span lang="ja">2027年1月</span></h2>
+<ul>
+<li><time datetime="2027-01-01">1 Jan</time>New Year&#39;s Day <span class="ja" lang="ja">1月1日 元日</span></li>
+<li><time datetime="2027-01-04">4 Jan–6 Jan</time>School Holiday <span class="ja" lang="ja">1月4日〜1月6日 学校休日</span></li>
+<li><time datetime="2027-01-14">14 Jan</time><a href="#/event/2027-01-14-g10-parent-info-session-high-school-subject-choi">G10 Parent info Session (High School Subject Choice)</a> <span class="ja" lang="ja">1月14日 G10保護者説明会（高等部の科目選択）</span><span class="aud">Secondary · Parents invited</span></li>
+<li><time datetime="2027-01-22">22 Jan</time><a href="#/event/2027-01-22-open-campus">Open Campus</a> <span class="ja" lang="ja">1月22日 オープンキャンパス</span><span class="aud">Whole School</span></li>
+<li><time datetime="2027-01-23">23 Jan</time><a href="#/event/2027-01-23-alumni-talk">Alumni Talk</a> <span class="ja" lang="ja">1月23日 卒業生講話</span><span class="aud">High School</span></li>
+<li><time datetime="2027-01-27">27 Jan</time><a href="#/event/2027-01-27-natural-disaster-field-trip">Natural Disaster Field Trip</a> <span class="ja" lang="ja">1月27日 防災校外学習</span><span class="aud">ELC</span></li>
+<li><time datetime="2027-01-30">30 Jan</time><a href="#/event/2027-01-30-model-united-nations-event-mun">Model United Nations Event (MUN)</a> <span class="ja" lang="ja">1月30日 模擬国連（MUN）</span><span class="aud">Secondary</span></li>
+</ul>
+<h2>February 2027 <span lang="ja">2027年2月</span></h2>
+<ul>
+<li><time datetime="2027-02-01">1 Feb–5 Feb</time><a href="#/event/2027-02-01-friendly-volleyball-tournament-internal">Friendly Volleyball Tournament (Internal)</a> <span class="ja" lang="ja">2月1日〜2月5日 校内バレーボール親善大会</span><span class="aud">Secondary</span></li>
+<li><time datetime="2027-02-01">1 Feb–5 Feb</time><a href="#/event/2027-02-01-concept-con-language">Concept Con (Language)</a> <span class="ja" lang="ja">2月1日〜2月5日 コンセプト・コン（言語）</span><span class="aud">Primary · ELC</span></li>
+<li><time datetime="2027-02-11">11 Feb</time>National Foundation Day <span class="ja" lang="ja">2月11日 建国記念の日</span></li>
+<li><time datetime="2027-02-18">18 Feb</time><a href="#/event/2027-02-18-career-support-second-career-roundtable-and-care">Career Support: Second Career Roundtable and Career Fair</a> <span class="ja" lang="ja">2月18日 進路支援：セカンドキャリア座談会・キャリアフェア</span><span class="aud">High School · Parents invited</span></li>
+<li><time datetime="2027-02-19">19 Feb</time><a href="#/event/2027-02-19-collective-field-trip">Collective Field Trip</a> <span class="ja" lang="ja">2月19日 合同校外学習</span><span class="aud">Primary</span></li>
+<li><time datetime="2027-02-22">22 Feb</time><a href="#/event/2027-02-22-world-thinking-day">World Thinking Day</a> <span class="ja" lang="ja">2月22日 ワールド・シンキング・デー</span><span class="aud">Primary · ELC</span></li>
+<li><time datetime="2027-02-22">22 Feb</time><a href="#/event/2027-02-22-secondary-sports-day-rehearsal-1">Secondary Sports Day Rehearsal #1</a> <span class="ja" lang="ja">2月22日 中等部運動会リハーサル #1</span><span class="aud">Secondary</span></li>
+<li><time datetime="2027-02-23">23 Feb</time>Emperor&#39;s Birthday <span class="ja" lang="ja">2月23日 天皇誕生日</span></li>
+<li><time datetime="2027-02-25">25 Feb</time><a href="#/event/2027-02-25-primary-sports-day-rehearsal-1">Primary Sports Day Rehearsal #1</a> <span class="ja" lang="ja">2月25日 初等部運動会リハーサル #1</span><span class="aud">Primary</span></li>
+<li><time datetime="2027-02-26">26 Feb</time><a href="#/event/2027-02-26-parents-morning-2">Parents Morning #2</a> <span class="ja" lang="ja">2月26日 保護者モーニング参観 #2</span><span class="aud">Primary · ELC · Parents invited</span></li>
+<li><time datetime="2027-02-26">26 Feb</time><a href="#/event/2027-02-26-eagle-talks">Eagle Talks</a> <span class="ja" lang="ja">2月26日 イーグル・トーク</span><span class="aud">Primary · ELC · Parents invited</span></li>
+</ul>
+<h2>March 2027 <span lang="ja">2027年3月</span></h2>
+<ul>
+<li><time datetime="2027-03-04">4 Mar–5 Mar</time><a href="#/event/2027-03-04-grade-1-2-musical">Grade 1, 2 Musical</a> <span class="ja" lang="ja">3月4日〜3月5日 1・2年生ミュージカル</span><span class="aud">Primary · Parents invited</span></li>
+<li><time datetime="2027-03-05">5 Mar</time><a href="#/event/2027-03-05-higashiyama-zoo-botanical-garden">Higashiyama Zoo &amp; Botanical Garden</a> <span class="ja" lang="ja">3月5日 東山動植物園</span><span class="aud">Secondary</span></li>
+<li><time datetime="2027-03-06">6 Mar</time><a href="#/event/2027-03-06-sat-test-6">SAT Test #6</a> <span class="ja" lang="ja">3月6日 SAT試験 第6回</span><span class="aud">High School</span></li>
+<li><time datetime="2027-03-09">9 Mar</time><a href="#/event/2027-03-09-primary-sports-day-rehearsal-2">Primary Sports Day Rehearsal #2</a> <span class="ja" lang="ja">3月9日 初等部運動会リハーサル #2</span><span class="aud">Primary</span></li>
+<li><time datetime="2027-03-12">12 Mar</time><a href="#/event/2027-03-12-secondary-sports-day-rehearsal-2">Secondary Sports Day Rehearsal #2</a> <span class="ja" lang="ja">3月12日 中等部運動会リハーサル #2</span><span class="aud">Secondary</span></li>
+<li><time datetime="2027-03-18">18 Mar</time><a href="#/event/2027-03-18-japanese-culture-day">Japanese Culture Day</a> <span class="ja" lang="ja">3月18日 日本文化デー</span><span class="aud">Whole School · Parents invited</span></li>
+<li><time datetime="2027-03-19">19 Mar</time><a href="#/event/2027-03-19-eagle-bucks-store">Eagle Bucks Store</a> <span class="ja" lang="ja">3月19日 イーグルバックス・ストア</span><span class="aud">Primary · ELC</span></li>
+<li><time datetime="2027-03-19">19 Mar</time><a href="#/event/2027-03-19-tea-party-pta-for-all">Tea Party / PTA for all</a> <span class="ja" lang="ja">3月19日 ティーパーティー／PTA（どなたでも）</span><span class="aud">PTA · Parents invited</span></li>
+<li><time datetime="2027-03-19">19 Mar–20 Mar</time><a href="#/event/2027-03-19-end-of-term-2-activity-g9-12">End of Term 2 Activity: G9-12</a> <span class="ja" lang="ja">3月19日〜3月20日 第2学期末行事：G9–12</span><span class="aud">High School</span></li>
+<li><time datetime="2027-03-20">20 Mar–21 Mar</time><a href="#/event/2027-03-20-end-of-term-2-activity-g6-8">End of Term 2 Activity: G6-8</a> <span class="ja" lang="ja">3月20日〜3月21日 第2学期末行事：G6–8</span><span class="aud">Secondary</span></li>
+<li><time datetime="2027-03-21">21 Mar</time>Vernal Equinox Day <span class="ja" lang="ja">3月21日 春分の日</span></li>
+<li><time datetime="2027-03-22">22 Mar–26 Mar</time>School Holiday <span class="ja" lang="ja">3月22日〜3月26日 学校休日</span></li>
+<li><time datetime="2027-03-29">29 Mar</time>Staff Prep Day (no classes) <span class="ja" lang="ja">3月29日 教職員準備日（授業なし）</span></li>
+<li><time datetime="2027-03-30">30 Mar</time><a href="#/event/2027-03-30-parent-teacher-conferences">Parent Teacher Conferences</a> <span class="ja" lang="ja">3月30日 保護者面談</span><span class="aud">Whole School · Parents invited</span></li>
+<li><time datetime="2027-03-31">31 Mar</time><a href="#/event/2027-03-31-secondary-sports-day-rehearsal-3">Secondary Sports Day Rehearsal #3</a> <span class="ja" lang="ja">3月31日 中等部運動会リハーサル #3</span><span class="aud">Secondary</span></li>
+</ul>
+<h2>April 2027 <span lang="ja">2027年4月</span></h2>
+<ul>
+<li><time datetime="2027-04-01">1 Apr</time><a href="#/event/2027-04-01-primary-sports-day-rehearsal-3">Primary Sports Day Rehearsal #3</a> <span class="ja" lang="ja">4月1日 初等部運動会リハーサル #3</span><span class="aud">Primary</span></li>
+<li><time datetime="2027-04-03">3 Apr</time><a href="#/event/2027-04-03-sports-day">Sports Day</a> <span class="ja" lang="ja">4月3日 運動会</span><span class="aud">Secondary · Parents invited</span></li>
+<li><time datetime="2027-04-03">3 Apr</time><a href="#/event/2027-04-03-primary-sports-day-2027">Primary Sports Day 2027</a> <span class="ja" lang="ja">4月3日 初等部運動会 2027</span><span class="aud">Primary · Parents invited</span></li>
+<li><time datetime="2027-04-15">15 Apr</time><a href="#/event/2027-04-15-world-art-day">World Art Day</a> <span class="ja" lang="ja">4月15日 ワールド・アート・デー</span><span class="aud">Primary · ELC · Parents invited</span></li>
+<li><time datetime="2027-04-16">16 Apr</time><a href="#/event/2027-04-16-foundation-field-trip">Foundation Field Trip</a> <span class="ja" lang="ja">4月16日 ファウンデーション校外学習</span><span class="aud">Primary · Parents invited</span></li>
+<li><time datetime="2027-04-21">21 Apr</time><a href="#/event/2027-04-21-hackathon-hour-of-code">Hackathon (Hour of Code)</a> <span class="ja" lang="ja">4月21日 ハッカソン（Hour of Code）</span><span class="aud">Secondary</span></li>
+<li><time datetime="2027-04-22">22 Apr</time><a href="#/event/2027-04-22-biology-ia-prep-field-trip-shore-ecosystem">Biology IA Prep. Field Trip: Shore Ecosystem</a> <span class="ja" lang="ja">4月22日 生物IA準備 校外学習：海岸の生態系</span><span class="aud">High School</span></li>
+<li><time datetime="2027-04-23">23 Apr</time><a href="#/event/2027-04-23-g12-celebration">G12 Celebration</a> <span class="ja" lang="ja">4月23日 G12お祝い行事</span><span class="aud">High School</span></li>
+<li><time datetime="2027-04-26">26 Apr–27 Apr</time><a href="#/event/2027-04-26-grade-4-5-camping-trip">Grade 4, 5 Camping Trip</a> <span class="ja" lang="ja">4月26日〜4月27日 4・5年生キャンプ</span><span class="aud">Primary</span></li>
+<li><time datetime="2027-04-27">27 Apr</time><a href="#/event/2027-04-27-choir-and-orchestra-concert">Choir and Orchestra Concert</a> <span class="ja" lang="ja">4月27日 合唱・オーケストラコンサート</span><span class="aud">Secondary · Parents invited</span></li>
+<li><time datetime="2027-04-30">30 Apr</time><a href="#/event/2027-04-30-science-fair">Science Fair</a> <span class="ja" lang="ja">4月30日 サイエンスフェア</span><span class="aud">Secondary · Parents invited</span></li>
+</ul>
+<h2>May 2027 <span lang="ja">2027年5月</span></h2>
+<ul>
+<li><time datetime="2027-05-03">3 May</time>Constitution Memorial Day <span class="ja" lang="ja">5月3日 憲法記念日</span></li>
+<li><time datetime="2027-05-04">4 May</time>Greenery Day <span class="ja" lang="ja">5月4日 みどりの日</span></li>
+<li><time datetime="2027-05-05">5 May</time>Children&#39;s Day <span class="ja" lang="ja">5月5日 こどもの日</span></li>
+<li><time datetime="2027-05-06">6 May–7 May</time>School Holiday <span class="ja" lang="ja">5月6日〜5月7日 学校休日</span></li>
+<li><time datetime="2027-05-17">17 May–21 May</time><a href="#/event/2027-05-17-friendly-basketball-tournament-internal">Friendly Basketball Tournament (Internal)</a> <span class="ja" lang="ja">5月17日〜5月21日 校内バスケットボール親善大会</span><span class="aud">Secondary</span></li>
+<li><time datetime="2027-05-19">19 May–20 May</time><a href="#/event/2027-05-19-entrepreneurs-day">Entrepreneurs Day</a> <span class="ja" lang="ja">5月19日〜5月20日 起業家デー</span><span class="aud">Primary · ELC · Parents invited</span></li>
+<li><time datetime="2027-05-21">21 May</time><a href="#/event/2027-05-21-collective-field-trip">Collective Field Trip</a> <span class="ja" lang="ja">5月21日 合同校外学習</span><span class="aud">Primary · ELC</span></li>
+<li><time datetime="2027-05-22">22 May</time><a href="#/event/2027-05-22-saturday-school-last-day-event">Saturday School Last Day Event</a> <span class="ja" lang="ja">5月22日 土曜校 最終日イベント</span><span class="aud">Secondary</span></li>
+<li><time datetime="2027-05-24">24 May–28 May</time><a href="#/event/2027-05-24-concept-con-future-focus">Concept Con (Future Focus)</a> <span class="ja" lang="ja">5月24日〜5月28日 コンセプト・コン（未来への視点）</span><span class="aud">Primary · ELC</span></li>
+<li><time datetime="2027-05-28">28 May</time><a href="#/event/2027-05-28-g12-graduation-with-performances">G12 Graduation with Performances</a> <span class="ja" lang="ja">5月28日 G12卒業式（パフォーマンス付き）</span><span class="aud">High School · Parents invited</span></li>
+</ul>
+<h2>June 2027 <span lang="ja">2027年6月</span></h2>
+<ul>
+<li><time datetime="2027-06-03">3 Jun</time><a href="#/event/2027-06-03-celebration-of-learning-prep">Celebration of Learning Prep</a> <span class="ja" lang="ja">6月3日 学びの発表会 準備</span><span class="aud">Whole School</span></li>
+<li><time datetime="2027-06-03">3 Jun–4 Jun</time><a href="#/event/2027-06-03-ukulele-concert">Ukulele Concert</a> <span class="ja" lang="ja">6月3日〜6月4日 ウクレレコンサート</span><span class="aud">Primary · Parents invited</span></li>
+<li><time datetime="2027-06-04">4 Jun</time><a href="#/event/2027-06-04-celebration-of-learning">Celebration of Learning</a> <span class="ja" lang="ja">6月4日 学びの発表会</span><span class="aud">Whole School · Parents invited</span></li>
+<li><time datetime="2027-06-05">5 Jun</time><a href="#/event/2027-06-05-sat-test-7">SAT Test #7</a> <span class="ja" lang="ja">6月5日 SAT試験 第7回</span><span class="aud">High School</span></li>
+<li><time datetime="2027-06-06">6 Jun–7 Jun</time>School Holiday <span class="ja" lang="ja">6月6日〜6月7日 学校休日</span></li>
+<li><time datetime="2027-06-17">17 Jun</time><a href="#/event/2027-06-17-eagle-bucks-store">Eagle Bucks Store</a> <span class="ja" lang="ja">6月17日 イーグルバックス・ストア</span><span class="aud">Primary · ELC</span></li>
+<li><time datetime="2027-06-18">18 Jun</time><a href="#/event/2027-06-18-kindergarten-and-grade-5-graduation">Kindergarten and Grade 5 Graduation</a> <span class="ja" lang="ja">6月18日 幼稚部・5年生 卒業式</span><span class="aud">Primary · ELC · Parents invited</span></li>
+<li><time datetime="2027-06-18">18 Jun</time><a href="#/event/2027-06-18-primary-elc-year-end-performance">Primary &amp; ELC Year End Performance</a> <span class="ja" lang="ja">6月18日 初等部・ELC 年度末発表会</span><span class="aud">Primary · ELC · Parents invited</span></li>
+<li><time datetime="2027-06-19">19 Jun</time><a href="#/event/2027-06-19-end-of-term-3-activity-g6-10">End of Term 3 Activity: G6-10</a> <span class="ja" lang="ja">6月19日 第3学期末行事：G6–10</span><span class="aud">Secondary</span></li>
+<li><time datetime="2027-06-21">21 Jun</time>Staff Prep Day (no classes) <span class="ja" lang="ja">6月21日 教職員準備日（授業なし）</span></li>
+<li><time datetime="2027-06-22">22 Jun–23 Jun</time><a href="#/event/2027-06-22-parent-teacher-conferences">Parent Teacher Conferences</a> <span class="ja" lang="ja">6月22日〜6月23日 保護者面談</span><span class="aud">Whole School · Parents invited</span></li>
+<li><time datetime="2027-06-24">24 Jun–25 Jun</time>Staff Prep Day (no classes) <span class="ja" lang="ja">6月24日〜6月25日 教職員準備日（授業なし）</span></li>
+<li><time datetime="2027-06-28">28 Jun–24 Jul</time><a href="#/event/2027-06-28-summer-school">Summer School</a> <span class="ja" lang="ja">6月28日〜7月24日 サマースクール</span><span class="aud">Whole School</span></li>
+</ul>
+<h2>July 2027 <span lang="ja">2027年7月</span></h2>
+<ul>
+<li><time datetime="2027-07-19">19 Jul</time>Marine Day (No School) <span class="ja" lang="ja">7月19日 海の日（休校）</span></li>
+<li><time datetime="2027-07-26">26 Jul–30 Jul</time>School Holiday <span class="ja" lang="ja">7月26日〜7月30日 学校休日</span></li>
+</ul>
+</div>
+<!--STATIC:END-->
+
+<dialog id="sheet" class="sheet" aria-labelledby="sheet-title">
+  <button class="dlg-x" type="button" data-close aria-label="Close">×</button>
+  <div id="sheet-content"></div>
+</dialog>
+<dialog id="subdlg" aria-labelledby="sub-title">
+  <button class="dlg-x" type="button" data-close aria-label="Close">×</button>
+  <div class="dlg-body" id="sub-content"></div>
+</dialog>
+<dialog id="printdlg" aria-labelledby="print-title">
+  <button class="dlg-x" type="button" data-close aria-label="Close">×</button>
+  <div class="dlg-body" id="print-content"></div>
+</dialog>
+<div class="toast" id="toast" role="status"></div>
+<div id="print"></div>
+
+<script type="application/json" id="compass-data">{"version":1,"meta":{"title":{"en":"EIS Compass","ja":"EIS コンパス"},"subtitle":{"en":"Events & Activities Calendar","ja":"イベント・活動カレンダー"},"year":"2026–2027","updated":"2026-10-05","siteUrl":"https://enishi.ac.jp/EISCompass.html","cover":"compass/images/site/cover-1.webp"},"audiences":[{"id":"whole","name":{"en":"Whole School","ja":"全校"},"color":"#002e7a"},{"id":"elc","name":{"en":"ELC","ja":"ELC"},"color":"#2f9e44"},{"id":"primary","name":{"en":"Primary","ja":"初等部"},"color":"#7c3aed"},{"id":"secondary","name":{"en":"Secondary","ja":"中等部"},"color":"#e8800f"},{"id":"high","name":{"en":"High School","ja":"高等部"},"color":"#c4291e"},{"id":"pta","name":{"en":"PTA","ja":"PTA"},"color":"#d63a7f"},{"id":"club","name":{"en":"Community Club","ja":"コミュニティクラブ"},"color":"#1b8fc4"}],"terms":[{"name":{"en":"Term 1","ja":"第1学期"},"start":"2026-08-17"},{"name":{"en":"Term 2","ja":"第2学期"},"start":"2027-01-11"},{"name":{"en":"Term 3","ja":"第3学期"},"start":"2027-03-31"}],"closures":[{"start":"2026-09-21","end":"2026-09-21","type":"national","name":{"en":"Respect for the Aged Day","ja":"敬老の日"}},{"start":"2026-09-22","end":"2026-09-22","type":"school","name":{"en":"School Holiday","ja":"学校休日"}},{"start":"2026-10-12","end":"2026-10-12","type":"national","name":{"en":"Sports Day (National Holiday)","ja":"スポーツの日"}},{"start":"2026-10-13","end":"2026-10-16","type":"school","name":{"en":"Mid-Term Break","ja":"中間休暇"}},{"start":"2026-11-03","end":"2026-11-03","type":"national","name":{"en":"Culture Day","ja":"文化の日"}},{"start":"2026-11-23","end":"2026-11-23","type":"national","name":{"en":"Labor Thanksgiving Day","ja":"勤労感謝の日"}},{"start":"2026-12-21","end":"2026-12-25","type":"school","name":{"en":"School Holiday","ja":"学校休日"}},{"start":"2026-12-28","end":"2026-12-31","type":"school","name":{"en":"School Holiday","ja":"学校休日"}},{"start":"2027-01-01","end":"2027-01-01","type":"national","name":{"en":"New Year's Day","ja":"元日"}},{"start":"2027-01-04","end":"2027-01-06","type":"school","name":{"en":"School Holiday","ja":"学校休日"}},{"start":"2027-02-11","end":"2027-02-11","type":"national","name":{"en":"National Foundation Day","ja":"建国記念の日"}},{"start":"2027-02-23","end":"2027-02-23","type":"national","name":{"en":"Emperor's Birthday","ja":"天皇誕生日"}},{"start":"2027-03-21","end":"2027-03-21","type":"national","name":{"en":"Vernal Equinox Day","ja":"春分の日"}},{"start":"2027-03-22","end":"2027-03-26","type":"school","name":{"en":"School Holiday","ja":"学校休日"}},{"start":"2027-03-29","end":"2027-03-29","type":"noclass","name":{"en":"Staff Prep Day (no classes)","ja":"教職員準備日（授業なし）"}},{"start":"2027-05-03","end":"2027-05-03","type":"national","name":{"en":"Constitution Memorial Day","ja":"憲法記念日"}},{"start":"2027-05-04","end":"2027-05-04","type":"national","name":{"en":"Greenery Day","ja":"みどりの日"}},{"start":"2027-05-05","end":"2027-05-05","type":"national","name":{"en":"Children's Day","ja":"こどもの日"}},{"start":"2027-05-06","end":"2027-05-07","type":"school","name":{"en":"School Holiday","ja":"学校休日"}},{"start":"2027-06-06","end":"2027-06-07","type":"school","name":{"en":"School Holiday","ja":"学校休日"}},{"start":"2027-06-21","end":"2027-06-21","type":"noclass","name":{"en":"Staff Prep Day (no classes)","ja":"教職員準備日（授業なし）"}},{"start":"2027-06-24","end":"2027-06-25","type":"noclass","name":{"en":"Staff Prep Day (no classes)","ja":"教職員準備日（授業なし）"}},{"start":"2027-07-19","end":"2027-07-19","type":"national","name":{"en":"Marine Day (No School)","ja":"海の日（休校）"}},{"start":"2027-07-26","end":"2027-07-30","type":"school","name":{"en":"School Holiday","ja":"学校休日"}}],"events":[{"id":"2026-08-12-book-drive","start":"2026-08-12","end":"2026-08-12","aud":["primary"],"parents":false,"title":{"en":"Book Drive","ja":"本の寄付活動"},"desc":{"en":"Families are invited to donate gently used books to support reading within our community. Donations help provide more opportunities for students to discover and enjoy books.","ja":"コミュニティの読書活動を応援するため、ご家庭で読み終えた本のご寄付をお願いします。寄付いただいた本は、生徒たちが本と出会い、楽しむ機会を広げます。"},"image":"compass/images/events/2026-08-12-book-drive.webp"},{"id":"2026-08-17-student-orientation-program","start":"2026-08-17","end":"2026-08-17","aud":["secondary"],"parents":false,"title":{"en":"Student Orientation Program","ja":"生徒オリエンテーション"},"desc":{"en":"Students will take part in orientation to review school rules, daily procedures, safeguarding, counselling, student support, and college counselling services.","ja":"校則、日々の手順、セーフガーディング、カウンセリング、生徒支援、進学カウンセリングについて確認するオリエンテーションに参加します。"},"image":"compass/images/events/2026-08-17-student-orientation-program.webp"},{"id":"2026-08-17-orientation-week-welfare-briefing","start":"2026-08-17","end":"2026-08-21","aud":["primary"],"parents":false,"title":{"en":"Orientation Week & Welfare Briefing","ja":"オリエンテーション週間・生活指導説明会"},"desc":{"en":"Students are invited to learn about the school’s programs, expectations, and community. This event helps everyone start the year feeling informed, connected, and prepared for success.","ja":"学校のプログラム、期待されること、コミュニティについて学びます。全員が必要な情報を得て、つながりを感じ、準備万端で新年度をスタートできるようにする行事です。"},"image":"compass/images/events/2026-08-17-orientation-week-welfare-briefing.webp"},{"id":"2026-08-22-sat-test-1","start":"2026-08-22","end":"2026-08-22","aud":["high"],"parents":false,"title":{"en":"SAT Test #1","ja":"SAT試験 第1回"},"desc":{"en":"An internationally recognized university entrance exam. Our school is an official SAT test center, and both Enishi students and external students are welcome to take the test on campus.","ja":"国際的に認められた大学入学試験です。本校はSAT公式試験会場であり、本校生徒・外部生徒ともに校内で受験できます。"},"image":"compass/images/events/2026-08-22-sat-test-1.webp"},{"id":"2026-08-24-book-drive","start":"2026-08-24","end":"2026-08-24","aud":["secondary"],"parents":true,"title":{"en":"Book Drive","ja":"本の寄付活動"},"desc":{"en":"Families are invited to donate gently used books to support reading within our community. Donations help provide more opportunities for students to discover and enjoy books.","ja":"コミュニティの読書活動を応援するため、ご家庭で読み終えた本のご寄付をお願いします。寄付いただいた本は、生徒たちが本と出会い、楽しむ機会を広げます。"},"image":"compass/images/events/2026-08-24-book-drive.webp"},{"id":"2026-08-24-jigsaw-competition","start":"2026-08-24","end":"2026-08-24","aud":["primary"],"parents":false,"title":{"en":"Jigsaw Competition","ja":"ジグソーパズル大会"},"desc":{"en":"Students work individually or in teams to complete puzzles as quickly and accurately as possible. This fun event encourages problem-solving, teamwork, and perseverance.","ja":"個人またはチームで、できるだけ速く正確にパズルを完成させます。問題解決力、チームワーク、粘り強さを育む楽しい行事です。"},"image":"compass/images/events/2026-08-24-jigsaw-competition.webp"},{"id":"2026-08-28-movie-night","start":"2026-08-28","end":"2026-08-28","aud":["club"],"parents":true,"title":{"en":"Movie Night","ja":"ムービーナイト"},"desc":{"en":"A fun community event where students, parents, and staff come together to enjoy a movie in a relaxed and friendly atmosphere.","ja":"生徒、保護者、教職員が集まり、和やかな雰囲気の中で映画を楽しむコミュニティイベントです。"},"image":"compass/images/events/2026-08-28-movie-night.webp"},{"id":"2026-09-01-bring-your-favourite-book-day","start":"2026-09-01","end":"2026-09-01","aud":["primary","elc"],"parents":false,"title":{"en":"Bring Your Favourite Book Day","ja":"お気に入りの本を持ってくる日"},"desc":{"en":"Students are encouraged to bring a favorite book from home to share with classmates. This event celebrates reading and helps students discover new books through recommendations from friends.","ja":"お気に入りの本を家から持ってきて、クラスメートと紹介し合います。読書の楽しさを分かち合い、友達のおすすめから新しい本に出会うきっかけとなる行事です。"},"image":"compass/images/events/2026-09-01-bring-your-favourite-book-day.webp"},{"id":"2026-09-04-art-workshop","start":"2026-09-04","end":"2026-09-04","aud":["club"],"parents":true,"title":{"en":"Art Workshop","ja":"アートワークショップ"},"desc":{"en":"A creative activity where parents come together to explore art, express their ideas, and enjoy a relaxing and enjoyable experience through hands-on artistic activities.","ja":"保護者の皆様が集まり、実際の制作を通してアートに触れ、アイデアを表現し、ゆったりと楽しい時間を過ごす創作活動です。"},"image":"compass/images/events/2026-09-04-art-workshop.webp"},{"id":"2026-09-09-speed-typing-competition","start":"2026-09-09","end":"2026-09-09","aud":["secondary"],"parents":false,"title":{"en":"Speed Typing Competition","ja":"タイピング大会"},"desc":{"en":"Students will participate in a friendly typing competition designed to improve keyboarding skills, accuracy, and confidence.","ja":"キーボード操作のスキル、正確さ、自信を高めることを目的とした、親善タイピング大会に参加します。"},"image":"compass/images/events/2026-09-09-speed-typing-competition.webp"},{"id":"2026-09-12-sat-test-2","start":"2026-09-12","end":"2026-09-12","aud":["high"],"parents":false,"title":{"en":"SAT Test #2","ja":"SAT試験 第2回"},"desc":{"en":"An internationally recognized university entrance exam. Our school is an official SAT test center, and both Enishi students and external students are welcome to take the test on campus.","ja":"国際的に認められた大学入学試験です。本校はSAT公式試験会場であり、本校生徒・外部生徒ともに校内で受験できます。"},"image":"compass/images/events/2026-09-12-sat-test-2.webp"},{"id":"2026-09-14-friendly-basketball-tournament-internal","start":"2026-09-14","end":"2026-09-18","aud":["secondary"],"parents":false,"title":{"en":"Friendly Basketball Tournament (Internal)","ja":"校内バスケットボール親善大会"},"desc":{"en":"Students will take part in a friendly internal basketball tournament, promoting teamwork, sportsmanship, and school spirit.","ja":"校内でのバスケットボール親善大会に参加し、チームワーク、スポーツマンシップ、愛校心を育みます。"},"image":"compass/images/events/2026-09-14-friendly-basketball-tournament-internal.webp"},{"id":"2026-09-14-concept-con-global-mindedness","start":"2026-09-14","end":"2026-09-18","aud":["primary","elc"],"parents":false,"title":{"en":"Concept Con (Global Mindedness)","ja":"コンセプト・コン（グローバルな視野）"},"desc":{"en":"Planned learning and understanding of global perspectives through projects, presentations, and activities. The event encourages curiosity, empathy, and international-mindedness.","ja":"プロジェクト、発表、活動を通して、グローバルな視点について計画的に学び理解を深めます。好奇心、共感力、国際的な視野を育む行事です。"},"image":"compass/images/events/2026-09-14-concept-con-global-mindedness.webp"},{"id":"2026-09-18-coffee-hour","start":"2026-09-18","end":"2026-09-18","aud":["elc"],"parents":true,"title":{"en":"Coffee Hour","ja":"コーヒーアワー"},"desc":{"en":"Parents and guardians are invited to connect with school leaders and other families in a relaxed setting. It is a wonderful opportunity to build community and stay informed.","ja":"保護者の皆様が、和やかな雰囲気の中で学校管理職や他のご家庭と交流できる場です。コミュニティを築き、学校の情報を得る絶好の機会です。"},"image":"compass/images/events/2026-09-18-coffee-hour.webp"},{"id":"2026-09-25-open-campus","start":"2026-09-25","end":"2026-09-25","aud":["whole"],"parents":false,"title":{"en":"Open Campus","ja":"オープンキャンパス"},"desc":{"en":"Any person interested in seeing the daily operation of the school is invited to join a tour of the school during its regular hours.","ja":"学校の日常の様子にご関心のある方は、通常授業時間中の校内見学にご参加いただけます。"},"image":"compass/images/events/2026-09-25-open-campus.webp"},{"id":"2026-09-28-spirit-week","start":"2026-09-28","end":"2026-09-30","aud":["whole"],"parents":false,"title":{"en":"Spirit Week","ja":"スピリットウィーク"},"desc":{"en":"A school wide event focused on raising awareness for wellbeing.","ja":"ウェルビーイング（心身の健康）への意識を高めることを目的とした全校行事です。"},"image":"compass/images/events/2026-09-28-spirit-week.webp"},{"id":"2026-10-03-world-tea-party","start":"2026-10-03","end":"2026-10-03","aud":["club"],"parents":true,"title":{"en":"World Tea Party","ja":"ワールド・ティーパーティー"},"desc":{"en":"A gathering where parents enjoy tasting different teas and foods from around the world while sharing conversations and cultural experiences together.","ja":"保護者の皆様が世界各国のお茶や料理を味わいながら、会話や文化体験を分かち合う集いです。"},"image":"compass/images/events/2026-10-03-world-tea-party.webp"},{"id":"2026-10-03-sat-test-3","start":"2026-10-03","end":"2026-10-03","aud":["high"],"parents":false,"title":{"en":"SAT Test #3","ja":"SAT試験 第3回"},"desc":{"en":"An internationally recognized university entrance exam. Our school is an official SAT test center, and both Enishi students and external students are welcome to take the test on campus.","ja":"国際的に認められた大学入学試験です。本校はSAT公式試験会場であり、本校生徒・外部生徒ともに校内で受験できます。"},"image":"compass/images/events/2026-10-03-sat-test-3.webp"},{"id":"2026-10-03-dp-rafting-trip","start":"2026-10-03","end":"2026-10-03","aud":["high"],"parents":false,"title":{"en":"DP Rafting Trip","ja":"DPラフティング"},"desc":{"en":"DP students will take part in a rafting activity to build community, strengthen teamwork, and enjoy time together outside the classroom.","ja":"DP生徒がラフティングに参加し、仲間との絆を深め、チームワークを高め、教室の外で共に過ごす時間を楽しみます。"},"image":"compass/images/events/2026-10-03-dp-rafting-trip.webp"},{"id":"2026-10-07-career-support-and-mental-health-round-table","start":"2026-10-07","end":"2026-10-07","aud":["high"],"parents":true,"title":{"en":"Career Support and Mental Health Round Table","ja":"進路支援・メンタルヘルス座談会"},"desc":{"en":"An informative event where students can learn about IB university admissions, holistic admissions strategies in Japan and abroad, and explore future academic and career opportunities through discussions with experts and representatives.","ja":"専門家や関係者との対話を通して、IBでの大学入試、国内外の総合型選抜の戦略について学び、将来の進学やキャリアの可能性を探る説明会です。"},"image":"compass/images/events/2026-10-07-career-support-and-mental-health-round-table.webp"},{"id":"2026-10-09-high-school-curriculum-night","start":"2026-10-09","end":"2026-10-09","aud":["high"],"parents":false,"title":{"en":"High School Curriculum Night","ja":"高等部カリキュラム説明会"},"desc":{"en":"An information session for students to learn about the IB Diploma Programme, course choices, academic expectations, and pathways to university.","ja":"IBディプロマ・プログラム、科目選択、学業面で求められること、大学への進路について学ぶ説明会です。"},"image":"compass/images/events/2026-10-09-high-school-curriculum-night.webp"},{"id":"2026-10-09-eagle-bucks-store","start":"2026-10-09","end":"2026-10-09","aud":["primary"],"parents":false,"title":{"en":"Eagle Bucks Store","ja":"イーグルバックス・ストア"},"desc":{"en":"Students can use their earned Eagle Bucks to purchase rewards and special items. The store reinforces positive behavior, responsibility, and goal-setting.","ja":"獲得したイーグルバックスを使って、ごほうびや特別なアイテムと交換できます。前向きな行動、責任感、目標設定を後押しする取り組みです。"},"image":"compass/images/events/2026-10-09-eagle-bucks-store.webp"},{"id":"2026-10-19-elc-primary-curriculum-night","start":"2026-10-19","end":"2026-10-19","aud":["primary","elc"],"parents":false,"title":{"en":"ELC & Primary Curriculum Night","ja":"ELC・初等部カリキュラム説明会"},"desc":{"en":"Families are invited to learn about the curriculum, classroom routines, and learning goals for the year. This event helps strengthen the home-school partnership.","ja":"カリキュラム、教室での日課、今年度の学習目標についてご紹介します。家庭と学校の連携を深める行事です。"},"image":"compass/images/events/2026-10-19-elc-primary-curriculum-night.webp"},{"id":"2026-10-19-parent-teacher-conferences","start":"2026-10-19","end":"2026-10-19","aud":["whole"],"parents":true,"title":{"en":"Parent Teacher Conferences","ja":"保護者面談"},"desc":{"en":"Parents meet one-on-one with each teacher to discuss their child's progress, strengths, and next steps. The school campus is closed to students on this day.","ja":"保護者の皆様が各担当教員と個別に面談し、お子様の成長、強み、今後の課題についてお話しします。当日、生徒は登校しません。"},"image":"compass/images/events/2026-10-19-parent-teacher-conferences.webp","noClasses":true},{"id":"2026-10-20-secondary-curriculum-night","start":"2026-10-20","end":"2026-10-20","aud":["secondary"],"parents":false,"title":{"en":"Secondary Curriculum Night","ja":"中等部カリキュラム説明会"},"desc":{"en":"Secondary parents are invited to Curriculum Night to learn more about subject expectations, learning goals, assessment, and support for students in Grades 6 to 10.","ja":"中等部の保護者の皆様を対象に、6～10年生の各教科で求められること、学習目標、評価、生徒への支援についてご説明します。"},"image":"compass/images/events/2026-10-20-secondary-curriculum-night.webp"},{"id":"2026-10-21-college-fair","start":"2026-10-21","end":"2026-10-21","aud":["high"],"parents":true,"title":{"en":"College Fair","ja":"大学フェア"},"desc":{"en":"A special event where representatives from several international and Japanese universities visit our school to introduce their programs and admission opportunities. The fair is open to all students and parents, and students from other international schools in the area are also invited to attend.","ja":"国内外の複数の大学の担当者が来校し、各大学のプログラムや入学機会を紹介する特別イベントです。全生徒・保護者が参加でき、近隣のインターナショナルスクールの生徒もご招待しています。"},"image":"compass/images/events/2026-10-21-college-fair.webp"},{"id":"2026-10-23-nagoya-university-biology-laboratory-visit","start":"2026-10-23","end":"2026-10-23","aud":["high"],"parents":false,"title":{"en":"Nagoya University Biology Laboratory Visit","ja":"名古屋大学 生物学研究室訪問"},"desc":{"en":"Grade 11 and 12 Biology students will visit Nagoya University for a guided laboratory experience, connecting classroom learning with real-world scientific research.","ja":"11・12年生の生物履修者が名古屋大学を訪問し、研究室での体験を通して授業での学びと実際の科学研究を結びつけます。"},"image":"compass/images/events/2026-10-23-nagoya-university-biology-laboratory-visit.webp"},{"id":"2026-10-25-pta-picnic","start":"2026-10-25","end":"2026-10-25","aud":["pta"],"parents":false,"title":{"en":"PTA Picnic","ja":"PTAピクニック"},"desc":{"en":"Families, students, and staff come together for a fun outdoor gathering that strengthens relationships and builds school community.","ja":"ご家族、生徒、教職員が集まり、屋外で楽しく交流しながら絆を深め、学校コミュニティを育みます。"},"image":"compass/images/events/2026-10-25-pta-picnic.webp"},{"id":"2026-10-26-toyota-college-trip","start":"2026-10-26","end":"2026-10-26","aud":["secondary"],"parents":false,"title":{"en":"Toyota College Trip","ja":"豊田高専 見学"},"desc":{"en":"Grade 8 Science students will visit Toyota College for a curriculum-based learning experience connected to their science studies.","ja":"8年生が理科の授業と関連したカリキュラムに基づく学習として、豊田高専を訪問します。"},"image":"compass/images/events/2026-10-26-toyota-college-trip.webp"},{"id":"2026-10-30-sensory-wonderland","start":"2026-10-30","end":"2026-10-30","aud":["primary"],"parents":false,"title":{"en":"Sensory Wonderland","ja":"センサリー・ワンダーランド"},"desc":{"en":"Students explore a variety of interactive sensory experiences designed to engage curiosity, creativity, and learning through play.","ja":"好奇心と創造性を刺激し、遊びを通して学ぶ、さまざまな体験型の感覚活動を楽しみます。"}},{"id":"2026-10-31-international-mindedness-festival","start":"2026-10-31","end":"2026-10-31","aud":["whole"],"parents":true,"title":{"en":"International Mindedness Festival","ja":"インターナショナル・マインドネス・フェスティバル"},"desc":{"en":"The whole school community, including parents, will take part in IMF, a full-day event celebrating community, culture, and shared school experiences.","ja":"保護者の皆様を含む学校コミュニティ全体で、コミュニティと文化、そして共に過ごす学校生活を祝う終日行事「IMF」に参加します。"},"image":"compass/images/events/2026-10-31-international-mindedness-festival.webp"},{"id":"2026-11-04-elc-sports-day-rehearsal-1","start":"2026-11-04","end":"2026-11-04","aud":["elc"],"parents":false,"title":{"en":"ELC Sports Day Rehearsal #1","ja":"ELC運動会リハーサル #1"},"desc":{"en":"During Sports Day practice, students participate in a variety of physical activities, team games, relays, and event rehearsals in preparation for Sports Day. They develop teamwork, cooperation, sportsmanship, and physical fitness while learning event procedures, safety expectations, and cheering routines. Practice sessions help students build confidence and ensure they are prepared to participate successfully in the Sports Day celebration.","ja":"運動会に向けた練習では、さまざまな運動、チームゲーム、リレー、種目のリハーサルに取り組みます。進行の流れ、安全面のルール、応援の仕方を学びながら、チームワーク、協調性、スポーツマンシップ、体力を養います。練習を通して自信をつけ、運動会当日に力を発揮できるよう準備します。"},"image":"compass/images/events/2026-11-04-elc-sports-day-rehearsal-1.webp"},{"id":"2026-11-05-toyota-museum-field-trip","start":"2026-11-05","end":"2026-11-05","aud":["secondary"],"parents":false,"title":{"en":"Toyota Museum Field Trip","ja":"トヨタ博物館 校外学習"},"desc":{"en":"Grade 9 students go to the Toyota museum down the road and view the exhibits taking some notes on machines they learned about.","ja":"9年生が近くのトヨタの博物館を訪れ、授業で学んだ機械について展示を見学しながらメモを取ります。"},"image":"compass/images/events/2026-11-05-toyota-museum-field-trip.webp"},{"id":"2026-11-06-extracurricular-activities-autumn-cas-project-su","start":"2026-11-06","end":"2026-11-06","aud":["secondary"],"parents":true,"title":{"en":"Extracurricular Activities: Autumn CAS & Project Support Fair","ja":"課外活動：秋のCAS・プロジェクト支援フェア"},"desc":{"en":"Secondary PTA Supported Event to help students understand various volunteering and CAS project opportunities in the community. Open to MYP and DP Students.","ja":"中等部PTAの支援による行事で、地域でのさまざまなボランティアやCASプロジェクトの機会について知ることができます。MYP・DP生徒が対象です。"},"image":"compass/images/events/2026-11-06-extracurricular-activities-autumn-cas-project-su.webp"},{"id":"2026-11-07-sat-test-4","start":"2026-11-07","end":"2026-11-07","aud":["high"],"parents":false,"title":{"en":"SAT Test #4","ja":"SAT試験 第4回"},"desc":{"en":"An internationally recognized university entrance exam. Our school is an official SAT test center, and both Enishi students and external students are welcome to take the test on campus.","ja":"国際的に認められた大学入学試験です。本校はSAT公式試験会場であり、本校生徒・外部生徒ともに校内で受験できます。"},"image":"compass/images/events/2026-11-07-sat-test-4.webp"},{"id":"2026-11-09-wellbeing-week","start":"2026-11-09","end":"2026-11-13","aud":["whole"],"parents":false,"title":{"en":"Wellbeing Week","ja":"ウェルビーイング週間"},"desc":{"en":"A school wide event focused on raising awareness for wellbeing.","ja":"ウェルビーイング（心身の健康）への意識を高めることを目的とした全校行事です。"},"image":"compass/images/events/2026-11-09-wellbeing-week.webp"},{"id":"2026-11-11-elc-sports-day-rehearsal-2","start":"2026-11-11","end":"2026-11-11","aud":["elc"],"parents":false,"title":{"en":"ELC Sports Day Rehearsal #2","ja":"ELC運動会リハーサル #2"},"desc":{"en":"During Sports Day practice, students participate in a variety of physical activities, team games, relays, and event rehearsals in preparation for Sports Day. They develop teamwork, cooperation, sportsmanship, and physical fitness while learning event procedures, safety expectations, and cheering routines. Practice sessions help students build confidence and ensure they are prepared to participate successfully in the Sports Day celebration.","ja":"運動会に向けた練習では、さまざまな運動、チームゲーム、リレー、種目のリハーサルに取り組みます。進行の流れ、安全面のルール、応援の仕方を学びながら、チームワーク、協調性、スポーツマンシップ、体力を養います。練習を通して自信をつけ、運動会当日に力を発揮できるよう準備します。"},"image":"compass/images/events/2026-11-11-elc-sports-day-rehearsal-2.webp"},{"id":"2026-11-14-elc-sports-day","start":"2026-11-14","end":"2026-11-14","aud":["elc"],"parents":false,"title":{"en":"ELC Sports Day","ja":"ELC運動会"},"desc":{"en":"During Sports Day, students participate in a variety of athletic events, relay races, team challenges, and cooperative games. They demonstrate teamwork, perseverance, sportsmanship, and school spirit while celebrating physical activity and healthy competition. Sports Day provides an opportunity for students to challenge themselves, support their peers, and enjoy a fun day of community participation and achievement.","ja":"運動会では、さまざまな競技、リレー、チーム対抗戦、協力ゲームに参加します。体を動かすことと健全な競争を楽しみながら、チームワーク、粘り強さ、スポーツマンシップ、愛校心を発揮します。自分に挑戦し、仲間を応援し、コミュニティ全体で達成感を味わう楽しい一日です。"},"image":"compass/images/events/2026-11-14-elc-sports-day.webp"},{"id":"2026-11-16-friendly-soccer-tournament-internal","start":"2026-11-16","end":"2026-11-20","aud":["secondary"],"parents":false,"title":{"en":"Friendly Soccer Tournament (Internal)","ja":"校内サッカー親善大会"},"desc":{"en":"Students will take part in a friendly internal soccer tournament, promoting teamwork, sportsmanship, and school spirit.","ja":"校内でのサッカー親善大会に参加し、チームワーク、スポーツマンシップ、愛校心を育みます。"},"image":"compass/images/events/2026-11-16-friendly-soccer-tournament-internal.webp"},{"id":"2026-11-17-foundation-field-trip","start":"2026-11-17","end":"2026-11-17","aud":["elc"],"parents":true,"title":{"en":"Foundation Field Trip","ja":"ファウンデーション校外学習"},"desc":{"en":"Our youngest learners will enjoy an age-appropriate educational excursion that supports classroom learning through hands-on experiences.","ja":"年少の子どもたちが、年齢に合った校外学習に出かけ、体験を通して教室での学びを深めます。"},"image":"compass/images/events/2026-11-17-foundation-field-trip.webp"},{"id":"2026-11-20-gifu-kakamigahara-air-and-space-museum","start":"2026-11-20","end":"2026-11-20","aud":["secondary"],"parents":false,"title":{"en":"Gifu Kakamigahara Air and Space Museum","ja":"岐阜かかみがはら航空宇宙博物館"},"desc":{"en":"Students will be going to the air and space museum to complete a practical where they will be analyzing plane design throughout history.","ja":"航空宇宙博物館を訪れ、歴史を通じた飛行機のデザインを分析する実習に取り組みます。"},"image":"compass/images/events/2026-11-20-gifu-kakamigahara-air-and-space-museum.webp"},{"id":"2026-11-24-winter-art-contest","start":"2026-11-24","end":"2026-11-25","aud":["primary","elc"],"parents":true,"title":{"en":"Winter Art Contest","ja":"冬のアートコンテスト"},"desc":{"en":"Students showcase their art that they have been working on with the visual arts teacher at an art showcase. Selected pieces will be displayed and celebrated within the school community.","ja":"美術の先生と取り組んできた作品を作品展で発表します。選ばれた作品は校内に展示され、学校コミュニティで共に称えます。"},"image":"compass/images/events/2026-11-24-winter-art-contest.webp"},{"id":"2026-11-27-parents-morning-1","start":"2026-11-27","end":"2026-11-27","aud":["primary","elc"],"parents":true,"title":{"en":"Parents Morning #1","ja":"保護者モーニング参観 #1"},"desc":{"en":"ELC and Primary Parents are invited to come and see the lessons in the morning and experience the morning routines with their child.","ja":"ELC・初等部の保護者の皆様をお招きし、朝の授業をご参観いただき、お子様と一緒に朝の日課を体験していただきます。"},"image":"compass/images/events/2026-11-27-parents-morning-1.webp"},{"id":"2026-11-27-teacher-appreciation-day","start":"2026-11-27","end":"2026-11-27","aud":["whole"],"parents":false,"title":{"en":"Teacher Appreciation Day","ja":"教員感謝デー"},"desc":{"en":"The school community will celebrate Teacher Appreciation Day by recognizing and thanking teachers for their dedication, care, and support.","ja":"学校コミュニティ全体で、教員の献身、思いやり、支えに感謝を伝える日です。"},"image":"compass/images/events/2026-11-27-teacher-appreciation-day.webp"},{"id":"2026-11-28-2026-enishi-futsal-tournament","start":"2026-11-28","end":"2026-11-28","aud":["secondary"],"parents":false,"title":{"en":"2026 - Enishi Futsal Tournament","ja":"2026 Enishiフットサル大会"},"desc":{"en":"Enishi will host a Middle School Futsal tournament at our school with multiple schools participating.","ja":"本校にて複数校が参加する中学生フットサル大会を開催します。"},"image":"compass/images/events/2026-11-28-2026-enishi-futsal-tournament.webp"},{"id":"2026-12-03-grade-3-4-musical","start":"2026-12-03","end":"2026-12-04","aud":["primary"],"parents":true,"title":{"en":"Grade 3, 4 Musical","ja":"3・4年生ミュージカル"},"desc":{"en":"Students present a musical performance showcasing their talents in singing, acting, and teamwork. Families are invited to enjoy this special production.","ja":"歌、演技、チームワークを披露するミュージカルを上演します。ご家族の皆様もぜひこの特別な公演をお楽しみください。"},"image":"compass/images/events/2026-12-03-grade-3-4-musical.webp"},{"id":"2026-12-05-sat-test-5","start":"2026-12-05","end":"2026-12-05","aud":["high"],"parents":false,"title":{"en":"SAT Test #5","ja":"SAT試験 第5回"},"desc":{"en":"An internationally recognized university entrance exam. Our school is an official SAT test center, and both Enishi students and external students are welcome to take the test on campus.","ja":"国際的に認められた大学入学試験です。本校はSAT公式試験会場であり、本校生徒・外部生徒ともに校内で受験できます。"},"image":"compass/images/events/2026-12-05-sat-test-5.webp"},{"id":"2026-12-10-choir-and-orchestra-concert","start":"2026-12-10","end":"2026-12-10","aud":["secondary"],"parents":true,"title":{"en":"Choir and Orchestra Concert","ja":"合唱・オーケストラコンサート"},"desc":{"en":"Choir class and orchestra club will perform the music repertoire they have been rehearsing for an audience of family, peers and teachers.","ja":"合唱クラスとオーケストラクラブが、練習を重ねてきた曲目をご家族、友人、教員の前で演奏します。"},"image":"compass/images/events/2026-12-10-choir-and-orchestra-concert.webp"},{"id":"2026-12-11-silent-auction","start":"2026-12-11","end":"2026-12-11","aud":["primary"],"parents":true,"title":{"en":"Silent Auction","ja":"サイレントオークション"},"desc":{"en":"Families and community members can bid on donated items and experiences to support initiatives chosen by the primary student council.","ja":"ご家族や地域の皆様が寄付された品物や体験に入札し、初等部生徒会が選んだ取り組みを支援します。"},"image":"compass/images/events/2026-12-11-silent-auction.webp"},{"id":"2026-12-16-industry-visit-tech-company","start":"2026-12-16","end":"2026-12-16","aud":["secondary"],"parents":false,"title":{"en":"Industry Visit (Tech Company)","ja":"企業訪問（テクノロジー企業）"},"desc":{"en":"Students will visit a local technology company to gain firsthand insight into the modern workplace and explore careers in technology and innovation.","ja":"地元のテクノロジー企業を訪問し、現代の職場を直接知るとともに、テクノロジーやイノベーション分野のキャリアについて考えます。"},"image":"compass/images/events/2026-12-16-industry-visit-tech-company.webp"},{"id":"2026-12-16-winter-party-eagle-nest","start":"2026-12-16","end":"2026-12-16","aud":["primary","elc"],"parents":false,"title":{"en":"Winter Party (Eagle Nest)","ja":"ウィンターパーティー（イーグルネスト）"},"desc":{"en":"Students celebrate the season with fun activities, games, and opportunities to connect with peers in their Eagle Nests. This is led by the primary student council.","ja":"イーグルネストごとに、楽しい活動やゲームを通して仲間と交流し、季節を祝います。初等部生徒会が主催します。"},"image":"compass/images/events/2026-12-16-winter-party-eagle-nest.webp"},{"id":"2026-12-17-talent-day","start":"2026-12-17","end":"2026-12-17","aud":["primary"],"parents":true,"title":{"en":"Talent Day","ja":"タレントデー"},"desc":{"en":"Students have the opportunity to showcase their unique talents and interests in a supportive and encouraging environment led by the performing arts teacher.","ja":"舞台芸術の先生のもと、温かく励まし合う雰囲気の中で、一人ひとりの特技や興味を披露します。"},"image":"compass/images/events/2026-12-17-talent-day.webp"},{"id":"2026-12-18-tea-party-pta-for-all","start":"2026-12-18","end":"2026-12-18","aud":["pta"],"parents":true,"title":{"en":"Tea Party / PTA for all","ja":"ティーパーティー／PTA（どなたでも）"},"desc":{"en":"Families are invited to enjoy refreshments while connecting with the PTA, school staff, and other members of the community.","ja":"軽食を楽しみながら、PTA、教職員、コミュニティの皆様と交流していただける集いです。"},"image":"compass/images/events/2026-12-18-tea-party-pta-for-all.webp"},{"id":"2026-12-18-eagle-bucks-store","start":"2026-12-18","end":"2026-12-18","aud":["primary","elc"],"parents":false,"title":{"en":"Eagle Bucks Store","ja":"イーグルバックス・ストア"},"desc":{"en":"Students can use their earned Eagle Bucks to purchase rewards and special items. The store reinforces positive behavior, responsibility, and goal-setting.","ja":"獲得したイーグルバックスを使って、ごほうびや特別なアイテムと交換できます。前向きな行動、責任感、目標設定を後押しする取り組みです。"},"image":"compass/images/events/2026-12-18-eagle-bucks-store.webp"},{"id":"2026-12-19-end-of-term-1-activity-sleep-over-program-g6-10","start":"2026-12-19","end":"2026-12-19","aud":["secondary"],"parents":false,"title":{"en":"End of Term 1 Activity-Sleep Over Program: G6-10","ja":"第1学期末行事 お泊まりプログラム：G6–10"},"desc":{"en":"Grade 6 to 10 students will take part in a school sleepover program to celebrate the end of Term 1 through shared activities and community building.","ja":"6～10年生が学校でのお泊まりプログラムに参加し、共に活動しながら仲間づくりを行い、第1学期の終わりを祝います。"},"image":"compass/images/events/2026-12-19-end-of-term-1-activity-sleep-over-program-g6-10.webp"},{"id":"2026-12-21-winter-study-camp-g11-12","start":"2026-12-21","end":"2026-12-23","aud":["high"],"parents":false,"title":{"en":"Winter Study Camp: G11-12","ja":"冬季学習合宿：G11–12"},"desc":{"en":"Grade 11 and 12 students will take part in an off-campus Winter Study Camp focused on concentrated study, academic review, and exam preparation.","ja":"11・12年生が校外での冬季学習合宿に参加し、集中学習、復習、試験対策に取り組みます。"},"image":"compass/images/events/2026-12-21-winter-study-camp-g11-12.webp"},{"id":"2027-01-14-g10-parent-info-session-high-school-subject-choi","start":"2027-01-14","end":"2027-01-14","aud":["secondary"],"parents":true,"title":{"en":"G10 Parent info Session (High School Subject Choice)","ja":"G10保護者説明会（高等部の科目選択）"},"desc":{"en":"Grade 10 parents are invited to an information session about DP subject choices and guidance for planning the next stage of their child’s learning.","ja":"10年生の保護者の皆様を対象に、DPの科目選択と、お子様の次のステージの学びを計画するためのガイダンスを行います。"},"image":"compass/images/events/2027-01-14-g10-parent-info-session-high-school-subject-choi.webp"},{"id":"2027-01-22-open-campus","start":"2027-01-22","end":"2027-01-22","aud":["whole"],"parents":false,"title":{"en":"Open Campus","ja":"オープンキャンパス"},"desc":{"en":"Any person interested in seeing the daily operation of the school is invited to join a tour of the school during its regular hours.","ja":"学校の日常の様子にご関心のある方は、通常授業時間中の校内見学にご参加いただけます。"},"image":"compass/images/events/2027-01-22-open-campus.webp"},{"id":"2027-01-23-alumni-talk","start":"2027-01-23","end":"2027-01-23","aud":["high"],"parents":false,"title":{"en":"Alumni Talk","ja":"卒業生講話"},"desc":{"en":"Alumni will share their experiences and advice with students, offering insight into life after School and future pathways.","ja":"卒業生が自身の経験やアドバイスを生徒に伝え、卒業後の生活や将来の進路について話します。"},"image":"compass/images/events/2027-01-23-alumni-talk.webp"},{"id":"2027-01-27-natural-disaster-field-trip","start":"2027-01-27","end":"2027-01-27","aud":["elc"],"parents":false,"title":{"en":"Natural Disaster Field Trip","ja":"防災校外学習"},"desc":{"en":"Students explore disaster preparedness and safety through interactive learning experiences related to natural disasters and emergency response.","ja":"自然災害や緊急時の対応に関する体験型学習を通して、防災と安全について学びます。"},"image":"compass/images/events/2027-01-27-natural-disaster-field-trip.webp"},{"id":"2027-01-30-model-united-nations-event-mun","start":"2027-01-30","end":"2027-01-30","aud":["secondary"],"parents":false,"title":{"en":"Model United Nations Event (MUN)","ja":"模擬国連（MUN）"},"desc":{"en":"Students will participate in Model United Nations, developing public speaking, research, collaboration, and global awareness through discussion of real-world issues.","ja":"模擬国連に参加し、現実の課題について議論することで、スピーチ力、調査力、協働する力、国際的な意識を育みます。"},"image":"compass/images/events/2027-01-30-model-united-nations-event-mun.webp"},{"id":"2027-02-01-friendly-volleyball-tournament-internal","start":"2027-02-01","end":"2027-02-05","aud":["secondary"],"parents":false,"title":{"en":"Friendly Volleyball Tournament (Internal)","ja":"校内バレーボール親善大会"},"desc":{"en":"Students will take part in a friendly internal volleyball tournament, promoting teamwork, sportsmanship, and school spirit.","ja":"校内でのバレーボール親善大会に参加し、チームワーク、スポーツマンシップ、愛校心を育みます。"},"image":"compass/images/events/2027-02-01-friendly-volleyball-tournament-internal.webp"},{"id":"2027-02-01-concept-con-language","start":"2027-02-01","end":"2027-02-05","aud":["primary","elc"],"parents":false,"title":{"en":"Concept Con (Language)","ja":"コンセプト・コン（言語）"},"desc":{"en":"Students celebrate language and communication through presentations, performances, and projects that showcase their learning and creativity.","ja":"学びと創造性を示す発表、パフォーマンス、プロジェクトを通して、言語とコミュニケーションを祝います。"},"image":"compass/images/events/2027-02-01-concept-con-language.webp"},{"id":"2027-02-18-career-support-second-career-roundtable-and-care","start":"2027-02-18","end":"2027-02-18","aud":["high"],"parents":true,"title":{"en":"Career Support: Second Career Roundtable and Career Fair","ja":"進路支援：セカンドキャリア座談会・キャリアフェア"},"desc":{"en":"An informative event where students and parents can learn about IB university admissions, holistic admissions strategies in Japan and abroad, and explore future academic and career opportunities through discussions with experts and representatives.","ja":"専門家や関係者との対話を通して、生徒と保護者の皆様がIBでの大学入試、国内外の総合型選抜の戦略について学び、将来の進学やキャリアの可能性を探る説明会です。"},"image":"compass/images/events/2027-02-18-career-support-second-career-roundtable-and-care.webp"},{"id":"2027-02-19-collective-field-trip","start":"2027-02-19","end":"2027-02-19","aud":["primary"],"parents":false,"title":{"en":"Collective Field Trip","ja":"合同校外学習"},"desc":{"en":"Students participate in an off-campus learning experience that connects classroom learning with real-world exploration and discovery.","ja":"校外での学習体験を通して、教室での学びを実社会での探究や発見と結びつけます。"},"image":"compass/images/events/2027-02-19-collective-field-trip.webp"},{"id":"2027-02-22-world-thinking-day","start":"2027-02-22","end":"2027-02-22","aud":["primary","elc"],"parents":false,"title":{"en":"World Thinking Day","ja":"ワールド・シンキング・デー"},"desc":{"en":"Students learn about cultures, traditions, and global citizenship while celebrating international understanding and connection.","ja":"国際理解とつながりを祝いながら、さまざまな文化や伝統、地球市民としてのあり方について学びます。"},"image":"compass/images/events/2027-02-22-world-thinking-day.webp"},{"id":"2027-02-22-secondary-sports-day-rehearsal-1","start":"2027-02-22","end":"2027-02-22","aud":["secondary"],"parents":false,"title":{"en":"Secondary Sports Day Rehearsal #1","ja":"中等部運動会リハーサル #1"},"desc":{"en":"Secondary students will prepare for Sports Day by practicing event routines, team organization, and activity expectations.","ja":"中等部の生徒が、種目の流れ、チーム編成、活動のルールを練習し、運動会に向けて準備します。"},"image":"compass/images/events/2027-02-22-secondary-sports-day-rehearsal-1.webp"},{"id":"2027-02-25-primary-sports-day-rehearsal-1","start":"2027-02-25","end":"2027-02-25","aud":["primary"],"parents":false,"title":{"en":"Primary Sports Day Rehearsal #1","ja":"初等部運動会リハーサル #1"},"desc":{"en":"Students begin preparing for Sports Day by practicing events, routines, and teamwork activities.","ja":"種目、流れ、チームワークの練習を通して、運動会に向けた準備を始めます。"},"image":"compass/images/events/2027-02-25-primary-sports-day-rehearsal-1.webp"},{"id":"2027-02-26-parents-morning-2","start":"2027-02-26","end":"2027-02-26","aud":["primary","elc"],"parents":true,"title":{"en":"Parents Morning #2","ja":"保護者モーニング参観 #2"},"desc":{"en":"ELC and Primary Parents are invited to come and see the lessons in the morning and experience the morning routines with their child.","ja":"ELC・初等部の保護者の皆様をお招きし、朝の授業をご参観いただき、お子様と一緒に朝の日課を体験していただきます。"},"image":"compass/images/events/2027-02-26-parents-morning-2.webp"},{"id":"2027-02-26-eagle-talks","start":"2027-02-26","end":"2027-02-26","aud":["primary","elc"],"parents":true,"title":{"en":"Eagle Talks","ja":"イーグル・トーク"},"desc":{"en":"Students share ideas, experiences, and learning through short presentations designed to build confidence, communication, and leadership skills.","ja":"短いプレゼンテーションを通して考えや経験、学びを共有し、自信、コミュニケーション力、リーダーシップを育みます。"},"image":"compass/images/events/2027-02-26-eagle-talks.webp"},{"id":"2027-03-04-grade-1-2-musical","start":"2027-03-04","end":"2027-03-05","aud":["primary"],"parents":true,"title":{"en":"Grade 1, 2 Musical","ja":"1・2年生ミュージカル"},"desc":{"en":"Students showcase their creativity and confidence through a musical performance featuring songs, acting, and teamwork.","ja":"歌、演技、チームワークによるミュージカルを通して、創造性と自信あふれる姿を披露します。"},"image":"compass/images/events/2027-03-04-grade-1-2-musical.webp"},{"id":"2027-03-05-higashiyama-zoo-botanical-garden","start":"2027-03-05","end":"2027-03-05","aud":["secondary"],"parents":false,"title":{"en":"Higashiyama Zoo & Botanical Garden","ja":"東山動植物園"},"desc":{"en":"Grade 7 Science students will visit Higashiyama Zoo and Botanical Gardens to support their learning through observation and real-world examples.","ja":"7年生が理科の学習の一環として東山動植物園を訪れ、観察や実物を通して学びを深めます。"},"image":"compass/images/events/2027-03-05-higashiyama-zoo-botanical-garden.webp"},{"id":"2027-03-06-sat-test-6","start":"2027-03-06","end":"2027-03-06","aud":["high"],"parents":false,"title":{"en":"SAT Test #6","ja":"SAT試験 第6回"},"desc":{"en":"An internationally recognized university entrance exam. Our school is an official SAT test center, and both Enishi students and external students are welcome to take the test on campus.","ja":"国際的に認められた大学入学試験です。本校はSAT公式試験会場であり、本校生徒・外部生徒ともに校内で受験できます。"},"image":"compass/images/events/2027-03-06-sat-test-6.webp"},{"id":"2027-03-09-primary-sports-day-rehearsal-2","start":"2027-03-09","end":"2027-03-09","aud":["primary"],"parents":false,"title":{"en":"Primary Sports Day Rehearsal #2","ja":"初等部運動会リハーサル #2"},"desc":{"en":"Students continue building skills and confidence as they prepare for Sports Day events and activities.","ja":"運動会の種目や活動に向けて準備を進めながら、技能と自信をさらに高めます。"},"image":"compass/images/events/2027-03-09-primary-sports-day-rehearsal-2.webp"},{"id":"2027-03-12-secondary-sports-day-rehearsal-2","start":"2027-03-12","end":"2027-03-12","aud":["secondary"],"parents":false,"title":{"en":"Secondary Sports Day Rehearsal #2","ja":"中等部運動会リハーサル #2"},"desc":{"en":"Secondary students will prepare for Sports Day by practicing event routines, team organization, and activity expectations.","ja":"中等部の生徒が、種目の流れ、チーム編成、活動のルールを練習し、運動会に向けて準備します。"},"image":"compass/images/events/2027-03-12-secondary-sports-day-rehearsal-2.webp"},{"id":"2027-03-18-japanese-culture-day","start":"2027-03-18","end":"2027-03-18","aud":["whole"],"parents":true,"title":{"en":"Japanese Culture Day","ja":"日本文化デー"},"desc":{"en":"Students will deepen their understanding and appreciation of Japanese culture through a variety of interactive activities with school community.","ja":"学校コミュニティとともにさまざまな体験型の活動に取り組み、日本文化への理解と関心を深めます。"},"image":"compass/images/events/2027-03-18-japanese-culture-day.webp"},{"id":"2027-03-19-eagle-bucks-store","start":"2027-03-19","end":"2027-03-19","aud":["primary","elc"],"parents":false,"title":{"en":"Eagle Bucks Store","ja":"イーグルバックス・ストア"},"desc":{"en":"Students can use their earned Eagle Bucks to purchase rewards and special items. The store reinforces positive behavior, responsibility, and goal-setting.","ja":"獲得したイーグルバックスを使って、ごほうびや特別なアイテムと交換できます。前向きな行動、責任感、目標設定を後押しする取り組みです。"},"image":"compass/images/events/2027-03-19-eagle-bucks-store.webp"},{"id":"2027-03-19-tea-party-pta-for-all","start":"2027-03-19","end":"2027-03-19","aud":["pta"],"parents":true,"title":{"en":"Tea Party / PTA for all","ja":"ティーパーティー／PTA（どなたでも）"},"desc":{"en":"A social gathering organized by the PTA and Community Club where staff and students are welcome to enjoy a variety of teas, snacks, and friendly conversation together.","ja":"PTAとコミュニティクラブが主催する交流会です。教職員や生徒も参加でき、さまざまなお茶や軽食、和やかな会話を楽しめます。"},"image":"compass/images/events/2027-03-19-tea-party-pta-for-all.webp"},{"id":"2027-03-19-end-of-term-2-activity-g9-12","start":"2027-03-19","end":"2027-03-20","aud":["high"],"parents":false,"title":{"en":"End of Term 2 Activity: G9-12","ja":"第2学期末行事：G9–12"},"desc":{"en":"Students will take part in an off-campus day trip activity to celebrate the end of Term 2.","ja":"第2学期の終わりを祝い、校外への日帰り活動に参加します。"},"image":"compass/images/events/2027-03-19-end-of-term-2-activity-g9-12.webp"},{"id":"2027-03-20-end-of-term-2-activity-g6-8","start":"2027-03-20","end":"2027-03-21","aud":["secondary"],"parents":false,"title":{"en":"End of Term 2 Activity: G6-8","ja":"第2学期末行事：G6–8"},"desc":{"en":"Students will take part in an overnight camp at an off-campus camping facility to celebrate the end of Term 2.","ja":"第2学期の終わりを祝い、校外のキャンプ施設での一泊キャンプに参加します。"},"image":"compass/images/events/2027-03-20-end-of-term-2-activity-g6-8.webp"},{"id":"2027-03-30-parent-teacher-conferences","start":"2027-03-30","end":"2027-03-30","aud":["whole"],"parents":true,"title":{"en":"Parent Teacher Conferences","ja":"保護者面談"},"desc":{"en":"Parents meet one-on-one with each teacher to discuss their child's progress, strengths, and next steps. The school campus is closed to students on this day.","ja":"保護者の皆様が各担当教員と個別に面談し、お子様の成長、強み、今後の課題についてお話しします。当日、生徒は登校しません。"},"image":"compass/images/events/2027-03-30-parent-teacher-conferences.webp","noClasses":true},{"id":"2027-03-31-secondary-sports-day-rehearsal-3","start":"2027-03-31","end":"2027-03-31","aud":["secondary"],"parents":false,"title":{"en":"Secondary Sports Day Rehearsal #3","ja":"中等部運動会リハーサル #3"},"desc":{"en":"Secondary students will prepare for Sports Day by practicing event routines, team organization, and activity expectations.","ja":"中等部の生徒が、種目の流れ、チーム編成、活動のルールを練習し、運動会に向けて準備します。"},"image":"compass/images/events/2027-03-31-secondary-sports-day-rehearsal-3.webp"},{"id":"2027-04-01-primary-sports-day-rehearsal-3","start":"2027-04-01","end":"2027-04-01","aud":["primary"],"parents":false,"title":{"en":"Primary Sports Day Rehearsal #3","ja":"初等部運動会リハーサル #3"},"desc":{"en":"The final rehearsal provides students with an opportunity to practice events and ensure they are ready for Sports Day.","ja":"最終リハーサルで各種目を練習し、運動会当日に向けて準備を整えます。"},"image":"compass/images/events/2027-04-01-primary-sports-day-rehearsal-3.webp"},{"id":"2027-04-03-sports-day","start":"2027-04-03","end":"2027-04-03","aud":["secondary"],"parents":true,"title":{"en":"Sports Day","ja":"運動会"},"desc":{"en":"Students will take part in Sports Day activities, participating in team games, athletic challenges, and school spirit events.","ja":"運動会に参加し、チームゲーム、運動競技、応援などの行事に取り組みます。"},"image":"compass/images/events/2027-04-03-sports-day.webp"},{"id":"2027-04-03-primary-sports-day-2027","start":"2027-04-03","end":"2027-04-03","aud":["primary"],"parents":true,"title":{"en":"Primary Sports Day 2027","ja":"初等部運動会 2027"},"desc":{"en":"Students participate in a day of fun, fitness, and friendly competition while demonstrating teamwork, perseverance, and sportsmanship.","ja":"チームワーク、粘り強さ、スポーツマンシップを発揮しながら、楽しく体を動かし、仲間と競い合う一日を過ごします。"},"image":"compass/images/events/2027-04-03-primary-sports-day-2027.webp"},{"id":"2027-04-15-world-art-day","start":"2027-04-15","end":"2027-04-15","aud":["primary","elc"],"parents":true,"title":{"en":"World Art Day","ja":"ワールド・アート・デー"},"desc":{"en":"Students celebrate creativity through art activities, exhibitions, and opportunities to explore different artistic styles and cultures.","ja":"アート活動や展示を通して創造性を祝い、さまざまな芸術様式や文化に触れます。"},"image":"compass/images/events/2027-04-15-world-art-day.webp"},{"id":"2027-04-16-foundation-field-trip","start":"2027-04-16","end":"2027-04-16","aud":["primary"],"parents":true,"title":{"en":"Foundation Field Trip","ja":"ファウンデーション校外学習"},"desc":{"en":"Our youngest learners will enjoy an age-appropriate educational excursion that supports classroom learning through hands-on experiences.","ja":"年少の子どもたちが、年齢に合った校外学習に出かけ、体験を通して教室での学びを深めます。"},"image":"compass/images/events/2027-04-16-foundation-field-trip.webp"},{"id":"2027-04-21-hackathon-hour-of-code","start":"2027-04-21","end":"2027-04-21","aud":["secondary"],"parents":false,"title":{"en":"Hackathon (Hour of Code)","ja":"ハッカソン（Hour of Code）"},"desc":{"en":"Students will take part in an engaging Hour of Code challenge, using creativity and problem-solving skills to build simple coding projects. This event encourages computational thinking, teamwork, and confidence in technology in a fun and supportive environment.","ja":"Hour of Codeチャレンジに参加し、創造性と問題解決力を生かして簡単なプログラミング作品を作ります。楽しく支え合う環境の中で、コンピュテーショナル・シンキング、チームワーク、テクノロジーへの自信を育みます。"},"image":"compass/images/events/2027-04-21-hackathon-hour-of-code.webp"},{"id":"2027-04-22-biology-ia-prep-field-trip-shore-ecosystem","start":"2027-04-22","end":"2027-04-22","aud":["high"],"parents":false,"title":{"en":"Biology IA Prep. Field Trip: Shore Ecosystem","ja":"生物IA準備 校外学習：海岸の生態系"},"desc":{"en":"Grade 11 and 12 Biology students will visit a shore ecosystem to prepare for their Biology Internal Assessment by collecting fieldwork data and practicing research methods.","ja":"11・12年生の生物履修者が海岸の生態系を訪れ、フィールドワークでのデータ収集や研究手法の練習を通して、生物の内部評価（IA）に向けた準備を行います。"},"image":"compass/images/events/2027-04-22-biology-ia-prep-field-trip-shore-ecosystem.webp"},{"id":"2027-04-23-g12-celebration","start":"2027-04-23","end":"2027-04-23","aud":["high"],"parents":false,"title":{"en":"G12 Celebration","ja":"G12お祝い行事"},"desc":{"en":"Grade 12 students will take part in a Graduation Walk as the school community celebrates them ahead of graduation.","ja":"卒業を前に、12年生がグラデュエーション・ウォークに参加し、学校コミュニティ全体でお祝いします。"},"image":"compass/images/events/2027-04-23-g12-celebration.webp"},{"id":"2027-04-26-grade-4-5-camping-trip","start":"2027-04-26","end":"2027-04-27","aud":["primary"],"parents":false,"title":{"en":"Grade 4, 5 Camping Trip","ja":"4・5年生キャンプ"},"desc":{"en":"Students enjoy an outdoor learning experience that promotes independence, teamwork, resilience, and a connection with nature.","ja":"自立心、チームワーク、たくましさ、自然とのつながりを育む野外学習を楽しみます。"},"image":"compass/images/events/2027-04-26-grade-4-5-camping-trip.webp"},{"id":"2027-04-27-choir-and-orchestra-concert","start":"2027-04-27","end":"2027-04-27","aud":["secondary"],"parents":true,"title":{"en":"Choir and Orchestra Concert","ja":"合唱・オーケストラコンサート"},"desc":{"en":"Choir class and orchestra club will perform the music repertoire they have been rehearsing for an audience of family, peers and teachers.","ja":"合唱クラスとオーケストラクラブが、練習を重ねてきた曲目をご家族、友人、教員の前で演奏します。"},"image":"compass/images/events/2027-04-27-choir-and-orchestra-concert.webp"},{"id":"2027-04-30-science-fair","start":"2027-04-30","end":"2027-04-30","aud":["secondary"],"parents":true,"title":{"en":"Science Fair","ja":"サイエンスフェア"},"desc":{"en":"Students will share their science projects and investigations with the school community, showcasing their research, creativity, and scientific thinking.","ja":"理科のプロジェクトや探究の成果を学校コミュニティに発表し、研究、創造性、科学的思考を披露します。"},"image":"compass/images/events/2027-04-30-science-fair.webp"},{"id":"2027-05-17-friendly-basketball-tournament-internal","start":"2027-05-17","end":"2027-05-21","aud":["secondary"],"parents":false,"title":{"en":"Friendly Basketball Tournament (Internal)","ja":"校内バスケットボール親善大会"},"desc":{"en":"Students will take part in a friendly internal basketball tournament, promoting teamwork, sportsmanship, and school spirit.","ja":"校内でのバスケットボール親善大会に参加し、チームワーク、スポーツマンシップ、愛校心を育みます。"},"image":"compass/images/events/2027-05-17-friendly-basketball-tournament-internal.webp"},{"id":"2027-05-19-entrepreneurs-day","start":"2027-05-19","end":"2027-05-20","aud":["primary","elc"],"parents":true,"title":{"en":"Entrepreneurs Day","ja":"起業家デー"},"desc":{"en":"Students develop and showcase business ideas while learning about creativity, financial literacy, problem-solving, and entrepreneurship.","ja":"創造性、金融リテラシー、問題解決、起業家精神について学びながら、ビジネスのアイデアを考え、発表します。"},"image":"compass/images/events/2027-05-19-entrepreneurs-day.webp"},{"id":"2027-05-21-collective-field-trip","start":"2027-05-21","end":"2027-05-21","aud":["primary","elc"],"parents":false,"title":{"en":"Collective Field Trip","ja":"合同校外学習"},"desc":{"en":"Students participate in a shared educational experience that promotes collaboration, inquiry, and real-world learning.","ja":"協働、探究、実社会での学びを促す合同の学習体験に参加します。"},"image":"compass/images/events/2027-05-21-collective-field-trip.webp"},{"id":"2027-05-22-saturday-school-last-day-event","start":"2027-05-22","end":"2027-05-22","aud":["secondary"],"parents":false,"title":{"en":"Saturday School Last Day Event","ja":"土曜校 最終日イベント"},"desc":{"en":"Students will take part in a relaxed final Saturday School session, with leisure activities at school to celebrate the last day.","ja":"土曜校の最終日を、校内でのレクリエーション活動とともにリラックスして過ごし、お祝いします。"},"image":"compass/images/events/2027-05-22-saturday-school-last-day-event.webp"},{"id":"2027-05-24-concept-con-future-focus","start":"2027-05-24","end":"2027-05-28","aud":["primary","elc"],"parents":false,"title":{"en":"Concept Con (Future Focus)","ja":"コンセプト・コン（未来への視点）"},"desc":{"en":"Students investigate future possibilities, innovations, and solutions to real-world challenges through inquiry-based projects and presentations.","ja":"探究型のプロジェクトや発表を通して、未来の可能性、イノベーション、現実の課題の解決策について考えます。"},"image":"compass/images/events/2027-05-24-concept-con-future-focus.webp"},{"id":"2027-05-28-g12-graduation-with-performances","start":"2027-05-28","end":"2027-05-28","aud":["high"],"parents":true,"title":{"en":"G12 Graduation with Performances","ja":"G12卒業式（パフォーマンス付き）"},"desc":{"en":"Grade 12 students will celebrate their graduation with a formal ceremony featuring student performances and the wider school community.","ja":"12年生が、生徒によるパフォーマンスを交えた式典で、学校コミュニティ全体とともに卒業を祝います。"},"image":"compass/images/events/2027-05-28-g12-graduation-with-performances.webp"},{"id":"2027-06-03-celebration-of-learning-prep","start":"2027-06-03","end":"2027-06-03","aud":["whole"],"parents":false,"title":{"en":"Celebration of Learning Prep","ja":"学びの発表会 準備"},"desc":{"en":"Students help prepare the school for the Celebration of Learning by organizing learning spaces, setting up displays, arranging materials, and ensuring classrooms and common areas are ready to welcome visitors. This preparation helps create an engaging and welcoming environment for families and guests.","ja":"学びの発表会に向けて、学習スペースの整理、展示の設営、資料の準備を行い、教室や共用エリアで来場者をお迎えできるよう整えます。ご家族やお客様にとって魅力的で温かな空間づくりにつながります。"},"image":"compass/images/events/2027-06-03-celebration-of-learning-prep.webp"},{"id":"2027-06-03-ukulele-concert","start":"2027-06-03","end":"2027-06-04","aud":["primary"],"parents":true,"title":{"en":"Ukulele Concert","ja":"ウクレレコンサート"},"desc":{"en":"Students perform musical pieces they have learned throughout the year, demonstrating their growth, confidence, and musical skills.","ja":"一年を通して学んだ曲を演奏し、成長、自信、音楽の技能を披露します。"},"image":"compass/images/events/2027-06-03-ukulele-concert.webp"},{"id":"2027-06-04-celebration-of-learning","start":"2027-06-04","end":"2027-06-04","aud":["whole"],"parents":true,"title":{"en":"Celebration of Learning","ja":"学びの発表会"},"desc":{"en":"The school community will celebrate learning as students share projects and exhibitions, including PYPX, MYPX, CAS, EE, TOK and Foundation to 4 projects.","ja":"PYPX、MYPX、CAS、EE、TOK、ファウンデーション～4年生のプロジェクトなど、生徒の作品や展示を通して学校コミュニティ全体で学びを祝います。"},"image":"compass/images/events/2027-06-04-celebration-of-learning.webp"},{"id":"2027-06-05-sat-test-7","start":"2027-06-05","end":"2027-06-05","aud":["high"],"parents":false,"title":{"en":"SAT Test #7","ja":"SAT試験 第7回"},"desc":{"en":"An internationally recognized university entrance exam. Our school is an official SAT test center, and both Enishi students and external students are welcome to take the test on campus.","ja":"国際的に認められた大学入学試験です。本校はSAT公式試験会場であり、本校生徒・外部生徒ともに校内で受験できます。"},"image":"compass/images/events/2027-06-05-sat-test-7.webp"},{"id":"2027-06-17-eagle-bucks-store","start":"2027-06-17","end":"2027-06-17","aud":["primary","elc"],"parents":false,"title":{"en":"Eagle Bucks Store","ja":"イーグルバックス・ストア"},"desc":{"en":"Students can use their earned Eagle Bucks to purchase rewards and special items. The store reinforces positive behavior, responsibility, and goal-setting.","ja":"獲得したイーグルバックスを使って、ごほうびや特別なアイテムと交換できます。前向きな行動、責任感、目標設定を後押しする取り組みです。"},"image":"compass/images/events/2027-06-17-eagle-bucks-store.webp"},{"id":"2027-06-18-kindergarten-and-grade-5-graduation","start":"2027-06-18","end":"2027-06-18","aud":["primary","elc"],"parents":true,"title":{"en":"Kindergarten and Grade 5 Graduation","ja":"幼稚部・5年生 卒業式"},"desc":{"en":"Students participate in graduation ceremonies to celebrate important milestones in their educational journey. The events recognize student growth, achievements, and readiness for the next stage of learning while bringing together families, staff, and the school community in celebration.","ja":"学びの歩みにおける大切な節目を祝う卒業式に参加します。生徒の成長と成果、そして次のステージへの準備が整ったことを、ご家族、教職員、学校コミュニティが一堂に会して祝福します。"},"image":"compass/images/events/2027-06-18-kindergarten-and-grade-5-graduation.webp"},{"id":"2027-06-18-primary-elc-year-end-performance","start":"2027-06-18","end":"2027-06-18","aud":["primary","elc"],"parents":true,"title":{"en":"Primary & ELC Year End Performance","ja":"初等部・ELC 年度末発表会"},"desc":{"en":"Students participate in music, dance, drama, and other performance activities to showcase their learning, creativity, and talents. These performances provide an opportunity to celebrate the school year and share achievements with families and the school community.","ja":"音楽、ダンス、演劇などのパフォーマンスを通して、学び、創造性、才能を披露します。一年の締めくくりを祝い、その成果をご家族や学校コミュニティと分かち合う機会です。"},"image":"compass/images/events/2027-06-18-primary-elc-year-end-performance.webp"},{"id":"2027-06-19-end-of-term-3-activity-g6-10","start":"2027-06-19","end":"2027-06-19","aud":["secondary"],"parents":false,"title":{"en":"End of Term 3 Activity: G6-10","ja":"第3学期末行事：G6–10"},"desc":{"en":"Students will take part in an off-campus day trip outside Nagoya to celebrate the end of Term 3.","ja":"第3学期の終わりを祝い、名古屋近郊への日帰り校外活動に参加します。"},"image":"compass/images/events/2027-06-19-end-of-term-3-activity-g6-10.webp"},{"id":"2027-06-22-parent-teacher-conferences","start":"2027-06-22","end":"2027-06-23","aud":["whole"],"parents":true,"title":{"en":"Parent Teacher Conferences","ja":"保護者面談"},"desc":{"en":"Parents meet one-on-one with each teacher to discuss their child's progress, strengths, and next steps. The school campus is closed to students on these days.","ja":"保護者の皆様が各担当教員と個別に面談し、お子様の成長、強み、今後の課題についてお話しします。期間中、生徒は登校しません。"},"image":"compass/images/events/2027-06-22-parent-teacher-conferences.webp","noClasses":true},{"id":"2027-06-28-summer-school","start":"2027-06-28","end":"2027-07-24","aud":["whole"],"parents":false,"title":{"en":"Summer School","ja":"サマースクール"},"desc":{"en":"Participate in fun English style summer camps that challenge students and help foster friendships and connections with others.","ja":"英語で楽しく過ごすサマーキャンプに参加し、新たなことに挑戦しながら友情や人とのつながりを育みます。"},"image":"compass/images/events/2027-06-28-summer-school.webp"}],"info":{"welcome":{"title":{"en":"Welcome to the Enishi Compass","ja":"THE ENISHI COMPASS へようこそ"},"greeting":{"en":"Dear Families,","ja":"保護者の皆様へ"},"paragraphs":[{"en":"Welcome to The Enishi Compass, our annual guide to the events, activities, celebrations, and experiences that bring our school community together throughout the academic year.","ja":"「Enishi Compass」へようこそ。本冊子は、一年を通して学校コミュニティをつなぐ行事、活動、お祝い、さまざまな体験をまとめた年間ガイドです。"},{"en":"At Enishi International School, we believe that education extends far beyond the classroom. While academic excellence remains at the heart of what we do, some of the most meaningful learning takes place through shared experiences, service, leadership opportunities, performances, competitions, cultural celebrations, excursions, and community events. These experiences help our students build confidence, develop new skills, form lasting friendships, and grow into caring and capable global citizens.","ja":"Enishi International Schoolでは、教育は教室の中だけにとどまらないと考えています。学業での卓越性は私たちの教育の中心にありますが、最も意義深い学びの多くは、共に過ごす体験、奉仕活動、リーダーシップの機会、発表、大会、文化行事、校外学習、そして地域とのイベントを通して生まれます。こうした体験を通して、生徒たちは自信を育み、新たな力を身につけ、かけがえのない友情を築き、思いやりと実行力を備えたグローバル市民へと成長していきます。"},{"en":"As you explore this calendar, you will see a rich variety of opportunities available across our school community, from ELC and Primary through Secondary and High School. This guide includes not only school-organized events, but also activities and initiatives led by our PTA and Community Club. Together, these contributions reflect the vibrant and welcoming community that makes Enishi such a special place to learn and grow.","ja":"このカレンダーには、ELC・初等部から中等部・高等部まで、学校全体にわたる多彩な機会が掲載されています。学校主催の行事に加え、PTAやコミュニティクラブが主導する活動や取り組みも含まれています。これらすべてが、Enishiを学び成長するための特別な場所にしている、活気あふれる温かなコミュニティの姿を表しています。"},{"en":"This year, we are pleased to further strengthen student engagement through the leadership of our Student Life Coordinators, Ms. Fourie (ELC - Primary) and Mr. Fatih (Secondary and High School). Working closely with our staff, students, families, PTA, and Community Club, they will help enrich and coordinate many of the experiences outlined in this guide.","ja":"今年度は、スチューデントライフ・コーディネーターのFourie先生（ELC・初等部）とFatih先生（中等部・高等部）のリーダーシップのもと、生徒の参加をさらに充実させてまいります。両先生は教職員、生徒、ご家庭、PTA、コミュニティクラブと緊密に連携し、本ガイドに掲載された多くの体験をより豊かなものにしていきます。"},{"en":"The name Compass was chosen intentionally. A compass provides direction, helps us navigate new journeys, and keeps us moving forward with purpose. We hope this guide will serve as a practical reference throughout the year while also highlighting the many opportunities available for students and families to connect, participate, and thrive together.","ja":"<strong>「Compass（コンパス）」という名前には思いが込められています。<\/strong>コンパスは方向を示し、新たな旅路を導き、目的を持って前へ進む助けとなります。本ガイドが一年を通して実用的な手引きとなり、生徒とご家庭がつながり、参加し、共に成長できる多くの機会をお伝えできれば幸いです。"},{"en":"Please note that Saturday School programs, after-school activities, and club offerings are not included in this edition of the Compass. Information regarding these programs will be shared separately at the beginning of the academic year.","ja":"<strong>土曜校プログラム、放課後活動、クラブ活動<\/strong>は本版のCompassには掲載していません。これらのプログラムについては、年度初めに別途お知らせします。"},{"en":"While we will make every effort to follow the calendar as published, circumstances may occasionally require adjustments. Should any changes become necessary, families will be informed promptly through our official communication platforms.","ja":"掲載のカレンダーどおりに実施するよう努めますが、<strong>状況により変更が必要となる場合があります<\/strong>。変更が生じた際は、学校の公式連絡手段を通じて速やかにお知らせします。"},{"en":"This is the digital version of the calendar and is the most up-to-date version of the calendar. Please check regularly for updates.","ja":"こちらはカレンダーの<strong>デジタル版<\/strong>で、常に最新の内容を掲載しています。定期的にご確認ください。"},{"en":"Thank you for being part of our community. We look forward to another year of learning, connection, service, and celebration together.","ja":"私たちのコミュニティの一員でいてくださることに<strong>感謝申し上げます<\/strong>。今年も<strong>共に学び、つながり、貢献し、喜びを分かち合う一年<\/strong>となることを楽しみにしています。"}],"signature":{"name":{"en":"Jan Baloglu","ja":"Jan Baloglu"},"role":{"en":"Head of School, Enishi International School","ja":"Enishi International School 校長"}},"image":"compass/images/site/welcome-hero.jpg"},"values":[{"en":"CARE","ja":"思いやり"},{"en":"SHARE","ja":"分かち合い"},{"en":"LEARN","ja":"学び"}],"motto":{"en":"Empowering minds. Inspiring hearts. Building a better world together.","ja":"知性を伸ばし、<br>心を動かし、<br>共により良い世界を<br>築く。"},"familiesNote":[{"en":"Some activities require registration.","ja":"一部の活動は事前登録が必要です。"},{"en":"Details will be shared via Toddle and email.","ja":"詳細はToddleおよびメールでお知らせします。"},{"en":"Times and venues may be updated when needed.","ja":"日時・会場は必要に応じて変更となる場合があります。"}],"drills":{"intro":{"en":"One safety drill is scheduled in the first week of every month. Drill types rotate so that students and staff practise responses to earthquake, fire, flood and intruder scenarios across the year.","ja":"<strong>毎月第1週<\/strong>に避難訓練を1回実施します。訓練の種類は毎回入れ替わり、生徒と教職員が一年を通して<strong>地震・火災・洪水・不審者侵入<\/strong>への対応を練習します。"},"types":[{"en":"Earthquake","ja":"地震"},{"en":"Fire","ja":"火災"},{"en":"Flood","ja":"洪水"},{"en":"Intruder","ja":"不審者"}],"schedule":{"en":"First week of every month, August 2026 – July 2027","ja":"2026年8月〜2027年7月の毎月第1週"},"note":{"en":"Exact dates within the listed week are confirmed by the Safeguarding Lead and shared on Toddle one week in advance. In the event of an actual emergency, the school follows the procedures rehearsed in these drills.","ja":"各週の具体的な実施日はセーフガーディング責任者が決定し、1週間前までにToddleでお知らせします。実際に緊急事態が発生した場合、学校はこれらの訓練で練習した手順に従って対応します。"}},"health":{"intro":{"en":"Various health checks are held during the year depending on the grade. These screenings are coordinated by the school nurse together with our visiting school doctor. The screenings form part of each student’s annual health record.","ja":"学年に応じて、年間を通してさまざまな健康診断を実施します。健診は養護教諭と学校医が連携して行い、その結果は各生徒の年間健康記録の一部となります。"},"mandatory":[{"freq":{"en":"Monthly","ja":"毎月"},"title":{"en":"Height & Weight Check","ja":"身長・体重測定"},"who":{"en":"ELC","ja":"ELC"}},{"freq":{"en":"Each Term","ja":"各学期"},"title":{"en":"Height & Weight Check","ja":"身長・体重測定"},"who":{"en":"Primary","ja":"初等部"}},{"freq":{"en":"Yearly","ja":"年1回"},"title":{"en":"Doctor Visit","ja":"学校医による健診"},"who":{"en":"ELC — twice a year · Primary — once a year","ja":"ELC — 年2回・初等部 — 年1回"}},{"freq":{"en":"One Time","ja":"1回のみ"},"title":{"en":"10th Grade X-Ray","ja":"10年生 X線検査"},"who":{"en":"Grade 10 · Conducted outside school","ja":"10年生・校外で実施"}}],"voluntary":[{"freq":{"en":"Yearly","ja":"年1回"},"title":{"en":"Physical","ja":"身体検査"},"who":{"en":"Middle School","ja":"中学生"}},{"freq":{"en":"Yearly","ja":"年1回"},"title":{"en":"Physical","ja":"身体検査"},"who":{"en":"High School","ja":"高等部"}}],"note":{"en":"* Medical check-ups for Secondary School and High School are not mandatory, but highly recommended. These check-ups take place outside of school and are not scheduled or paid for by the school. When your child completes a yearly medical check-up we kindly request that you provide a copy for Enishi so the school nurse can keep record of your child’s health.","ja":"※ 中等部・高等部の健康診断は必須ではありませんが、受診を強くお勧めします。これらの健診は校外で行われ、学校による日程調整や費用負担はありません。お子様が年1回の健康診断を受診された際は、養護教諭がお子様の健康記録を管理できるよう、結果の写しを学校にご提出ください。"}},"olympiads":{"intro":{"en":"Academic Olympiads are external competitions that celebrate the intellectual strengths of our PYP (Primary) students. Each olympiad is organised by an independent provider and focuses on a specific subject area, encouraging deeper thinking beyond the everyday curriculum.","ja":"アカデミック・オリンピアードは、<strong>PYP（初等部）の生徒<\/strong>の知的な強みを称える<strong>外部の競技会<\/strong>です。各オリンピアードは独立した団体が主催し、特定の教科分野に焦点を当てて、日々のカリキュラムを超えた深い思考を促します。"},"items":[{"name":{"en":"Robotics Olympiad","ja":"ロボティクス・オリンピアード"},"subjects":{"en":"Coding · Robotics","ja":"コーディング・ロボティクス"},"when":{"en":"February","ja":"2月"},"format":{"en":"Online","ja":"オンライン"},"logo":"compass/images/logos/logoRobotics.webp"},{"name":{"en":"Global Olympiads","ja":"グローバル・オリンピアード"},"subjects":{"en":"Singapore Maths","ja":"シンガポール算数"},"when":{"en":"March – April","ja":"3月～4月"},"format":{"en":"Online","ja":"オンライン"},"logo":"compass/images/logos/logoGlobalOlympiads.png"},{"name":{"en":"Hippo","ja":"Hippo"},"subjects":{"en":"English","ja":"英語"},"when":{"en":"May","ja":"5月"},"format":{"en":"Online / Travel","ja":"オンライン／遠征"},"logo":"compass/images/logos/logoHippo.png"},{"name":{"en":"ADEPT Competition","ja":"ADEPTコンペティション"},"subjects":{"en":"English · Arts · Science","ja":"英語・芸術・理科"},"when":{"en":"June – July","ja":"6月～7月"},"format":{"en":"Fukuoka / Hong Kong","ja":"福岡／香港"},"logo":"compass/images/logos/logoAdept.jpg"},{"name":{"en":"GJMOC","ja":"GJMOC"},"subjects":{"en":"Mathematics","ja":"数学"},"when":{"en":"July","ja":"7月"},"format":{"en":"Online","ja":"オンライン"},"logo":"compass/images/logos/logoGjmoc.jpg"}],"note":{"en":"PYP Students Only · All olympiads listed are open to Primary Year Programme students. Participation details and sign-up information will be shared via Toddle ahead of each competition window.","ja":"<strong>PYP生徒対象<\/strong> · 掲載のオリンピアードはすべてプライマリー・イヤーズ・プログラムの生徒が参加できます。参加方法や申込情報は、各大会の前にToddleでお知らせします。"}},"contact":{"address":{"en":"Kikui 2-12-32, Nishi Ward, Nagoya, Aichi 451-0044, Japan","ja":"〒451-0044 愛知県名古屋市西区菊井2-12-32"},"phone":"052-581-0700","email":"office@enishi.ac.jp","web":"https://www.enishi.ac.jp"}}}</script>
+<script>
+(function () {
+'use strict';
+var DATA = JSON.parse(document.getElementById('compass-data').textContent || '{}');
+if (!DATA.events) return;
+
+/* ---------- strings ---------- */
+var S = {
+  en: {
+    upcoming:'Upcoming', calendar:'Calendar', info:'About', search:'Search events', subscribe:'Subscribe',
+    everyone:'Everyone', parents:'Parents invited', today:'Today', tomorrow:'Tomorrow', thisWeek:'This week', nextWeek:'Next week',
+    showing:'Showing {list} + whole-school events', showingWhole:'Showing whole-school events', showingPar:'Events parents are invited to',
+    nextOff:'Next day off', offNow:'No school today', inDays:'in {n} days', until:'until {d}',
+    seeAll:'See the full calendar', noMatch:'No events match your filters.', clear:'Clear filters', results:'{n} results for “{q}”', noResults:'No events found for “{q}”.',
+    addGoogle:'Google Calendar', addIcs:'Apple / Outlook', share:'Share', copied:'Link copied', copyLink:'Copy link',
+    subTitle:'Subscribe to EIS Compass', subIntro:'Add EIS events to the calendar on your phone. A subscribed calendar updates by itself when dates change, so you always have the latest version.',
+    subNote:'Google Calendar can take up to 24 hours to show changes. On iPhone, tap “iPhone / Mac” and confirm “Subscribe”. Other apps: copy the link and add it as an internet calendar.',
+    allEvents:'All events', plusWhole:'Includes whole-school events and holidays',
+    print:'Print', printTitle:'Print or save as PDF', range:'Months', thisMonth:'{m}', wholeYear:'Whole year', language:'Language', both:'Both', onlyMine:'Only my selected sections', doPrint:'Print',
+    updated:'Last updated {d}', official:'This page is the official, up-to-date EIS calendar. Changes are also announced on Toddle.',
+    changed:'Date changed', was:'was {d}', cancelled:'Cancelled', tbc:'To be confirmed', recent:'Updated', noClasses:'No classes',
+    when:'When', time:'Time', place:'Where', forWho:'For', allDay:'All day', close:'Close', more:'+{n} more',
+    term:'Term', beforeTerm:'Summer break', letter:'Welcome letter', readMore:'Read the full letter', less:'Show less',
+    drills:'Safety drills', health:'Health checks', mandatory:'Mandatory', voluntary:'Voluntary', olympiads:'Academic Olympiads (PYP)',
+    contact:'Contact', families:'What families should know', values:'Our values',
+    legendNational:'National holiday', legendSchool:'School holiday', legendNoclass:'No classes', printed:'Printed {d}. The latest version is always online:',
+    prev:'Previous month', next:'Next month', noSchool:'No school'
+  },
+  ja: {
+    upcoming:'これから', calendar:'カレンダー', info:'ご案内', search:'イベントを検索', subscribe:'購読',
+    everyone:'すべて', parents:'保護者参加可', today:'今日', tomorrow:'明日', thisWeek:'今週', nextWeek:'来週',
+    showing:'{list}＋全校行事を表示中', showingWhole:'全校行事を表示中', showingPar:'保護者が参加できるイベント',
+    nextOff:'次のお休み', offNow:'本日は休校です', inDays:'あと{n}日', until:'{d}まで',
+    seeAll:'カレンダーをすべて見る', noMatch:'条件に合うイベントはありません。', clear:'絞り込みを解除', results:'「{q}」の検索結果：{n}件', noResults:'「{q}」に一致するイベントはありません。',
+    addGoogle:'Googleカレンダー', addIcs:'Apple・Outlook', share:'共有', copied:'リンクをコピーしました', copyLink:'リンクをコピー',
+    subTitle:'EIS Compass を購読', subIntro:'EISのイベントをスマートフォンのカレンダーに追加できます。購読したカレンダーは日程変更時に自動で更新されるため、常に最新の予定を確認できます。',
+    subNote:'Googleカレンダーでは変更の反映に最大24時間かかる場合があります。iPhoneでは「iPhone / Mac」をタップし、「照会」を確認してください。その他のアプリでは、リンクをコピーしてインターネットカレンダーとして追加してください。',
+    allEvents:'すべてのイベント', plusWhole:'全校行事・休日を含みます',
+    print:'印刷', printTitle:'印刷・PDF保存', range:'期間', thisMonth:'{m}', wholeYear:'年間すべて', language:'言語', both:'両方', onlyMine:'選択中の対象のみ', doPrint:'印刷する',
+    updated:'最終更新：{d}', official:'このページはEISの公式・最新カレンダーです。変更はToddleでもお知らせします。',
+    changed:'日程変更', was:'変更前：{d}', cancelled:'中止', tbc:'未確定', recent:'更新', noClasses:'授業なし',
+    when:'日時', time:'時間', place:'場所', forWho:'対象', allDay:'終日', close:'閉じる', more:'他{n}件',
+    term:'学期', beforeTerm:'夏休み', letter:'校長からのご挨拶', readMore:'全文を読む', less:'閉じる',
+    drills:'避難訓練', health:'健康診断', mandatory:'必須', voluntary:'任意', olympiads:'アカデミック・オリンピアード（PYP）',
+    contact:'お問い合わせ', families:'ご家庭へのお知らせ', values:'私たちの価値観',
+    legendNational:'祝日', legendSchool:'学校休日', legendNoclass:'授業なし', printed:'{d}印刷。最新版は常にオンラインでご覧いただけます：',
+    prev:'前の月', next:'次の月', noSchool:'休校'
+  }
+};
+var MON_EN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var MONF_EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+var DOW_EN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+var DOW_JA = ['日','月','火','水','木','金','土'];
+
+/* ---------- storage & params ---------- */
+var store = {
+  get: function (k, d) { try { var v = localStorage.getItem('eisc.' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set: function (k, v) { try { localStorage.setItem('eisc.' + k, JSON.stringify(v)); } catch (e) {} }
+};
+var params = new URLSearchParams(location.search);
+
+/* ---------- dates ---------- */
+function pad(n) { return (n < 10 ? '0' : '') + n; }
+function isoOf(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+function D(s) { var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+function addDays(s, n) { var d = D(s); d.setDate(d.getDate() + n); return isoOf(d); }
+function diffDays(a, b) { return Math.round((D(b) - D(a)) / 864e5); }
+function ym(s) { return s.slice(0, 7); }
+function addMonths(m, n) { var d = D(m + '-01'); d.setMonth(d.getMonth() + n); return isoOf(d).slice(0, 7); }
+function monthEnd(m) { var d = D(m + '-01'); d.setMonth(d.getMonth() + 1); d.setDate(0); return isoOf(d); }
+var TODAY = /^\d{4}-\d{2}-\d{2}$/.test(params.get('today') || '') ? params.get('today') : isoOf(new Date());
+
+/* ---------- state ---------- */
+var lang = params.get('lang') || store.get('lang', null) || ((navigator.language || '').toLowerCase().indexOf('ja') === 0 ? 'ja' : 'en');
+if (lang !== 'ja') lang = 'en';
+var AUD = {}; DATA.audiences.forEach(function (a) { AUD[a.id] = a; });
+var state = { tab: 'upcoming', month: ym(TODAY), filters: (params.get('for') ? params.get('for').split(',') : store.get('filters', [])).filter(function (f) { return AUD[f]; }), parents: params.get('for') ? params.get('for').split(',').indexOf('parents') >= 0 : !!store.get('parents', false), q: (params.get('q') || '').trim() };
+var EVENTS = DATA.events.filter(function (e) { return !e.hidden; }).map(function (e) { return Object.assign({ kind: 'event' }, e); });
+var CLOSURES = (DATA.closures || []).map(function (c, i) { return Object.assign({ kind: 'closure', id: 'c' + i }, c); });
+var BY_ID = {}; EVENTS.forEach(function (e) { BY_ID[e.id] = e; });
+var ALL = EVENTS.concat(CLOSURES).sort(byStart);
+var MONTHS = (function () {
+  var lo = ALL.reduce(function (m, i) { return i.start < m ? i.start : m; }, '9999');
+  var hi = ALL.reduce(function (m, i) { return i.end > m ? i.end : m; }, '0000');
+  var out = [], m = ym(lo); while (m <= ym(hi)) { out.push(m); m = addMonths(m, 1); } return out;
+})();
+if (MONTHS.indexOf(state.month) < 0) state.month = state.month < MONTHS[0] ? MONTHS[0] : MONTHS[MONTHS.length - 1];
+
+/* ---------- helpers ---------- */
+function T(k, v) { var s = (S[lang][k] != null ? S[lang][k] : S.en[k]) || k; if (v) for (var x in v) s = s.split('{' + x + '}').join(v[x]); return s; }
+function L(o) { return o ? (o[lang] || o.en || '') : ''; }
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+function rich(s) {
+  s = String(s || '').replace(/<(?!\/?(strong|em|b|i|br)\b)[^>]*>/gi, '');
+  return esc(s).replace(/&lt;(\/?)(strong|em|b|i)&gt;/gi, '<$1$2>').replace(/&lt;br\s*\/?&gt;/gi, '<br>');
+}
+function byStart(a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : (a.kind === b.kind ? 0 : a.kind === 'closure' ? -1 : 1); }
+function dow(s) { return (lang === 'ja' ? DOW_JA : DOW_EN)[D(s).getDay()]; }
+function fmtDay(s, noDow) {
+  var d = D(s);
+  if (lang === 'ja') return (d.getMonth() + 1) + '月' + d.getDate() + '日' + (noDow ? '' : '（' + DOW_JA[d.getDay()] + '）');
+  return (noDow ? '' : DOW_EN[d.getDay()] + ' ') + d.getDate() + ' ' + MON_EN[d.getMonth()];
+}
+function fmtRange(s, e) {
+  if (!e || e === s) return fmtDay(s);
+  var a = D(s), b = D(e);
+  if (lang === 'ja') return fmtDay(s) + '〜' + (a.getMonth() === b.getMonth() ? b.getDate() + '日（' + DOW_JA[b.getDay()] + '）' : fmtDay(e));
+  if (a.getMonth() === b.getMonth()) return DOW_EN[a.getDay()] + ' ' + a.getDate() + ' – ' + DOW_EN[b.getDay()] + ' ' + b.getDate() + ' ' + MON_EN[b.getMonth()];
+  return fmtDay(s) + ' – ' + fmtDay(e);
+}
+function fmtLong(s) {
+  var d = D(s);
+  if (lang === 'ja') return d.getFullYear() + '年' + fmtDay(s);
+  return DOW_EN[d.getDay()] + ', ' + d.getDate() + ' ' + MONF_EN[d.getMonth()] + ' ' + d.getFullYear();
+}
+function monthLabel(m, l) {
+  var d = D(m + '-01'); l = l || lang;
+  return l === 'ja' ? d.getFullYear() + '年' + (d.getMonth() + 1) + '月' : MONF_EN[d.getMonth()] + ' ' + d.getFullYear();
+}
+function termFor(s) {
+  var t = null; (DATA.terms || []).forEach(function (x) { if (x.start <= s) t = x; }); return t;
+}
+function audColor(e) { var a = AUD[(e.aud || [])[0]]; return a ? a.color : '#8a93ab'; }
+function barStyle(e) {
+  var cs = (e.aud || []).map(function (a) { return AUD[a] && AUD[a].color; }).filter(Boolean);
+  if (!cs.length) return '#8a93ab';
+  if (cs.length === 1) return cs[0];
+  var step = 100 / cs.length;
+  return 'linear-gradient(' + cs.map(function (c, i) { return c + ' ' + (i * step) + '% ' + ((i + 1) * step) + '%'; }).join(',') + ')';
+}
+function title(i) { return i.kind === 'closure' ? L(i.name) : L(i.title); }
+function isOff(i) { return i.kind === 'closure' || i.noClasses; }
+function parseTime(t) {
+  var m = /^(\d{1,2}):(\d{2})(?:\s*[-–~〜]\s*(\d{1,2}):(\d{2}))?$/.exec((t || '').trim());
+  if (!m) return null;
+  return { s: pad(+m[1]) + m[2] + '00', e: m[3] ? pad(+m[3]) + m[4] + '00' : pad(Math.min(+m[1] + 1, 23)) + m[2] + '00', label: t.trim() };
+}
+function eventUrl(e) { var u = new URL(location.href); u.search = ''; u.hash = '#/event/' + e.id; return u.href; }
+
+/* ---------- filtering ---------- */
+function matchesQuery(i, q) {
+  if (!q) return true;
+  var hay = (i.kind === 'closure' ? [i.name.en, i.name.ja] : [i.title.en, i.title.ja, i.desc && i.desc.en, i.desc && i.desc.ja, i.location && i.location.en, i.location && i.location.ja])
+    .concat((i.aud || []).map(function (a) { return AUD[a] ? AUD[a].name.en + ' ' + AUD[a].name.ja : ''; })).join(' ').toLowerCase();
+  return q.toLowerCase().split(/\s+/).every(function (w) { return hay.indexOf(w) >= 0; });
+}
+function visible(i, opts) {
+  opts = opts || {};
+  var f = opts.filters || state.filters, par = opts.parents != null ? opts.parents : state.parents, q = opts.q != null ? opts.q : state.q;
+  if (!matchesQuery(i, q)) return false;
+  if (i.kind === 'closure') return !par;
+  if (par && !i.parents) return false;
+  if (!f.length) return true;
+  return (i.aud || []).some(function (a) { return a === 'whole' || f.indexOf(a) >= 0; });
+}
+
+/* ---------- rendering: list items ---------- */
+function badges(e) {
+  var b = '';
+  if (e.status === 'cancelled') b += '<span class="badge can">' + T('cancelled') + '</span>';
+  else if (e.status === 'changed') b += '<span class="badge chg">' + T('changed') + '</span>';
+  else if (e.status === 'tentative') b += '<span class="badge tbc">' + T('tbc') + '</span>';
+  if (e.updated && e.status !== 'changed' && diffDays(e.updated, TODAY) <= 14 && diffDays(e.updated, TODAY) >= 0) b += '<span class="badge upd">' + T('recent') + '</span>';
+  if (e.noClasses) b += '<span class="badge nc">' + T('noClasses') + '</span>';
+  if (e.parents) b += '<span class="badge par">' + T('parents') + '</span>';
+  return b;
+}
+function tags(e) {
+  return (e.aud || []).map(function (a) { return AUD[a] ? '<span class="tag" style="--c:' + AUD[a].color + '"><i></i>' + esc(L(AUD[a].name)) + '</span>' : ''; }).join('');
+}
+function itemHTML(i, clampFrom) {
+  if (i.kind === 'closure') {
+    var r = i.end !== i.start ? ' · ' + fmtRange(i.start, i.end) : '';
+    return '<div class="closure ' + esc(i.type) + '"><span class="ev-bar"></span><span><b>' + esc(L(i.name)) + '</b>' + (i.type !== 'noclass' ? ' — ' + T('noSchool') : '') + esc(r) + '</span></div>';
+  }
+  var meta = [];
+  if (i.end !== i.start) meta.push(esc(clampFrom && i.start < clampFrom ? T('until', { d: fmtDay(i.end) }) : fmtRange(i.start, i.end)));
+  if (i.time) meta.push(esc(i.time));
+  if (L(i.location)) meta.push(esc(L(i.location)));
+  return '<button type="button" class="ev' + (i.status === 'cancelled' ? ' cancelled' : '') + '" data-ev="' + esc(i.id) + '">' +
+    '<span class="ev-bar" style="--bar:' + barStyle(i) + '"></span>' +
+    '<span class="ev-main"><span class="ev-t">' + esc(L(i.title)) + '</span>' +
+    '<span class="ev-m">' + tags(i) + badges(i) + (meta.length ? '<span>' + meta.join(' · ') + '</span>' : '') + '</span></span>' +
+    (i.image ? '<img class="ev-thumb" src="' + esc(i.image) + '" alt="" loading="lazy" width="52" height="52">' : '') +
+    '</button>';
+}
+function dayGroupsHTML(items, clampFrom, showMonth) {
+  var groups = [], cur = null;
+  items.forEach(function (i) {
+    var d = clampFrom && i.start < clampFrom ? clampFrom : i.start;
+    if (!cur || cur.d !== d) { cur = { d: d, items: [] }; groups.push(cur); }
+    cur.items.push(i);
+  });
+  return groups.map(function (g) {
+    var dd = D(g.d);
+    return '<div class="dg' + (g.d === TODAY ? ' is-today' : '') + '" data-date="' + g.d + '">' +
+      '<div class="dg-date"><span class="dw">' + dow(g.d) + '</span><span class="dn">' + dd.getDate() + '</span>' +
+      (showMonth ? '<span class="mo">' + (lang === 'ja' ? (dd.getMonth() + 1) + '月' : MON_EN[dd.getMonth()]) + '</span>' : '') + '</div>' +
+      '<div class="dg-items">' + g.items.map(function (i) { return itemHTML(i, clampFrom); }).join('') + '</div></div>';
+  }).join('');
+}
+function emptyHTML(msg) {
+  var hasF = state.filters.length || state.parents || state.q;
+  return '<div class="card empty">' + esc(msg) + (hasF ? '<br><button type="button" class="btn" data-act="clear">' + T('clear') + '</button>' : '') + '</div>';
+}
+
+/* ---------- views ---------- */
+function renderUpcoming() {
+  var horizon = addDays(TODAY, 62);
+  var items = ALL.filter(function (i) { return i.end >= TODAY && i.start <= horizon && visible(i); });
+  var t = termFor(TODAY);
+  var off = ALL.filter(function (i) { return isOff(i) && i.end >= TODAY && (i.kind === 'closure' || visible(i, { q: '', parents: false })); })[0];
+  var offHTML = '';
+  if (off) {
+    var n = diffDays(TODAY, off.start), whenTxt = n <= 0 ? T('today') : n === 1 ? T('tomorrow') : T('inDays', { n: n });
+    offHTML = '<div class="dayoff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>' +
+      '<span><span class="k">' + (n <= 0 ? T('offNow') : T('nextOff')) + ' · ' + esc(whenTxt) + '</span><b>' + esc(title(off)) + '</b> · ' + esc(fmtRange(off.start, off.end)) + '</span></div>';
+  }
+  var h = '<section class="hero"><div class="d">' + esc(t ? L(t.name) : T('beforeTerm')) + ' · ' + esc(DATA.meta.year) + '</div>' +
+    '<h1>' + esc(fmtLong(TODAY)) + '</h1>' + offHTML + '</section>';
+  if (state.q) return h + searchHTML();
+  if (!items.length) return h + emptyHTML(T('noMatch'));
+  var wkEnd = addDays(TODAY, (7 - D(TODAY).getDay()) % 7), nxEnd = addDays(wkEnd, 7);
+  var buckets = [], map = {};
+  items.forEach(function (i) {
+    var s = i.start < TODAY ? TODAY : i.start;
+    var k = s === TODAY ? 'today' : s <= wkEnd ? 'week' : s <= nxEnd ? 'next' : ym(s);
+    if (!map[k]) { map[k] = []; buckets.push(k); }
+    map[k].push(i);
+  });
+  buckets.forEach(function (k) {
+    var label = k === 'today' ? T('today') : k === 'week' ? T('thisWeek') : k === 'next' ? T('nextWeek') : monthLabel(k);
+    h += '<div class="sec-h"><h2>' + esc(label) + '</h2><span>' + (k === 'today' ? esc(fmtDay(TODAY)) : '') + '</span></div>' +
+      '<div class="card">' + dayGroupsHTML(map[k], TODAY, k !== 'today' && k !== 'week' && k !== 'next' ? false : true) + '</div>';
+  });
+  h += '<div class="more"><a class="btn" href="#/calendar/' + addMonths(ym(horizon), 0) + '">' + T('seeAll') + ' →</a></div>';
+  return h;
+}
+
+function searchHTML() {
+  var items = ALL.filter(function (i) { return visible(i); });
+  if (!items.length) return emptyHTML(T('noResults', { q: state.q }));
+  var h = '<div class="sec-h"><h2>' + esc(T('results', { n: items.length, q: state.q })) + '</h2></div>', byM = {}, order = [];
+  items.forEach(function (i) { var m = ym(i.start); if (!byM[m]) { byM[m] = []; order.push(m); } byM[m].push(i); });
+  order.forEach(function (m) { h += '<div class="sec-h"><h2>' + esc(monthLabel(m)) + '</h2></div><div class="card">' + dayGroupsHTML(byM[m]) + '</div>'; });
+  return h;
+}
+
+function closureOn(day) {
+  for (var k = 0; k < ALL.length; k++) { var i = ALL[k]; if (i.start <= day && i.end >= day && isOff(i)) return i; }
+  return null;
+}
+function gridHTML(m) {
+  var first = D(m + '-01'), lead = (first.getDay() + 6) % 7, end = monthEnd(m);
+  var start = addDays(m + '-01', -lead), cells = Math.ceil((lead + D(end).getDate()) / 7) * 7;
+  var wds = lang === 'ja' ? ['月', '火', '水', '木', '金', '土', '日'] : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  var termStarts = {}; (DATA.terms || []).forEach(function (t) { termStarts[t.start] = t; });
+  var h = '<div class="grid" role="grid" aria-label="' + esc(monthLabel(m)) + '">' + wds.map(function (w) { return '<div class="wd" role="columnheader">' + w + '</div>'; }).join('');
+  for (var c = 0; c < cells; c++) {
+    var day = addDays(start, c), inM = ym(day) === m;
+    if (!inM) { h += '<div class="cell off" aria-hidden="true"><span class="n">' + D(day).getDate() + '</span></div>'; continue; }
+    var evs = EVENTS.filter(function (e) { return e.start <= day && e.end >= day && visible(e); });
+    var cl = closureOn(day), clType = cl ? (cl.kind === 'closure' ? cl.type : 'noclass') : '';
+    var wd = (c % 7);
+    var label = fmtLong(day) + (cl ? '. ' + title(cl) : '') + (evs.length ? '. ' + evs.map(function (e) { return L(e.title); }).join(', ') : '');
+    h += '<button type="button" class="cell' + (wd > 4 ? ' we' : '') + (clType ? ' ' + clType : '') + (day === TODAY ? ' today' : '') + '" data-day="' + day + '" aria-label="' + esc(label) + '">' +
+      '<span class="n">' + D(day).getDate() + '</span>' +
+      (termStarts[day] ? '<span class="term">' + esc(L(termStarts[day].name).replace(/^Term /, 'T')) + '</span>' : '') +
+      (cl && cl.kind === 'closure' && (cl.start === day || wd === 0) ? '<span class="hl">' + esc(L(cl.name)) + '</span>' : '') +
+      '<span class="dots">' + evs.slice(0, 5).map(function (e) { return '<i style="--c:' + audColor(e) + '"></i>'; }).join('') + '</span>' +
+      '<span class="names">' + evs.slice(0, 3).map(function (e) { return '<span style="--c:' + audColor(e) + '">' + esc(L(e.title)) + '</span>'; }).join('') +
+      (evs.length > 3 ? '<em>' + esc(T('more', { n: evs.length - 3 })) + '</em>' : '') + '</span></button>';
+  }
+  return h + '</div>';
+}
+function renderCalendar() {
+  if (state.q) return searchHTML();
+  var m = state.month, idx = MONTHS.indexOf(m);
+  var mStart = m + '-01', mEnd = monthEnd(m), t = termFor(mStart) || termFor(mEnd);
+  var items = ALL.filter(function (i) { return i.start <= mEnd && i.end >= mStart && visible(i); });
+  var chev = function (d) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="' + (d < 0 ? 'M15 6l-6 6 6 6' : 'M9 6l6 6-6 6') + '"/></svg>'; };
+  var h = '<div class="mpills" role="tablist">' + MONTHS.map(function (x) {
+    var d = D(x + '-01');
+    return '<button type="button" class="mpill' + (x === ym(TODAY) ? ' now' : '') + '" data-month="' + x + '"' + (x === m ? ' aria-current="true"' : '') + '>' +
+      (lang === 'ja' ? (d.getMonth() + 1) + '月' : MON_EN[d.getMonth()]) + '</button>';
+  }).join('') + '</div>';
+  h += '<div class="cal-layout"><div class="cal-left"><div class="mnav"><h2><small>' + esc(t ? L(t.name) : T('beforeTerm')) + '</small>' + esc(monthLabel(m)) + '</h2>' +
+    '<button type="button" class="round" data-mstep="-1" aria-label="' + T('prev') + '"' + (idx <= 0 ? ' disabled' : '') + '>' + chev(-1) + '</button>' +
+    '<button type="button" class="round" data-mstep="1" aria-label="' + T('next') + '"' + (idx >= MONTHS.length - 1 ? ' disabled' : '') + '>' + chev(1) + '</button>' +
+    '<button type="button" class="round" data-act="print" aria-label="' + T('print') + '" title="' + T('print') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-2"/><rect x="6" y="14" width="12" height="7"/></svg></button></div>' +
+    gridHTML(m) +
+    '<div class="legend"><span><i style="background:var(--national)"></i>' + T('legendNational') + '</span><span><i style="background:var(--school)"></i>' + T('legendSchool') + '</span><span><i style="background:var(--noclass)"></i>' + T('legendNoclass') + '</span></div></div>' +
+    '<div class="cal-right">' + (items.length ? '<div class="card" id="agenda">' + dayGroupsHTML(items, mStart) + '</div>' : emptyHTML(T('noMatch'))) + '</div></div>';
+  return h;
+}
+
+function renderInfo() {
+  var I = DATA.info || {}, w = I.welcome || {}, h = '<div class="info">';
+  var paras = (w.paragraphs || []).map(function (p) { return '<p>' + rich(L(p)) + '</p>'; });
+  h += '<section class="card letter"><h2>' + esc(L(w.title)) + '</h2>' + (w.image ? '<img class="letter-img" src="' + esc(w.image) + '" alt="" loading="lazy">' : '') +
+    '<p><b>' + esc(L(w.greeting)) + '</b></p>' + paras.slice(0, 2).join('') +
+    '<div id="letter-more" hidden>' + paras.slice(2).join('') + '<p class="sig">' + esc(L(w.signature && w.signature.name)) + '</p><p class="role">' + esc(L(w.signature && w.signature.role)) + '</p></div>' +
+    '<button type="button" class="toggle-more" data-act="letter" aria-expanded="false" aria-controls="letter-more">' + T('readMore') + ' ↓</button>';
+  if (I.values) {
+    var vc = ['var(--orange)', 'var(--sky)', 'var(--red)'];
+    h += '<h3>' + T('values') + '</h3><div class="values">' + I.values.map(function (v, k) { return '<span style="background:' + vc[k % 3] + '">' + esc(L(v)) + '</span>'; }).join('') + '</div>' +
+      (I.motto ? '<p class="motto">' + rich(L(I.motto)).replace(/<br>/g, ' ') + '</p>' : '');
+  }
+  h += '</section>';
+  if (I.familiesNote) h += '<section class="card"><h2>' + T('families') + '</h2><ul>' + I.familiesNote.map(function (n) { return '<li>' + esc(L(n)) + '</li>'; }).join('') + '</ul></section>';
+  if (I.drills) {
+    var dc = ['#c4291e', '#ff6a1f', '#1d6db8', '#5a3aa8'];
+    h += '<section class="card"><h2>' + T('drills') + '</h2><p>' + rich(L(I.drills.intro)) + '</p><div class="pillrow">' +
+      I.drills.types.map(function (t, k) { return '<span style="background:' + dc[k % 4] + '">' + esc(L(t)) + '</span>'; }).join('') + '</div>' +
+      '<p style="margin-top:12px"><b>' + esc(L(I.drills.schedule)) + '</b></p><div class="note">' + rich(L(I.drills.note)) + '</div></section>';
+  }
+  if (I.health) {
+    var card = function (c) { return '<div><span class="f">' + esc(L(c.freq)) + '</span><b>' + esc(L(c.title)) + '</b><small>' + esc(L(c.who)) + '</small></div>'; };
+    h += '<section class="card"><h2>' + T('health') + '</h2><p>' + rich(L(I.health.intro)) + '</p><h3>' + T('mandatory') + '</h3><div class="hc">' + I.health.mandatory.map(card).join('') +
+      '</div><h3>' + T('voluntary') + '</h3><div class="hc">' + I.health.voluntary.map(card).join('') + '</div><div class="note">' + rich(L(I.health.note)) + '</div></section>';
+  }
+  if (I.olympiads) {
+    h += '<section class="card"><h2>' + T('olympiads') + '</h2><p>' + rich(L(I.olympiads.intro)) + '</p><table class="oly"><tbody>' +
+      I.olympiads.items.map(function (o) { return '<tr><td>' + (o.logo ? '<img src="' + esc(o.logo) + '" alt="" loading="lazy">' : '') + '</td><td><b>' + esc(L(o.name)) + '</b><small>' + esc(L(o.subjects)) + '</small></td><td>' + esc(L(o.when)) + '<small>' + esc(L(o.format)) + '</small></td></tr>'; }).join('') +
+      '</tbody></table><div class="note">' + rich(L(I.olympiads.note)) + '</div></section>';
+  }
+  if (I.contact) {
+    var c = I.contact;
+    h += '<section class="card"><h2>' + T('contact') + '</h2><p>' + esc(L(c.address)) + '<br><a href="tel:' + esc(c.phone.replace(/[^\d+]/g, '')) + '">' + esc(c.phone) + '</a> · <a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a><br><a href="' + esc(c.web) + '">' + esc(c.web.replace(/^https?:\/\//, '')) + '</a></p></section>';
+  }
+  return h + '</div>';
+}
+
+/* ---------- chrome ---------- */
+function renderChrome() {
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-t]').forEach(function (el) { el.textContent = T(el.getAttribute('data-t')); });
+  document.querySelectorAll('.seg button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang)); });
+  document.querySelectorAll('.tab').forEach(function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === state.tab)); });
+  var q = document.getElementById('q'); q.placeholder = T('search');
+  document.getElementById('h-sub').textContent = DATA.meta.year;
+  document.getElementById('fbar').hidden = state.tab === 'info';
+  var chips = '<button type="button" class="chip all" data-aud="" aria-pressed="' + (!state.filters.length) + '">' + T('everyone') + '</button>' +
+    DATA.audiences.map(function (a) { return '<button type="button" class="chip" data-aud="' + a.id + '" style="--c:' + a.color + '" aria-pressed="' + (state.filters.indexOf(a.id) >= 0) + '"><i></i>' + esc(L(a.name)) + '</button>'; }).join('') +
+    '<button type="button" class="chip par" data-par aria-pressed="' + state.parents + '"><i></i>' + T('parents') + '</button>';
+  document.getElementById('chips').innerHTML = chips;
+  var hint = '';
+  if (state.parents) hint = T('showingPar');
+  else if (state.filters.length) {
+    var others = state.filters.filter(function (f) { return f !== 'whole'; });
+    hint = others.length ? T('showing', { list: others.map(function (f) { return L(AUD[f].name); }).join(lang === 'ja' ? '・' : ', ') }) : T('showingWhole');
+  }
+  document.getElementById('fhint').textContent = hint;
+  var c = (DATA.info || {}).contact || {};
+  document.getElementById('f-addr').textContent = L(c.address);
+  var tel = document.getElementById('f-tel'); tel.textContent = c.phone || ''; tel.href = 'tel:' + (c.phone || '').replace(/[^\d+]/g, '');
+  var mail = document.getElementById('f-mail'); mail.textContent = c.email || ''; mail.href = 'mailto:' + (c.email || '');
+  document.getElementById('f-upd').textContent = T('updated', { d: fmtLong(DATA.meta.updated) });
+  document.getElementById('f-off').textContent = T('official');
+}
+function render() {
+  renderChrome();
+  var v = document.getElementById('view');
+  v.className = 'view' + (state.tab === 'calendar' && !state.q ? ' wide' : '');
+  v.innerHTML = state.tab === 'calendar' ? renderCalendar() : state.tab === 'info' ? renderInfo() : renderUpcoming();
+  if (state.tab === 'calendar' && !state.q) {
+    var cur = v.querySelector('.mpill[aria-current]');
+    if (cur) cur.parentNode.scrollLeft = cur.offsetLeft - cur.parentNode.clientWidth / 2 + cur.clientWidth / 2;
+  }
+}
+
+/* ---------- calendar files ---------- */
+function icsEsc(s) { return String(s || '').replace(/\\/g, '\\\\').replace(/\r?\n/g, '\\n').replace(/([,;])/g, '\\$1'); }
+function icsFold(line) {
+  var out = [], cur = '', bytes = 0, enc = new TextEncoder();
+  for (var ch of line) {
+    var b = enc.encode(ch).length;
+    if (bytes + b > 73) { out.push(cur); cur = ' '; bytes = 1; }
+    cur += ch; bytes += b;
+  }
+  out.push(cur); return out.join('\r\n');
+}
+function ymd(s) { return s.replace(/-/g, ''); }
+function icsEvent(i, l, stamp, base) {
+  var pick = function (o) { return o ? (o[l] || o.en || '') : ''; };
+  var name = i.kind === 'closure' ? pick(i.name) : pick(i.title);
+  var lines = ['BEGIN:VEVENT', 'UID:' + (i.kind === 'closure' ? 'closure-' + i.start + '-' + ymd(i.end) : i.id) + '@enishi.ac.jp', 'DTSTAMP:' + stamp];
+  var t = i.kind === 'event' && parseTime(i.time);
+  if (t) { lines.push('DTSTART;TZID=Asia/Tokyo:' + ymd(i.start) + 'T' + t.s, 'DTEND;TZID=Asia/Tokyo:' + ymd(i.start) + 'T' + t.e); }
+  else { lines.push('DTSTART;VALUE=DATE:' + ymd(i.start), 'DTEND;VALUE=DATE:' + ymd(addDays(i.end, 1))); }
+  var desc = i.kind === 'closure' ? (i.type === 'noclass' ? (l === 'ja' ? '授業なし' : 'No classes') : (l === 'ja' ? '休校' : 'No school')) : pick(i.desc);
+  if (i.kind === 'event') {
+    var aud = (i.aud || []).map(function (a) { return AUD[a] ? pick(AUD[a].name) : a; }).join(', ');
+    if (aud) desc += (desc ? '\n\n' : '') + (l === 'ja' ? '対象：' : 'For: ') + aud + (i.parents ? (l === 'ja' ? '（保護者参加可）' : ' (parents invited)') : '');
+    if (base) desc += '\n' + base + '#/event/' + i.id;
+  }
+  lines.push('SUMMARY:' + icsEsc((i.status === 'cancelled' ? (l === 'ja' ? '【中止】' : '[Cancelled] ') : '') + name));
+  if (desc) lines.push('DESCRIPTION:' + icsEsc(desc));
+  if (i.kind === 'event' && pick(i.location)) lines.push('LOCATION:' + icsEsc(pick(i.location)));
+  if (i.kind === 'event' && base) lines.push('URL:' + base + '#/event/' + i.id);
+  if (i.status === 'cancelled') lines.push('STATUS:CANCELLED');
+  if (i.status === 'tentative') lines.push('STATUS:TENTATIVE');
+  lines.push('TRANSP:TRANSPARENT', 'END:VEVENT');
+  return lines;
+}
+function icsCalendar(name, items, l, stamp, base) {
+  var lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Enishi International School//EIS Compass//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+    'X-WR-CALNAME:' + icsEsc(name), 'X-WR-TIMEZONE:Asia/Tokyo', 'REFRESH-INTERVAL;VALUE=DURATION:PT12H', 'X-PUBLISHED-TTL:PT12H'];
+  if (items.some(function (i) { return i.kind === 'event' && parseTime(i.time); }))
+    lines.push('BEGIN:VTIMEZONE', 'TZID:Asia/Tokyo', 'BEGIN:STANDARD', 'DTSTART:19700101T000000', 'TZOFFSETFROM:+0900', 'TZOFFSETTO:+0900', 'TZNAME:JST', 'END:STANDARD', 'END:VTIMEZONE');
+  items.forEach(function (i) { lines = lines.concat(icsEvent(i, l, stamp, base)); });
+  lines.push('END:VCALENDAR');
+  return lines.map(icsFold).join('\r\n') + '\r\n';
+}
+function pageBase() { var u = new URL(location.href); u.search = ''; u.hash = ''; return u.href; }
+function googleUrl(e) {
+  var t = parseTime(e.time), dates = t ? ymd(e.start) + 'T' + t.s + '/' + ymd(e.start) + 'T' + t.e : ymd(e.start) + '/' + ymd(addDays(e.end, 1));
+  var p = new URLSearchParams({ action: 'TEMPLATE', text: L(e.title), dates: dates, details: L(e.desc) + '\n\n' + eventUrl(e) });
+  if (t) p.set('ctz', 'Asia/Tokyo');
+  if (L(e.location)) p.set('location', L(e.location));
+  return 'https://calendar.google.com/calendar/render?' + p.toString();
+}
+function downloadIcs(e) {
+  var stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
+  var blob = new Blob([icsCalendar(L(e.title), [e], lang, stamp, pageBase())], { type: 'text/calendar;charset=utf-8' });
+  var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = e.id + '.ics';
+  document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+}
+
+/* ---------- event sheet ---------- */
+var sheet = document.getElementById('sheet'), sheetFromApp = false;
+function openSheet(e) {
+  var facts = '<dt>' + T('time') + '</dt><dd>' + esc(e.time || T('allDay')) + '</dd>' +
+    (L(e.location) ? '<dt>' + T('place') + '</dt><dd>' + esc(L(e.location)) + '</dd>' : '');
+  var was = e.status === 'changed' && e.prevStart ? ' <span class="badge chg">' + esc(T('was', { d: fmtDay(e.prevStart) })) + '</span>' : '';
+  document.getElementById('sheet-content').innerHTML =
+    (e.image ? '<img class="sheet-img" src="' + esc(e.image) + '" alt="">' : '<div style="height:44px"></div>') +
+    '<div class="dlg-body"><div class="tags">' + badges(e) + was + '</div>' +
+    '<h2 id="sheet-title">' + esc(L(e.title)) + '</h2><p class="when">' + esc(e.end === e.start ? fmtLong(e.start) : fmtRange(e.start, e.end)) + '</p>' +
+    '<div class="tags">' + tags(e) + '</div>' +
+    (L(e.desc) ? '<p class="desc">' + rich(L(e.desc)) + '</p>' : '') +
+    '<dl class="facts">' + facts + '</dl>' +
+    '<div class="actions"><a class="btn" target="_blank" rel="noopener" href="' + esc(googleUrl(e)) + '">' + T('addGoogle') + '</a>' +
+    '<button type="button" class="btn" data-act="ics" data-id="' + esc(e.id) + '">' + T('addIcs') + '</button>' +
+    '<button type="button" class="btn primary wide" data-act="share" data-id="' + esc(e.id) + '">' + T('share') + '</button></div></div>';
+  sheet.querySelector('.dlg-x').setAttribute('aria-label', T('close'));
+  if (!sheet.open) sheet.showModal();
+  sheet.scrollTop = 0;
+}
+function closeSheet() {
+  if (!sheet.open && !/^#\/event\//.test(location.hash)) return;
+  if (sheetFromApp) { sheetFromApp = false; history.back(); }
+  else { history.replaceState(null, '', tabHash()); if (sheet.open) sheet.close(); render(); }
+}
+sheet.addEventListener('cancel', function (ev) { ev.preventDefault(); closeSheet(); });
+
+/* ---------- subscribe ---------- */
+function feedUrl(id) { return new URL('compass/feeds/' + lang + '/' + id + '.ics', pageBase()).href; }
+function openSubscribe() {
+  var rows = [{ id: 'all', name: T('allEvents'), sub: '' }].concat(DATA.audiences.map(function (a) { return { id: a.id, name: L(a.name), sub: a.id === 'whole' ? '' : T('plusWhole') }; }));
+  if (state.filters.length === 1) rows.sort(function (a, b) { return (b.id === state.filters[0]) - (a.id === state.filters[0]); });
+  document.getElementById('sub-content').innerHTML = '<h2 id="sub-title">' + T('subTitle') + '</h2><p>' + T('subIntro') + '</p><ul class="feeds">' +
+    rows.map(function (r) {
+      var https = feedUrl(r.id), webcal = https.replace(/^https?:/, 'webcal:');
+      return '<li><span>' + esc(r.name) + (r.sub ? '<small>' + esc(r.sub) + '</small>' : '') + '</span>' +
+        '<a class="btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(webcal) + '">Google</a>' +
+        '<a class="btn" href="' + esc(webcal) + '">iPhone / Mac</a>' +
+        '<button type="button" class="btn" data-act="copy" data-url="' + esc(https) + '">' + T('copyLink') + '</button></li>';
+    }).join('') + '</ul><p class="note">' + T('subNote') + '</p>';
+  document.querySelector('#subdlg .dlg-x').setAttribute('aria-label', T('close'));
+  document.getElementById('subdlg').showModal();
+}
+
+/* ---------- print ---------- */
+function openPrint() {
+  document.getElementById('print-content').innerHTML = '<h2 id="print-title">' + T('printTitle') + '</h2>' +
+    '<div class="opt"><fieldset><legend>' + T('range') + '</legend><label><input type="radio" name="pr" value="month" checked> ' + esc(monthLabel(state.month)) + '</label><label><input type="radio" name="pr" value="year"> ' + T('wholeYear') + '</label></fieldset></div>' +
+    '<div class="opt"><fieldset><legend>' + T('language') + '</legend><label><input type="radio" name="pl" value="en"' + (lang === 'en' ? ' checked' : '') + '> English</label><label><input type="radio" name="pl" value="ja"' + (lang === 'ja' ? ' checked' : '') + '> 日本語</label><label><input type="radio" name="pl" value="both"> ' + T('both') + ' (EN + 日本語)</label></fieldset></div>' +
+    (state.filters.length || state.parents ? '<div class="opt"><label><input type="checkbox" name="pf" checked> ' + T('onlyMine') + '</label></div>' : '') +
+    '<button type="button" class="btn primary" data-act="doprint">' + T('doPrint') + '</button>';
+  document.getElementById('printdlg').showModal();
+}
+function buildPrint(months, pl, filtered) {
+  var opts = filtered ? { q: '' } : { filters: [], parents: false, q: '' };
+  var nm = function (o) { if (!o) return ''; if (pl === 'both') return esc(o.en) + (o.ja && o.ja !== o.en ? '<span class="j">' + esc(o.ja) + '</span>' : ''); return esc(o[pl] || o.en); };
+  var lab = function (en, ja) { return pl === 'ja' ? ja : pl === 'both' ? en + ' / ' + ja : en; };
+  var saved = lang; lang = pl === 'ja' ? 'ja' : 'en';
+  var wds = pl === 'ja' ? ['月', '火', '水', '木', '金', '土', '日'] : ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+  var html = months.map(function (m) {
+    var first = D(m + '-01'), lead = (first.getDay() + 6) % 7, end = monthEnd(m), start = addDays(m + '-01', -lead), cells = Math.ceil((lead + D(end).getDate()) / 7) * 7;
+    var g = '<div class="pg" style="grid-template-rows:auto repeat(' + (cells / 7) + ',1fr)">' + wds.map(function (w) { return '<div class="wd">' + w + '</div>'; }).join('');
+    for (var c = 0; c < cells; c++) {
+      var day = addDays(start, c);
+      if (ym(day) !== m) { g += '<div class="c off"><b>' + D(day).getDate() + '</b></div>'; continue; }
+      var evs = EVENTS.filter(function (e) { return e.start <= day && e.end >= day && visible(e, opts); });
+      var cl = closureOn(day), ct = cl ? (cl.kind === 'closure' ? cl.type : 'noclass') : '';
+      g += '<div class="c ' + ct + '"><b>' + D(day).getDate() + '</b>' + (cl && cl.kind === 'closure' ? '<span class="h">' + nm(cl.name) + '</span>' : '') +
+        evs.slice(0, pl === 'both' ? 3 : 4).map(function (e) { return '<span class="e" style="--c:' + audColor(e) + '">' + nm(e.title) + '</span>'; }).join('') +
+        (evs.length > (pl === 'both' ? 3 : 4) ? '<span class="mr">+' + (evs.length - (pl === 'both' ? 3 : 4)) + '</span>' : '') + '</div>';
+    }
+    g += '</div>';
+    var items = ALL.filter(function (i) { return i.start <= end && i.end >= m + '-01' && visible(i, opts); });
+    var list = '<div class="pl"><h4>' + lab("What's happening", '今月の予定') + '</h4>' + items.map(function (i) {
+      var dl = fmtRange(i.start < m + '-01' ? m + '-01' : i.start, i.end);
+      return i.kind === 'closure' ? '<div class="r cl"><span class="d">' + esc(dl) + '</span><span class="x">' + nm(i.name) + '</span></div>'
+        : '<div class="r"><span class="d">' + esc(dl) + '</span><span class="x"><i style="--c:' + audColor(i) + '"></i>' + nm(i.title) + '</span></div>';
+    }).join('') + '</div>';
+    var t = termFor(end);
+    return '<section class="pp"><div class="pp-h"><img src="compass/images/site/eis-logo.png" alt=""><div class="t"><small>' + lab('Events & Activities Calendar', 'イベント・活動カレンダー') + '</small>EIS Compass ' + esc(DATA.meta.year) + '</div>' +
+      '<div class="m">' + (pl === 'both' ? monthLabel(m, 'en') + ' <small>' + monthLabel(m, 'ja') + (t ? ' · ' + esc(t.name.en) : '') + '</small>' : esc(monthLabel(m, pl)) + (t ? '<small>' + esc(t.name[pl] || t.name.en) + '</small>' : '')) + '</div></div>' +
+      '<div class="pp-b">' + g + list + '</div>' +
+      '<div class="pp-f"><span class="lg">' + DATA.audiences.map(function (a) { return '<span style="--c:' + a.color + '"><i></i>' + nm(a.name).replace('<span class="j">', ' / ').replace('</span>', '') + '</span>'; }).join('') + '</span>' +
+      '<span>' + esc(T('printed', { d: fmtLong(TODAY) })) + ' ' + esc((DATA.meta.siteUrl || pageBase()).replace(/^https?:\/\//, '')) + '</span></div></section>';
+  }).join('');
+  lang = saved;
+  document.getElementById('print').innerHTML = html;
+}
+window.addEventListener('afterprint', function () { document.getElementById('print').innerHTML = ''; });
+
+/* ---------- toast ---------- */
+var toastT;
+function toast(msg) { var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function () { t.classList.remove('show'); }, 2200); }
+function copy(text) {
+  (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () { toast(T('copied')); }, function () { window.prompt(T('copyLink'), text); });
+}
+
+/* ---------- routing ---------- */
+function tabHash() { return state.tab === 'calendar' ? '#/calendar/' + state.month : '#/' + state.tab; }
+function route() {
+  var p = location.hash.replace(/^#\/?/, '').split('/');
+  if (p[0] === 'event' && BY_ID[p[1]]) {
+    if (!sheetFromApp) { state.tab = 'calendar'; state.month = ym(BY_ID[p[1]].start < MONTHS[0] ? MONTHS[0] : BY_ID[p[1]].start); render(); }
+    openSheet(BY_ID[p[1]]); return;
+  }
+  if (sheet.open) sheet.close();
+  sheetFromApp = false;
+  if (p[0] === 'subscribe') { state.tab = 'upcoming'; render(); history.replaceState(null, '', '#/upcoming'); openSubscribe(); return; }
+  if (p[0] === 'calendar') { state.tab = 'calendar'; if (MONTHS.indexOf(p[1]) >= 0) state.month = p[1]; }
+  else if (p[0] === 'info') state.tab = 'info';
+  else state.tab = 'upcoming';
+  render();
+}
+window.addEventListener('hashchange', route);
+
+/* ---------- events ---------- */
+function setFilters() { store.set('filters', state.filters); store.set('parents', state.parents); render(); }
+document.addEventListener('click', function (ev) {
+  var t = ev.target.closest('button, a'); if (!t) return;
+  if (t.matches('.seg button')) { lang = t.getAttribute('data-lang'); store.set('lang', lang); render(); if (sheet.open) { var p = location.hash.split('/'); if (BY_ID[p[2]]) openSheet(BY_ID[p[2]]); } return; }
+  if (t.matches('.tab')) { state.tab = t.getAttribute('data-tab'); location.hash = tabHash(); window.scrollTo(0, 0); return; }
+  if (t.hasAttribute('data-aud')) {
+    var a = t.getAttribute('data-aud');
+    if (!a) state.filters = []; else { var k = state.filters.indexOf(a); if (k >= 0) state.filters.splice(k, 1); else state.filters.push(a); }
+    setFilters(); return;
+  }
+  if (t.hasAttribute('data-par')) { state.parents = !state.parents; setFilters(); return; }
+  if (t.hasAttribute('data-ev')) { sheetFromApp = true; location.hash = '#/event/' + t.getAttribute('data-ev'); return; }
+  if (t.hasAttribute('data-month')) { state.month = t.getAttribute('data-month'); history.replaceState(null, '', tabHash()); render(); return; }
+  if (t.hasAttribute('data-mstep')) { var i = MONTHS.indexOf(state.month) + (+t.getAttribute('data-mstep')); if (MONTHS[i]) { state.month = MONTHS[i]; history.replaceState(null, '', tabHash()); render(); } return; }
+  if (t.hasAttribute('data-day')) {
+    var day = t.getAttribute('data-day'), rows = document.querySelectorAll('#agenda .dg'), target = null;
+    for (var r = 0; r < rows.length; r++) { if (rows[r].getAttribute('data-date') >= day) { target = rows[r]; break; } }
+    if (!target && rows.length) target = rows[rows.length - 1];
+    if (target) {
+      var evs = target.getAttribute('data-date') === day ? target.querySelectorAll('[data-ev]') : [];
+      if (evs.length === 1 && window.matchMedia('(min-width:900px)').matches) { evs[0].click(); return; }
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' }); target.classList.remove('flash'); void target.offsetWidth; target.classList.add('flash');
+    }
+    return;
+  }
+  if (t.hasAttribute('data-close')) { var dlg = t.closest('dialog'); if (dlg === sheet) closeSheet(); else dlg.close(); return; }
+  var act = t.getAttribute('data-act');
+  if (act === 'clear') { state.filters = []; state.parents = false; state.q = ''; document.getElementById('q').value = ''; document.getElementById('q-clear').hidden = true; setFilters(); }
+  else if (act === 'ics') downloadIcs(BY_ID[t.getAttribute('data-id')]);
+  else if (act === 'share') {
+    var e = BY_ID[t.getAttribute('data-id')], url = eventUrl(e);
+    if (navigator.share) navigator.share({ title: L(e.title), text: L(e.title) + ' — ' + fmtRange(e.start, e.end), url: url }).catch(function () {});
+    else copy(url);
+  }
+  else if (act === 'copy') copy(t.getAttribute('data-url'));
+  else if (act === 'print') openPrint();
+  else if (act === 'doprint') {
+    var f = document.getElementById('print-content');
+    var range = f.querySelector('[name=pr]:checked').value, pl = f.querySelector('[name=pl]:checked').value, pf = f.querySelector('[name=pf]');
+    buildPrint(range === 'year' ? MONTHS : [state.month], pl, pf ? pf.checked : false);
+    document.getElementById('printdlg').close();
+    setTimeout(function () { window.print(); }, 50);
+  }
+  else if (act === 'letter') {
+    var more = document.getElementById('letter-more'), open = more.hidden;
+    more.hidden = !open; t.setAttribute('aria-expanded', String(open)); t.textContent = open ? T('less') + ' ↑' : T('readMore') + ' ↓';
+  }
+});
+document.querySelectorAll('dialog').forEach(function (d) {
+  d.addEventListener('click', function (ev) { if (ev.target === d) { if (d === sheet) closeSheet(); else d.close(); } });
+});
+document.getElementById('btn-sub').addEventListener('click', openSubscribe);
+var qT;
+document.getElementById('q').addEventListener('input', function (ev) {
+  clearTimeout(qT);
+  var v = ev.target.value.trim();
+  document.getElementById('q-clear').hidden = !v;
+  qT = setTimeout(function () { state.q = v; render(); }, 150);
+});
+document.getElementById('q-clear').addEventListener('click', function () {
+  var q = document.getElementById('q'); q.value = ''; state.q = ''; this.hidden = true; render(); q.focus();
+});
+window.addEventListener('beforeprint', function () { if (!document.getElementById('print').innerHTML) buildPrint([state.month], lang, true); });
+
+if (state.q) { document.getElementById('q').value = state.q; document.getElementById('q-clear').hidden = false; }
+route();
+})();
+</script>
+</body>
+</html>

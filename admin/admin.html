@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EIS Compass Admin</title>
+<style>
+:root{--navy:#002e7a;--navy-2:#1d4a9a;--sky:#53c3f0;--orange:#ff9933;--red:#c4291e;--ink:#1a2238;--ink-2:#4b5775;--ink-3:#5f6984;--line:#e3e7ef;--bg:#f4f6fa;--ok:#1f7a3a;--warn:#a94f00;--err:#a3241a;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Hiragino Sans","Yu Gothic UI",Meiryo,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 var(--sans)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+header{background:var(--navy);color:#fff}
+header .in{max-width:1280px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{font-size:18px;margin:0}
+header h1 small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--sky)}
+header .file{margin-left:auto;font-size:13px;color:#cfdaf5}
+.stripe{height:4px;background:linear-gradient(90deg,var(--sky) 0 33.3%,var(--orange) 33.3% 66.6%,var(--red) 66.6%)}
+nav{background:#fff;border-bottom:1px solid var(--line)}
+nav .in{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;gap:4px;overflow-x:auto}
+nav button{border:0;background:none;padding:12px 14px 10px;font-weight:650;color:var(--ink-3);border-bottom:3px solid transparent;white-space:nowrap}
+nav button[aria-selected=true]{color:var(--navy);border-bottom-color:var(--orange)}
+nav .n{display:inline-block;min-width:20px;padding:0 6px;border-radius:999px;background:#fde8e6;color:var(--err);font-size:12px;margin-left:4px}
+nav .n.w{background:#fff1e0;color:var(--warn)}
+main{max-width:1280px;margin:0 auto;padding:20px}
+.card{background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(16,30,70,.08);padding:18px 20px;margin-bottom:16px}
+h2{margin:0 0 6px;font-size:19px}
+p.lead{margin:0 0 14px;color:var(--ink-2)}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid #cfd6e3;background:#fff;border-radius:8px;padding:8px 13px;font-weight:650;color:var(--navy);text-decoration:none}
+.btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn.danger{color:var(--err);border-color:#efc1bc}
+.btn:disabled{opacity:.45;cursor:default}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.drop{border:2px dashed #b8c3d8;border-radius:12px;padding:28px;text-align:center;color:var(--ink-2);background:#fafbfe}
+.drop.over{border-color:var(--orange);background:#fff8ef}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.steps li{counter-increment:s;background:var(--bg);border-radius:10px;padding:12px 14px 12px 46px;position:relative;font-size:14px}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:12px;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;text-align:center;line-height:24px;font-size:13px}
+.steps b{display:block}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{position:sticky;top:0;background:#f7f9fc;text-align:left;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);padding:8px;border-bottom:1px solid var(--line);z-index:1}
+td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:#f8faff}
+td .ja{display:block;color:var(--ink-3);font-size:13px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:middle}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:999px;background:#eef1f6;color:var(--ink-2);margin:1px 2px 1px 0;white-space:nowrap}
+.pill.err{background:#fde8e6;color:var(--err)}
+.pill.warn{background:#fff1e0;color:var(--warn)}
+.pill.ok{background:#e6f6ec;color:var(--ok)}
+.tablewrap{max-height:70vh;overflow:auto;border:1px solid var(--line);border-radius:10px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.toolbar input[type=search],.toolbar select{border:1px solid #cfd6e3;border-radius:8px;padding:7px 10px;background:#fff}
+.issues li{margin:6px 0}
+.issues a{cursor:pointer;color:var(--navy-2);text-decoration:underline}
+dialog{border:0;border-radius:14px;padding:0;width:min(860px,calc(100% - 24px));box-shadow:0 20px 60px rgba(0,20,60,.3)}
+dialog::backdrop{background:rgba(10,22,52,.5)}
+.dh{display:flex;align-items:center;gap:10px;padding:14px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:2}
+.dh h3{margin:0;font-size:17px;margin-right:auto}
+.db{padding:16px 20px;max-height:70vh;overflow:auto}
+.df{padding:12px 20px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end;background:#fafbfd;position:sticky;bottom:0}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px}
+.form label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:650;color:var(--ink-2)}
+.form label.full{grid-column:1/-1}
+.form input[type=text],.form input[type=date],.form textarea,.form select{border:1px solid #cfd6e3;border-radius:8px;padding:7px 9px;font-weight:400;color:var(--ink);background:#fff}
+.form textarea{min-height:88px;resize:vertical}
+.form .checks{display:flex;flex-wrap:wrap;gap:6px 14px;font-weight:400}
+.form .checks label{flex-direction:row;align-items:center;font-weight:400;color:var(--ink)}
+.form small{font-weight:400;color:var(--ink-3)}
+.diff h4{margin:14px 0 6px}
+.diff ul{margin:0;padding-left:20px}
+.diff .old{color:var(--err);text-decoration:line-through}
+.diff .new{color:var(--ok)}
+textarea.code{width:100%;min-height:55vh;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid #cfd6e3;border-radius:8px;padding:10px}
+.stat{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}
+.stat div{background:var(--bg);border-radius:10px;padding:10px 14px;min-width:120px}
+.stat b{display:block;font-size:22px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;opacity:0;transition:.25s;pointer-events:none;z-index:99}
+.toast.show{opacity:1}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header><div class="in"><h1><small>Private · not for publishing</small>EIS Compass Admin</h1><span class="file" id="fileinfo">No calendar loaded</span></div></header>
+<div class="stripe"></div>
+<nav><div class="in" role="tablist">
+  <button data-tab="start" aria-selected="true">1 · Open</button>
+  <button data-tab="events">2 · Events <span id="n-events" class="pill"></span></button>
+  <button data-tab="closures">Holidays &amp; terms</button>
+  <button data-tab="text">Page text</button>
+  <button data-tab="check">3 · Check <span id="n-check"></span></button>
+  <button data-tab="publish">4 · Publish</button>
+</div></nav>
+<main id="main"></main>
+
+<dialog id="dlg"><div id="dlg-in"></div></dialog>
+<div class="toast" id="toast"></div>
+<input type="file" id="f-html" accept=".html,.htm" hidden>
+<input type="file" id="f-sheet" accept=".xlsx,.csv,.tsv,.txt" hidden>
+
+<script>
+(function () {
+'use strict';
+/* =========================================================
+   State
+   ========================================================= */
+var DATA = null, TEMPLATE = null, FILENAME = '', TAB = 'start', FILTER = { q: '', month: '' };
+var EV_COLS = ['id', 'start', 'end', 'time', 'audiences', 'parents_invited', 'no_classes', 'status', 'title_en', 'title_ja', 'description_en', 'description_ja', 'location_en', 'location_ja', 'image', 'hidden'];
+var CL_COLS = ['start', 'end', 'type', 'name_en', 'name_ja'];
+var STATUSES = { '': 'Confirmed', tentative: 'To be confirmed', changed: 'Date changed', cancelled: 'Cancelled' };
+var CL_TYPES = { national: 'National holiday (no school)', school: 'School holiday (no school)', noclass: 'No classes (e.g. staff prep day)' };
+
+function $(s, r) { return (r || document).querySelector(s); }
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+function pad(n) { return (n < 10 ? '0' : '') + n; }
+function isoOf(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+function D(s) { var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+function addDays(s, n) { var d = D(s); d.setDate(d.getDate() + n); return isoOf(d); }
+function validISO(s) { return /^\d{4}-\d{2}-\d{2}$/.test(s || '') && isoOf(D(s)) === s; }
+function today() { return isoOf(new Date()); }
+function slug(s, n) { return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, n || 48); }
+function clone(o) { return JSON.parse(JSON.stringify(o)); }
+function audMap() { var m = {}; DATA.audiences.forEach(function (a) { m[a.id] = a; }); return m; }
+var toastT;
+function toast(m) { var t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function () { t.classList.remove('show'); }, 2600); }
+
+function saveDraft() { try { localStorage.setItem('eisc-admin', JSON.stringify({ data: DATA, template: TEMPLATE, file: FILENAME })); } catch (e) {} }
+function loadDraft() { try { var d = JSON.parse(localStorage.getItem('eisc-admin') || 'null'); if (d && d.data && d.template) { DATA = d.data; TEMPLATE = d.template; FILENAME = d.file || 'EISCompass.html'; DATA.events.forEach(normEvent); return true; } } catch (e) {} return false; }
+function changed() { saveDraft(); updateCounts(); }
+
+/* =========================================================
+   Loading the published page (it is its own template)
+   ========================================================= */
+var DATA_RE = /(<script type="application\/json" id="compass-data">)([\s\S]*?)(<\/script>)/;
+function loadTemplate(text, name) {
+  var m = DATA_RE.exec(text);
+  if (!m) throw new Error('This file does not look like an EIS Compass page (no compass-data block found).');
+  var d = JSON.parse(m[2].replace(/<\\\//g, '</'));
+  if (!d.events) throw new Error('The compass-data block has no events.');
+  DATA = d; TEMPLATE = text; FILENAME = name || 'EISCompass.html';
+  DATA.events.forEach(function (e) { normEvent(e); });
+  changed();
+}
+function normEvent(e) {
+  e.title = e.title || { en: '', ja: '' }; e.desc = e.desc || { en: '', ja: '' }; e.location = e.location || { en: '', ja: '' };
+  e.aud = e.aud || []; e.end = e.end || e.start; e.time = e.time || ''; e.status = e.status || ''; e.image = e.image || '';
+  return e;
+}
+function readFile(file, cb) {
+  var r = new FileReader();
+  r.onload = function () { cb(r.result); };
+  if (/\.xlsx$/i.test(file.name)) r.readAsArrayBuffer(file); else r.readAsText(file, 'utf-8');
+}
+
+/* =========================================================
+   Validation
+   ========================================================= */
+function validate() {
+  var out = [], A = audMap(), ids = {}, descs = {}, titles = {};
+  var off = (DATA.closures || []);
+  DATA.events.forEach(function (e, idx) {
+    var add = function (level, msg) { out.push({ level: level, msg: msg, idx: idx, e: e }); };
+    if (!validISO(e.start)) add('err', 'Start date is missing or invalid (' + (e.start || 'empty') + ')');
+    if (!validISO(e.end)) add('err', 'End date is invalid (' + (e.end || 'empty') + ')');
+    else if (e.end < e.start) add('err', 'Ends before it starts');
+    if (!e.title.en.trim()) add('err', 'English title is missing');
+    if (!e.title.ja.trim()) add('warn', 'Japanese title is missing');
+    if (e.desc.en.trim() && !e.desc.ja.trim()) add('warn', 'Japanese description is missing');
+    if (!e.desc.en.trim()) add('info', 'No description');
+    if (!e.aud.length) add('err', 'No audience selected');
+    e.aud.forEach(function (a) { if (!A[a]) add('err', 'Unknown audience "' + a + '"'); });
+    if (ids[e.id]) add('err', 'Duplicate ID (same as another event): ' + e.id); ids[e.id] = 1;
+    if (e.time && !/^\d{1,2}:\d{2}(\s*[-–~〜]\s*\d{1,2}:\d{2})?$/.test(e.time.trim())) add('warn', 'Time should look like 15:00 or 15:00-17:00');
+    if (e.status === 'changed' && !e.prevStart) add('info', 'Marked "Date changed" but no previous date recorded');
+    var d = e.desc.en.trim();
+    if (d) { (descs[d] = descs[d] || []).push(e); }
+    (titles[e.title.en.trim()] = titles[e.title.en.trim()] || []).push(e);
+    if (validISO(e.start)) off.forEach(function (c) { if (c.type !== 'noclass' && c.start <= e.start && c.end >= e.start && !e.hidden) add('info', 'Falls on a no-school day: ' + c.name.en); });
+  });
+  Object.keys(descs).forEach(function (d) {
+    var list = descs[d], names = {}; list.forEach(function (e) { names[baseTitle(e.title.en)] = 1; });
+    if (Object.keys(names).length > 1) list.forEach(function (e) {
+      out.push({ level: 'warn', msg: 'Same description as: ' + list.filter(function (x) { return x !== e; }).map(function (x) { return x.title.en; }).join(', ') + ' — is that intended?', idx: DATA.events.indexOf(e), e: e });
+    });
+  });
+  Object.keys(titles).forEach(function (t) {
+    var list = titles[t], ds = {}; list.forEach(function (e) { ds[e.desc.en.trim()] = 1; });
+    if (list.length > 1 && Object.keys(ds).length > 1) list.forEach(function (e) {
+      out.push({ level: 'info', msg: '"' + t + '" appears ' + list.length + ' times with different descriptions', idx: DATA.events.indexOf(e), e: e });
+    });
+  });
+  (DATA.closures || []).forEach(function (c, i) {
+    if (!validISO(c.start) || !validISO(c.end) || c.end < c.start) out.push({ level: 'err', msg: 'Holiday "' + c.name.en + '" has invalid dates', closure: i });
+    if (!c.name.ja) out.push({ level: 'warn', msg: 'Holiday "' + c.name.en + '" has no Japanese name', closure: i });
+  });
+  return out;
+}
+function baseTitle(t) { return t.replace(/\s*#\d+$/, '').replace(/\s*\d{4}$/, '').trim(); }
+function updateCounts() {
+  if (!DATA) return;
+  var v = validate(), e = v.filter(function (x) { return x.level === 'err'; }).length, w = v.filter(function (x) { return x.level === 'warn'; }).length;
+  $('#n-check').innerHTML = e ? '<span class="n">' + e + '</span>' : w ? '<span class="n w">' + w + '</span>' : '';
+  $('#n-events').textContent = DATA.events.length;
+  $('#fileinfo').textContent = FILENAME + ' · ' + DATA.events.length + ' events · last published ' + (DATA.meta.updated || '?');
+}
+
+/* =========================================================
+   Views
+   ========================================================= */
+function show(tab) {
+  TAB = tab;
+  document.querySelectorAll('nav button').forEach(function (b) { b.setAttribute('aria-selected', String(b.dataset.tab === tab)); });
+  var m = $('#main');
+  if (!DATA && tab !== 'start') { tab = 'start'; }
+  m.innerHTML = ({ start: vStart, events: vEvents, closures: vClosures, text: vText, check: vCheck, publish: vPublish })[tab]();
+  if (tab === 'events') bindEventsView();
+  if (tab === 'start') bindDrop();
+}
+function vStart() {
+  return '<div class="card"><h2>How this works</h2><p class="lead">This admin page lives on your computer — never upload it to the website. The public page <b>EISCompass.html</b> carries its own data, so this tool opens it, lets you change events, and saves a new copy for you to upload.</p>' +
+    '<ol class="steps"><li><b>Open</b>the current EISCompass.html (download it from the website or use your saved copy).</li><li><b>Update events</b>by importing your spreadsheet, or edit single events here.</li><li><b>Check</b>for missing Japanese, wrong dates and duplicates.</li><li><b>Publish</b>— download the new page and calendar feeds and upload them.</li></ol></div>' +
+    '<div class="card"><div class="drop" id="drop"><p><b>Drop EISCompass.html here</b> or</p><button class="btn primary" id="pick-html">Choose file…</button>' +
+    (DATA ? '<p style="margin-top:14px">Currently open: <b>' + esc(FILENAME) + '</b> (' + DATA.events.length + ' events, unsaved changes are kept in this browser). <button class="btn danger" id="discard">Discard local changes</button></p>' : '') + '</div></div>';
+}
+function bindDrop() {
+  var dz = $('#drop');
+  ['dragenter', 'dragover'].forEach(function (t) { dz.addEventListener(t, function (e) { e.preventDefault(); dz.classList.add('over'); }); });
+  ['dragleave', 'drop'].forEach(function (t) { dz.addEventListener(t, function (e) { e.preventDefault(); dz.classList.remove('over'); }); });
+  dz.addEventListener('drop', function (e) { var f = e.dataTransfer.files[0]; if (f) openHtml(f); });
+  $('#pick-html').onclick = function () { $('#f-html').click(); };
+  var dc = $('#discard'); if (dc) dc.onclick = function () { if (confirm('Discard all unsaved changes in this browser?')) { localStorage.removeItem('eisc-admin'); DATA = null; TEMPLATE = null; show('start'); $('#fileinfo').textContent = 'No calendar loaded'; } };
+}
+function openHtml(f) {
+  readFile(f, function (text) {
+    try { loadTemplate(text, f.name); toast('Opened ' + f.name); show('events'); } catch (err) { alert(err.message); }
+  });
+}
+$('#f-html').addEventListener('change', function () { if (this.files[0]) openHtml(this.files[0]); this.value = ''; });
+
+function issuesFor(idx, all) { return all.filter(function (x) { return x.idx === idx; }); }
+function vEvents() {
+  var months = {}; DATA.events.forEach(function (e) { if (e.start) months[e.start.slice(0, 7)] = 1; });
+  return '<div class="card"><div class="toolbar"><input type="search" id="ev-q" placeholder="Search title or description" value="' + esc(FILTER.q) + '">' +
+    '<select id="ev-m"><option value="">All months</option>' + Object.keys(months).sort().map(function (m) { return '<option' + (FILTER.month === m ? ' selected' : '') + '>' + m + '</option>'; }).join('') + '</select>' +
+    '<span style="flex:1"></span><button class="btn" id="imp">Import spreadsheet…</button><button class="btn" id="exp-x">Download as Excel</button><button class="btn primary" id="add">+ Add event</button></div>' +
+    '<div class="tablewrap"><table><thead><tr><th style="width:110px">Date</th><th>Title</th><th style="width:170px">Audience</th><th style="width:150px">Flags</th><th style="width:170px">Check</th></tr></thead><tbody id="ev-body"></tbody></table></div></div>';
+}
+function bindEventsView() {
+  $('#ev-q').oninput = function () { FILTER.q = this.value; fillEvents(); };
+  $('#ev-m').onchange = function () { FILTER.month = this.value; fillEvents(); };
+  $('#add').onclick = function () { editEvent(-1); };
+  $('#imp').onclick = function () { $('#f-sheet').click(); };
+  $('#exp-x').onclick = function () { download('EIS-Compass-events.xlsx', writeXlsx(), 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'); };
+  fillEvents();
+}
+function fillEvents() {
+  var A = audMap(), v = validate(), q = FILTER.q.toLowerCase();
+  var rows = DATA.events.map(function (e, i) { return { e: e, i: i }; })
+    .filter(function (r) { return (!FILTER.month || (r.e.start || '').indexOf(FILTER.month) === 0) && (!q || (r.e.title.en + ' ' + r.e.title.ja + ' ' + r.e.desc.en).toLowerCase().indexOf(q) >= 0); })
+    .sort(function (a, b) { return (a.e.start || '') < (b.e.start || '') ? -1 : 1; });
+  $('#ev-body').innerHTML = rows.map(function (r) {
+    var e = r.e, iss = issuesFor(r.i, v);
+    var flags = (e.parents ? '<span class="pill">Parents</span>' : '') + (e.noClasses ? '<span class="pill">No classes</span>' : '') + (e.status ? '<span class="pill warn">' + STATUSES[e.status] + '</span>' : '') +
+      (e.hidden ? '<span class="pill err">Hidden</span>' : '') + (e.image ? '<span class="pill">Photo</span>' : '') + (e.time ? '<span class="pill">' + esc(e.time) + '</span>' : '');
+    var chk = iss.filter(function (x) { return x.level !== 'info'; });
+    return '<tr data-i="' + r.i + '"><td>' + esc(e.start) + (e.end && e.end !== e.start ? '<span class="ja">→ ' + esc(e.end) + '</span>' : '') + '</td>' +
+      '<td><b>' + esc(e.title.en) + '</b><span class="ja" lang="ja">' + esc(e.title.ja) + '</span></td>' +
+      '<td>' + e.aud.map(function (a) { return '<span class="pill"><span class="dot" style="background:' + (A[a] ? A[a].color : '#999') + '"></span>' + esc(A[a] ? A[a].name.en : a) + '</span>'; }).join('') + '</td>' +
+      '<td>' + flags + '</td><td>' + (chk.length ? chk.map(function (x) { return '<span class="pill ' + x.level + '" title="' + esc(x.msg) + '">' + esc(x.msg.length > 28 ? x.msg.slice(0, 26) + '…' : x.msg) + '</span>'; }).join('') : '<span class="pill ok">OK</span>') + '</td></tr>';
+  }).join('') || '<tr><td colspan="5">No events match.</td></tr>';
+  document.querySelectorAll('#ev-body tr[data-i]').forEach(function (tr) { tr.onclick = function () { editEvent(+tr.dataset.i); }; });
+}
+
+function field(label, name, val, opts) {
+  opts = opts || {};
+  var input = opts.area ? '<textarea name="' + name + '"' + (opts.lang ? ' lang="' + opts.lang + '"' : '') + '>' + esc(val) + '</textarea>'
+    : '<input type="' + (opts.type || 'text') + '" name="' + name + '" value="' + esc(val) + '"' + (opts.lang ? ' lang="' + opts.lang + '"' : '') + (opts.ph ? ' placeholder="' + esc(opts.ph) + '"' : '') + (opts.ro ? ' readonly' : '') + '>';
+  return '<label class="' + (opts.full ? 'full' : '') + '">' + label + input + (opts.help ? '<small>' + opts.help + '</small>' : '') + '</label>';
+}
+function editEvent(i) {
+  var isNew = i < 0, e = isNew ? normEvent({ id: '', start: '', end: '', aud: [], parents: false, title: { en: '', ja: '' }, desc: { en: '', ja: '' } }) : clone(DATA.events[i]);
+  var v = isNew ? [] : issuesFor(i, validate());
+  var A = DATA.audiences;
+  $('#dlg-in').innerHTML = '<form method="dialog" id="evf"><div class="dh"><h3>' + (isNew ? 'New event' : 'Edit event') + '</h3><button type="button" class="btn" data-x>Close</button></div><div class="db">' +
+    (v.length ? '<ul class="issues">' + v.map(function (x) { return '<li><span class="pill ' + x.level + '">' + x.level + '</span> ' + esc(x.msg) + '</li>'; }).join('') + '</ul>' : '') +
+    '<div class="form">' +
+    field('Start date', 'start', e.start, { type: 'date' }) + field('End date', 'end', e.end, { type: 'date', help: 'Same as start for one-day events' }) +
+    field('Title (English)', 'title_en', e.title.en) + field('タイトル（日本語）', 'title_ja', e.title.ja, { lang: 'ja' }) +
+    field('Description (English)', 'desc_en', e.desc.en, { area: true }) + field('説明（日本語）', 'desc_ja', e.desc.ja, { area: true, lang: 'ja' }) +
+    '<label class="full">Audience<span class="checks">' + A.map(function (a) { return '<label><input type="checkbox" name="aud" value="' + a.id + '"' + (e.aud.indexOf(a.id) >= 0 ? ' checked' : '') + '> <span class="dot" style="background:' + a.color + '"></span>' + esc(a.name.en) + '</label>'; }).join('') + '</span></label>' +
+    '<label class="full">Options<span class="checks"><label><input type="checkbox" name="parents"' + (e.parents ? ' checked' : '') + '> Parents invited</label><label><input type="checkbox" name="noClasses"' + (e.noClasses ? ' checked' : '') + '> No classes for students this day</label><label><input type="checkbox" name="hidden"' + (e.hidden ? ' checked' : '') + '> Hidden (draft — not published)</label></span></label>' +
+    field('Time (optional)', 'time', e.time, { ph: '15:00 or 15:00-17:00', help: 'Leave empty for all-day events' }) +
+    '<label>Status<select name="status">' + Object.keys(STATUSES).map(function (k) { return '<option value="' + k + '"' + (e.status === k ? ' selected' : '') + '>' + STATUSES[k] + '</option>'; }).join('') + '</select><small>"Date changed" shows a badge with the previous date</small></label>' +
+    field('Location (English, optional)', 'loc_en', e.location.en) + field('場所（日本語・任意）', 'loc_ja', e.location.ja, { lang: 'ja' }) +
+    field('Previous date (for "Date changed")', 'prevStart', e.prevStart || '', { type: 'date' }) +
+    field('Photo path (optional)', 'image', e.image, { ph: 'compass/images/events/….webp', help: 'Upload the photo to this path on the website. Keep photos under ~150 KB.' }) +
+    field('ID (used in links — leave unless you know why)', 'id', e.id, { help: 'Generated from the date and title when empty' }) +
+    '</div></div><div class="df">' + (isNew ? '' : '<button type="button" class="btn danger" data-del>Delete</button><button type="button" class="btn" data-dup>Duplicate</button>') +
+    '<span style="flex:1"></span><button type="button" class="btn" data-x>Cancel</button><button type="submit" class="btn primary">Save</button></div></form>';
+  var dlg = $('#dlg'), f = $('#evf');
+  f.querySelectorAll('[data-x]').forEach(function (b) { b.onclick = function () { dlg.close(); }; });
+  f.start.addEventListener('change', function () { if (!f.end.value || f.end.value < f.start.value) f.end.value = f.start.value; });
+  var del = f.querySelector('[data-del]'); if (del) del.onclick = function () { if (confirm('Delete "' + e.title.en + '"?')) { DATA.events.splice(i, 1); changed(); dlg.close(); fillEvents(); toast('Event deleted'); } };
+  var dup = f.querySelector('[data-dup]'); if (dup) dup.onclick = function () { var c = clone(DATA.events[i]); c.id = ''; c.title.en += ' (copy)'; DATA.events.push(c); assignIds(); changed(); dlg.close(); fillEvents(); editEvent(DATA.events.length - 1); };
+  f.onsubmit = function (ev) {
+    ev.preventDefault();
+    var n = {
+      id: f.id.value.trim(), start: f.start.value, end: f.end.value || f.start.value, time: f.time.value.trim(),
+      aud: Array.prototype.map.call(f.querySelectorAll('[name=aud]:checked'), function (x) { return x.value; }),
+      parents: f.parents.checked, title: { en: f.title_en.value.trim(), ja: f.title_ja.value.trim() },
+      desc: { en: f.desc_en.value.trim(), ja: f.desc_ja.value.trim() }, location: { en: f.loc_en.value.trim(), ja: f.loc_ja.value.trim() },
+      image: f.image.value.trim(), status: f.status.value, updated: today()
+    };
+    if (f.noClasses.checked) n.noClasses = true;
+    if (f.hidden.checked) n.hidden = true;
+    if (f.prevStart.value) n.prevStart = f.prevStart.value;
+    if (!isNew && DATA.events[i].start !== n.start && !n.prevStart && confirm('The date moved from ' + DATA.events[i].start + ' to ' + n.start + '. Show a "Date changed" badge to families?')) { n.status = 'changed'; n.prevStart = DATA.events[i].start; }
+    if (isNew) DATA.events.push(n); else DATA.events[i] = n;
+    assignIds(); changed(); dlg.close(); fillEvents(); toast('Saved — remember to Publish');
+  };
+  dlg.showModal();
+}
+function assignIds() {
+  var used = {};
+  DATA.events.forEach(function (e) { if (e.id) { if (used[e.id]) e.id = ''; else used[e.id] = 1; } });
+  DATA.events.forEach(function (e) {
+    if (e.id) return;
+    var base = (e.start || 'undated') + '-' + slug(e.title.en), id = base, n = 2;
+    while (used[id]) id = base + '-' + n++;
+    e.id = id; used[id] = 1;
+  });
+}
+
+function vClosures() {
+  return '<div class="card"><h2>Holidays and no-school days</h2><p class="lead">Shown shaded on the calendar and included in every subscribed feed. Types: <b>national</b> (national holiday), <b>school</b> (school holiday / break), <b>noclass</b> (campus open to staff, no classes). Edit here or in the "Holidays" sheet of the spreadsheet.</p>' +
+    '<div class="tablewrap"><table><thead><tr><th>Start</th><th>End</th><th>Type</th><th>Name (EN)</th><th>名称（日本語）</th><th></th></tr></thead><tbody>' +
+    DATA.closures.map(function (c, i) {
+      return '<tr><td><input type="date" data-c="' + i + '" data-k="start" value="' + esc(c.start) + '"></td><td><input type="date" data-c="' + i + '" data-k="end" value="' + esc(c.end) + '"></td>' +
+        '<td><select data-c="' + i + '" data-k="type">' + Object.keys(CL_TYPES).map(function (k) { return '<option value="' + k + '"' + (c.type === k ? ' selected' : '') + '>' + k + '</option>'; }).join('') + '</select></td>' +
+        '<td><input type="text" data-c="' + i + '" data-k="en" value="' + esc(c.name.en) + '"></td><td><input type="text" lang="ja" data-c="' + i + '" data-k="ja" value="' + esc(c.name.ja) + '"></td><td><button class="btn danger" data-cdel="' + i + '">✕</button></td></tr>';
+    }).join('') + '</tbody></table></div><p><button class="btn" id="cadd">+ Add holiday</button></p></div>' +
+    '<div class="card"><h2>Terms</h2><p class="lead">The first day of each term (shown as T1/T2/T3 on the calendar).</p>' +
+    DATA.terms.map(function (t, i) { return '<div class="row" style="margin-bottom:8px"><input type="date" data-t="' + i + '" value="' + esc(t.start) + '"> <b>' + esc(t.name.en) + '</b> / ' + esc(t.name.ja) + '</div>'; }).join('') + '</div>';
+}
+document.addEventListener('change', function (ev) {
+  var t = ev.target;
+  if (t.dataset.c != null) {
+    var c = DATA.closures[+t.dataset.c], k = t.dataset.k;
+    if (k === 'en' || k === 'ja') c.name[k] = t.value.trim(); else c[k] = t.value;
+    if (k === 'start' && (!c.end || c.end < c.start)) c.end = c.start;
+    DATA.closures.sort(function (a, b) { return a.start < b.start ? -1 : 1; });
+    changed();
+  }
+  if (t.dataset.t != null) { DATA.terms[+t.dataset.t].start = t.value; changed(); }
+});
+document.addEventListener('click', function (ev) {
+  var t = ev.target;
+  if (t.dataset.cdel != null) { DATA.closures.splice(+t.dataset.cdel, 1); changed(); show('closures'); }
+  if (t.id === 'cadd') { DATA.closures.push({ start: today(), end: today(), type: 'school', name: { en: 'School Holiday', ja: '学校休日' } }); DATA.closures.sort(function (a, b) { return a.start < b.start ? -1 : 1; }); changed(); show('closures'); }
+  if (t.matches('nav button')) show(t.dataset.tab);
+  if (t.dataset.goto != null) { show('events'); editEvent(+t.dataset.goto); }
+});
+
+function vText() {
+  return '<div class="card"><h2>Page text (advanced)</h2><p class="lead">The welcome letter, values, safety drills, health checks, olympiads, contact details and audience colours. These rarely change. Edit carefully — it must stay valid JSON. Each text has <code>"en"</code> and <code>"ja"</code>.</p>' +
+    '<textarea class="code" id="txt" spellcheck="false">' + esc(JSON.stringify({ meta: DATA.meta, audiences: DATA.audiences, info: DATA.info }, null, 2)) + '</textarea>' +
+    '<p class="row"><button class="btn primary" id="txt-save">Apply changes</button><span id="txt-msg"></span></p></div>';
+}
+document.addEventListener('click', function (ev) {
+  if (ev.target.id !== 'txt-save') return;
+  try {
+    var o = JSON.parse($('#txt').value);
+    if (!o.meta || !o.audiences || !o.info) throw new Error('meta, audiences and info are all required');
+    DATA.meta = o.meta; DATA.audiences = o.audiences; DATA.info = o.info; changed();
+    $('#txt-msg').innerHTML = '<span class="pill ok">Applied</span>';
+  } catch (err) { $('#txt-msg').innerHTML = '<span class="pill err">' + esc(err.message) + '</span>'; }
+});
+
+function vCheck() {
+  var v = validate(), lv = { err: 'Errors — fix before publishing', warn: 'Warnings — please review', info: 'For information' };
+  return '<div class="card"><h2>Check</h2><div class="stat">' + Object.keys(lv).map(function (k) { return '<div><b>' + v.filter(function (x) { return x.level === k; }).length + '</b>' + k.replace('err', 'Errors').replace('warn', 'Warnings').replace('info', 'Notes') + '</div>'; }).join('') + '</div>' +
+    Object.keys(lv).map(function (k) {
+      var list = v.filter(function (x) { return x.level === k; });
+      if (!list.length) return '';
+      return '<h3>' + lv[k] + '</h3><ul class="issues">' + list.map(function (x) {
+        return '<li><span class="pill ' + k + '">' + k + '</span> ' + (x.e ? '<a data-goto="' + x.idx + '">' + esc(x.e.start + ' · ' + x.e.title.en) + '</a> — ' : '') + esc(x.msg) + '</li>';
+      }).join('') + '</ul>';
+    }).join('') + (v.length ? '' : '<p class="pill ok">Everything looks good.</p>') + '</div>';
+}
+
+function vPublish() {
+  var v = validate(), errs = v.filter(function (x) { return x.level === 'err'; }).length;
+  return '<div class="card"><h2>Publish</h2><p class="lead">Download the files below and upload them to the website, replacing the old ones. Paths matter — keep the folder structure.</p>' +
+    (errs ? '<p><span class="pill err">' + errs + ' error(s)</span> Fix them on the Check tab first.</p>' : '') +
+    '<div class="row" style="margin-bottom:14px"><label>“Last updated” date shown to families: <input type="date" id="pub-date" value="' + today() + '"></label></div>' +
+    '<div class="row"><button class="btn primary" id="pub-all"' + (errs ? ' disabled' : '') + '>Download everything (.zip)</button><button class="btn" id="pub-html"' + (errs ? ' disabled' : '') + '>EISCompass.html only</button><button class="btn" id="pub-feeds"' + (errs ? ' disabled' : '') + '>Calendar feeds only (.zip)</button><button class="btn" id="pub-xlsx">Spreadsheet backup (.xlsx)</button></div>' +
+    '<h3>Upload to the website</h3><table><tbody>' +
+    '<tr><td><code>EISCompass.html</code></td><td>→ website root (replaces the current page — existing links keep working)</td></tr>' +
+    '<tr><td><code>compass/feeds/en/*.ics</code>, <code>compass/feeds/ja/*.ics</code></td><td>→ the same folders on the website (subscribed calendars update from these)</td></tr>' +
+    '<tr><td><code>compass/images/…</code></td><td>→ only when you add or change a photo</td></tr></tbody></table>' +
+    '<p class="lead" style="margin-top:14px">After uploading, open the live page on your phone and check one changed event. Then announce important changes on Toddle as usual.</p></div>';
+}
+document.addEventListener('click', function (ev) {
+  var id = ev.target.id; if (!/^pub-/.test(id) || id === 'pub-date') return;
+  if (id === 'pub-xlsx') { download('EIS-Compass-events.xlsx', writeXlsx(), 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'); return; }
+  DATA.meta.updated = $('#pub-date').value || today(); changed();
+  var out = buildOutputs(DATA, TEMPLATE), enc = new TextEncoder();
+  if (id === 'pub-html') download('EISCompass.html', out.html, 'text/html');
+  else {
+    var files = out.feeds.map(function (f) { return { name: f.path, data: enc.encode(f.text) }; });
+    if (id === 'pub-all') files.unshift({ name: 'EISCompass.html', data: enc.encode(out.html) });
+    download(id === 'pub-all' ? 'EIS-Compass-publish-' + DATA.meta.updated + '.zip' : 'EIS-Compass-feeds.zip', zip(files), 'application/zip');
+  }
+  toast('Downloaded — now upload to the website');
+});
+
+function download(name, content, type) {
+  var blob = content instanceof Blob ? content : new Blob([content], { type: type });
+  var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+}
+
+/* =========================================================
+   Spreadsheet import (xlsx or csv) with change preview
+   ========================================================= */
+$('#f-sheet').addEventListener('change', function () {
+  var f = this.files[0]; this.value = ''; if (!f) return;
+  readFile(f, function (res) {
+    var p = /\.xlsx$/i.test(f.name) ? readXlsx(res) : Promise.resolve(csvSheets(res));
+    p.then(function (sheets) { previewImport(sheets, f.name); }).catch(function (err) { alert('Could not read the spreadsheet: ' + err.message); });
+  });
+});
+function csvParse(text) {
+  text = text.replace(/^\ufeff/, '');
+  var delim = (text.split('\n')[0].match(/\t/g) || []).length > (text.split('\n')[0].match(/,/g) || []).length ? '\t' : ',';
+  var rows = [], row = [], cur = '', q = false;
+  for (var i = 0; i < text.length; i++) {
+    var c = text[i];
+    if (q) { if (c === '"') { if (text[i + 1] === '"') { cur += '"'; i++; } else q = false; } else cur += c; }
+    else if (c === '"') q = true;
+    else if (c === delim) { row.push(cur); cur = ''; }
+    else if (c === '\n' || c === '\r') { if (c === '\r' && text[i + 1] === '\n') i++; row.push(cur); rows.push(row); row = []; cur = ''; }
+    else cur += c;
+  }
+  if (cur || row.length) { row.push(cur); rows.push(row); }
+  return rows.filter(function (r) { return r.some(function (x) { return x.trim(); }); });
+}
+function csvSheets(text) {
+  var rows = csvParse(text), head = (rows[0] || []).map(function (h) { return h.trim().toLowerCase(); });
+  return head.indexOf('type') >= 0 && head.indexOf('name_en') >= 0 ? { holidays: rows } : { events: rows };
+}
+function toObjects(rows) {
+  if (!rows || !rows.length) return [];
+  var head = rows[0].map(function (h) { return String(h).trim().toLowerCase().replace(/\s+/g, '_'); });
+  return rows.slice(1).map(function (r, n) { var o = { _row: n + 2 }; head.forEach(function (h, k) { o[h] = r[k] == null ? '' : String(r[k]).trim(); }); return o; });
+}
+function parseDate(v) {
+  v = String(v || '').trim(); if (!v) return '';
+  if (/^\d{5}(\.\d+)?$/.test(v)) { var d = new Date(Date.UTC(1899, 11, 30) + Math.floor(+v) * 864e5); return d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate()); }
+  var m = /^(\d{4})[-\/.年](\d{1,2})[-\/.月](\d{1,2})日?/.exec(v);
+  if (m) return m[1] + '-' + pad(+m[2]) + '-' + pad(+m[3]);
+  return v;
+}
+function yes(v) { return /^(y|yes|true|1|x|✓|○|はい)$/i.test(String(v || '').trim()); }
+function mapAud(cell, problems, row) {
+  var A = DATA.audiences;
+  return String(cell || '').split(/[,;、・\/]+/).map(function (s) { return s.trim().toLowerCase(); }).filter(Boolean).map(function (s) {
+    var a = A.filter(function (x) { return x.id === s || x.name.en.toLowerCase() === s || x.name.ja === s || (s === 'whole-school' && x.id === 'whole') || (s === 'high' && x.id === 'high'); })[0];
+    if (!a) { problems.push('Row ' + row + ': unknown audience "' + s + '"'); return null; }
+    return a.id;
+  }).filter(Boolean);
+}
+function rowToEvent(o, problems) {
+  var e = normEvent({
+    id: o.id || '', start: parseDate(o.start), end: parseDate(o.end) || parseDate(o.start), time: o.time || '',
+    aud: mapAud(o.audiences, problems, o._row), parents: yes(o.parents_invited),
+    title: { en: o.title_en || '', ja: o.title_ja || '' }, desc: { en: o.description_en || '', ja: o.description_ja || '' },
+    location: { en: o.location_en || '', ja: o.location_ja || '' }, image: o.image || '', status: ''
+  });
+  var st = (o.status || '').toLowerCase();
+  e.status = /cancel|中止/.test(st) ? 'cancelled' : /tbc|tentative|confirm|未定|未確定/.test(st) ? 'tentative' : /chang|変更/.test(st) ? 'changed' : '';
+  if (yes(o.no_classes)) e.noClasses = true;
+  if (yes(o.hidden)) e.hidden = true;
+  if (!validISO(e.start)) problems.push('Row ' + o._row + ' (' + (e.title.en || 'untitled') + '): start date "' + o.start + '" not understood — use YYYY-MM-DD');
+  return e;
+}
+var COMPARE = ['start', 'end', 'time', 'aud', 'parents', 'noClasses', 'hidden', 'status', 'title', 'desc', 'location', 'image'];
+function sameVal(a, b) { return JSON.stringify(a == null ? '' : a) === JSON.stringify(b == null ? '' : b) || (!a && !b); }
+function previewImport(sheets, fname) {
+  var problems = [], incoming = toObjects(sheets.events).filter(function (o) { return o.title_en || o.start; }).map(function (o) { return rowToEvent(o, problems); });
+  var hol = sheets.holidays ? toObjects(sheets.holidays).filter(function (o) { return o.start; }).map(function (o) {
+    return { start: parseDate(o.start), end: parseDate(o.end) || parseDate(o.start), type: CL_TYPES[(o.type || '').toLowerCase()] ? o.type.toLowerCase() : 'school', name: { en: o.name_en || '', ja: o.name_ja || '' } };
+  }) : null;
+  if (!incoming.length && !hol) { alert('No events found. The first row must be the column headings (id, start, end, …, title_en, title_ja, …).'); return; }
+  var old = DATA.events, used = {}, plan = { added: [], removed: [], changed: [], same: 0 };
+  incoming.forEach(function (n) {
+    var o = n.id && old.filter(function (x) { return x.id === n.id && !used[x.id]; })[0];
+    if (!o) o = old.filter(function (x) { return !used[x.id] && x.title.en === n.title.en && x.start === n.start; })[0];
+    if (!o) { var same = old.filter(function (x) { return !used[x.id] && x.title.en === n.title.en; }); if (same.length === 1) o = same[0]; }
+    if (!o) { plan.added.push(n); return; }
+    used[o.id] = 1; n.id = o.id;
+    ['prevStart', 'updated'].forEach(function (k) { if (o[k]) n[k] = o[k]; });
+    if (!n.status && o.status === 'changed') n.status = 'changed';
+    var diffs = COMPARE.filter(function (k) { return !sameVal(o[k], n[k]); });
+    if (diffs.length) plan.changed.push({ o: o, n: n, diffs: diffs }); else plan.same++;
+  });
+  if (incoming.length) plan.removed = old.filter(function (x) { return !used[x.id]; });
+  var showVal = function (k, v) { return k === 'aud' ? (v || []).join(', ') : typeof v === 'object' && v ? (v.en || '') + (v.ja ? ' / ' + v.ja : '') : String(v == null ? '' : v); };
+  $('#dlg-in').innerHTML = '<div class="dh"><h3>Import “' + esc(fname) + '”</h3><button class="btn" data-x>Cancel</button></div><div class="db diff">' +
+    '<div class="stat"><div><b>' + plan.added.length + '</b>new</div><div><b>' + plan.changed.length + '</b>changed</div><div><b>' + plan.removed.length + '</b>removed</div><div><b>' + plan.same + '</b>unchanged</div>' + (hol ? '<div><b>' + hol.length + '</b>holidays</div>' : '') + '</div>' +
+    (problems.length ? '<h4>Problems</h4><ul>' + problems.map(function (p) { return '<li class="old" style="text-decoration:none">' + esc(p) + '</li>'; }).join('') + '</ul>' : '') +
+    (plan.changed.length ? '<h4>Changed</h4><ul>' + plan.changed.map(function (c) {
+      return '<li><b>' + esc(c.o.title.en) + '</b> (' + esc(c.o.start) + ')<ul>' + c.diffs.map(function (k) { return '<li>' + k + ': <span class="old">' + esc(showVal(k, c.o[k]).slice(0, 120)) + '</span> → <span class="new">' + esc(showVal(k, c.n[k]).slice(0, 120)) + '</span></li>'; }).join('') + '</ul></li>';
+    }).join('') + '</ul>' : '') +
+    (plan.added.length ? '<h4>New</h4><ul>' + plan.added.map(function (e) { return '<li class="new">' + esc(e.start + ' · ' + e.title.en) + '</li>'; }).join('') + '</ul>' : '') +
+    (plan.removed.length ? '<h4>Removed (not in the spreadsheet)</h4><ul>' + plan.removed.map(function (e) { return '<li class="old">' + esc(e.start + ' · ' + e.title.en) + '</li>'; }).join('') + '</ul>' : '') +
+    '<p><label><input type="checkbox" id="mark-chg" checked> Show a “Date changed” badge on events whose date moved</label></p></div>' +
+    '<div class="df"><button class="btn" data-x>Cancel</button><button class="btn primary" id="apply">Apply import</button></div>';
+  var dlg = $('#dlg');
+  dlg.querySelectorAll('[data-x]').forEach(function (b) { b.onclick = function () { dlg.close(); }; });
+  $('#apply').onclick = function () {
+    var mark = $('#mark-chg').checked, t = today();
+    plan.changed.forEach(function (c) {
+      c.n.updated = t;
+      if (mark && c.diffs.indexOf('start') >= 0 && c.n.status !== 'cancelled') { c.n.status = 'changed'; c.n.prevStart = c.o.start; }
+    });
+    plan.added.forEach(function (e) { e.updated = t; });
+    if (incoming.length) DATA.events = incoming;
+    if (hol) DATA.closures = hol.sort(function (a, b) { return a.start < b.start ? -1 : 1; });
+    assignIds(); changed(); dlg.close(); show('events');
+    toast('Imported: ' + plan.added.length + ' new, ' + plan.changed.length + ' changed, ' + plan.removed.length + ' removed');
+  };
+  dlg.showModal();
+}
+
+/* ---------- minimal ZIP reader + XLSX reader ---------- */
+function inflateRaw(bytes) {
+  if (typeof DecompressionStream === 'undefined') return Promise.reject(new Error('This browser cannot open .xlsx files — save as CSV instead, or use a current Chrome, Edge, Safari or Firefox.'));
+  var ds = new DecompressionStream('deflate-raw');
+  var stream = new Blob([bytes]).stream().pipeThrough(ds);
+  return new Response(stream).arrayBuffer().then(function (b) { return new Uint8Array(b); });
+}
+function unzip(buf) {
+  var u8 = new Uint8Array(buf), dv = new DataView(buf), eocd = -1;
+  for (var i = u8.length - 22; i >= Math.max(0, u8.length - 70000); i--) { if (dv.getUint32(i, true) === 0x06054b50) { eocd = i; break; } }
+  if (eocd < 0) return Promise.reject(new Error('Not a valid .xlsx file'));
+  var n = dv.getUint16(eocd + 10, true), off = dv.getUint32(eocd + 16, true), files = {}, jobs = [], dec = new TextDecoder();
+  for (var k = 0; k < n; k++) {
+    var method = dv.getUint16(off + 10, true), csize = dv.getUint32(off + 20, true), nlen = dv.getUint16(off + 28, true), elen = dv.getUint16(off + 30, true), clen = dv.getUint16(off + 32, true), lho = dv.getUint32(off + 42, true);
+    var name = dec.decode(u8.subarray(off + 46, off + 46 + nlen));
+    var start = lho + 30 + dv.getUint16(lho + 26, true) + dv.getUint16(lho + 28, true), data = u8.subarray(start, start + csize);
+    jobs.push((method === 0 ? Promise.resolve(data) : inflateRaw(data)).then(function (nm) { return function (d) { files[nm] = d; }; }(name)));
+    off += 46 + nlen + elen + clen;
+  }
+  return Promise.all(jobs).then(function () { return files; });
+}
+function readXlsx(buf) {
+  return unzip(buf).then(function (files) {
+    var dec = new TextDecoder(), xml = function (p) { return files[p] ? new DOMParser().parseFromString(dec.decode(files[p]), 'application/xml') : null; };
+    var all = function (doc, tag) { return Array.prototype.slice.call(doc.getElementsByTagNameNS('*', tag)); };
+    var ss = xml('xl/sharedStrings.xml'), strings = ss ? all(ss, 'si').map(function (si) { return all(si, 't').map(function (t) { return t.textContent; }).join(''); }) : [];
+    var wb = xml('xl/workbook.xml'), rels = xml('xl/_rels/workbook.xml.rels'), relMap = {};
+    all(rels, 'Relationship').forEach(function (r) { relMap[r.getAttribute('Id')] = r.getAttribute('Target').replace(/^\/?(xl\/)?/, 'xl/'); });
+    var out = {};
+    all(wb, 'sheet').forEach(function (s, idx) {
+      var rid = s.getAttribute('r:id') || s.getAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships', 'id');
+      var doc = xml(relMap[rid]); if (!doc) return;
+      var rows = all(doc, 'row').map(function (r) {
+        var arr = [];
+        all(r, 'c').forEach(function (c) {
+          var ref = c.getAttribute('r') || '', col = 0, letters = ref.replace(/\d+/g, '');
+          for (var j = 0; j < letters.length; j++) col = col * 26 + letters.charCodeAt(j) - 64;
+          var t = c.getAttribute('t'), v = all(c, 'v')[0], val = '';
+          if (t === 's') val = strings[+v.textContent] || '';
+          else if (t === 'inlineStr') val = all(c, 't').map(function (x) { return x.textContent; }).join('');
+          else if (t === 'b') val = v && v.textContent === '1' ? 'yes' : '';
+          else val = v ? v.textContent : '';
+          arr[(col || arr.length + 1) - 1] = val;
+        });
+        for (var z = 0; z < arr.length; z++) if (arr[z] == null) arr[z] = '';
+        return arr;
+      }).filter(function (r) { return r.some(function (x) { return String(x).trim(); }); });
+      var name = (s.getAttribute('name') || '').toLowerCase();
+      if (/holiday|closure|休/.test(name)) out.holidays = rows;
+      else if (/guide|read/.test(name)) {}
+      else if (!out.events) out.events = rows;
+    });
+    return out;
+  });
+}
+
+/* ---------- ZIP writer (stored) + XLSX writer ---------- */
+var CRC = (function () { var t = new Uint32Array(256); for (var n = 0; n < 256; n++) { var c = n; for (var k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+function crc32(u8) { var c = 0xFFFFFFFF; for (var i = 0; i < u8.length; i++) c = CRC[(c ^ u8[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+function zip(files) {
+  var enc = new TextEncoder(), parts = [], central = [], offset = 0;
+  files.forEach(function (f) {
+    var name = enc.encode(f.name), data = f.data, crc = crc32(data);
+    var lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true); lh.setUint16(8, 0, true);
+    lh.setUint16(10, 0, true); lh.setUint16(12, 0x5021, true); lh.setUint32(14, crc, true); lh.setUint32(18, data.length, true); lh.setUint32(22, data.length, true);
+    lh.setUint16(26, name.length, true); lh.setUint16(28, 0, true);
+    parts.push(new Uint8Array(lh.buffer), name, data);
+    var ch = new DataView(new ArrayBuffer(46));
+    ch.setUint32(0, 0x02014b50, true); ch.setUint16(4, 20, true); ch.setUint16(6, 20, true); ch.setUint16(8, 0x0800, true); ch.setUint16(10, 0, true);
+    ch.setUint16(12, 0, true); ch.setUint16(14, 0x5021, true); ch.setUint32(16, crc, true); ch.setUint32(20, data.length, true); ch.setUint32(24, data.length, true);
+    ch.setUint16(28, name.length, true); ch.setUint32(42, offset, true);
+    central.push(new Uint8Array(ch.buffer), name);
+    offset += 30 + name.length + data.length;
+  });
+  var csize = central.reduce(function (s, p) { return s + p.length; }, 0);
+  var end = new DataView(new ArrayBuffer(22));
+  end.setUint32(0, 0x06054b50, true); end.setUint16(8, files.length, true); end.setUint16(10, files.length, true); end.setUint32(12, csize, true); end.setUint32(16, offset, true);
+  return new Blob(parts.concat(central, [new Uint8Array(end.buffer)]), { type: 'application/zip' });
+}
+function xesc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, ''); }
+function colName(i) { var s = ''; i++; while (i > 0) { var m = (i - 1) % 26; s = String.fromCharCode(65 + m) + s; i = Math.floor((i - 1) / 26); } return s; }
+function sheetXml(rows, widths) {
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>' +
+    '<cols>' + widths.map(function (w, i) { return '<col min="' + (i + 1) + '" max="' + (i + 1) + '" width="' + w + '" customWidth="1"/>'; }).join('') + '</cols><sheetData>' +
+    rows.map(function (r, ri) { return '<row r="' + (ri + 1) + '">' + r.map(function (v, ci) { return '<c r="' + colName(ci) + (ri + 1) + '" t="inlineStr"' + (ri === 0 ? ' s="1"' : ' s="2"') + '><is><t xml:space="preserve">' + xesc(v) + '</t></is></c>'; }).join('') + '</row>'; }).join('') +
+    '</sheetData></worksheet>';
+}
+function eventRows() {
+  var A = audMap();
+  return [EV_COLS].concat(DATA.events.slice().sort(function (a, b) { return a.start < b.start ? -1 : 1; }).map(function (e) {
+    return [e.id, e.start, e.end, e.time, e.aud.map(function (a) { return A[a] ? A[a].name.en : a; }).join(', '), e.parents ? 'yes' : '', e.noClasses ? 'yes' : '', e.status, e.title.en, e.title.ja, e.desc.en, e.desc.ja, e.location.en, e.location.ja, e.image, e.hidden ? 'yes' : ''];
+  }));
+}
+function writeXlsx() {
+  var enc = new TextEncoder();
+  var ev = eventRows();
+  var hol = [CL_COLS].concat(DATA.closures.map(function (c) { return [c.start, c.end, c.type, c.name.en, c.name.ja]; }));
+  var guide = [['Column', 'What to enter']].concat([
+    ['id', 'Leave as is for existing events (keeps links and change tracking). Leave empty for new events.'],
+    ['start / end', 'Dates as YYYY-MM-DD, e.g. 2026-10-31. End = start for one-day events.'],
+    ['time', 'Optional, e.g. 15:00 or 15:00-17:00. Empty = all day.'],
+    ['audiences', 'Comma-separated: ' + DATA.audiences.map(function (a) { return a.name.en; }).join(', ')],
+    ['parents_invited / no_classes / hidden', 'yes or empty'],
+    ['status', 'empty (confirmed), tentative, changed or cancelled'],
+    ['title_en / title_ja, description_en / description_ja', 'English and Japanese text. Both languages are shown on the website.'],
+    ['location_en / location_ja', 'Optional.'],
+    ['image', 'Optional photo path, e.g. compass/images/events/2026-10-31-imf.webp'],
+    ['Holidays sheet: type', 'national, school or noclass']
+  ]);
+  var wbx = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Events" sheetId="1" r:id="rId1"/><sheet name="Holidays" sheetId="2" r:id="rId2"/><sheet name="Guide" sheetId="3" r:id="rId3"/></sheets></workbook>';
+  var rels = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet2.xml"/><Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet3.xml"/><Relationship Id="rId4" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>';
+  var styles = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Calibri"/></font></fonts><fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FF002E7A"/></patternFill></fill></fills><borders count="1"><border/></borders><cellStyleXfs count="1"><xf/></cellStyleXfs><cellXfs count="3"><xf/><xf fontId="1" fillId="2" applyFont="1" applyFill="1"/><xf applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf></cellXfs></styleSheet>';
+  var ct = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/worksheets/sheet2.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/worksheets/sheet3.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>';
+  var root = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>';
+  return zip([
+    { name: '[Content_Types].xml', data: enc.encode(ct) }, { name: '_rels/.rels', data: enc.encode(root) },
+    { name: 'xl/workbook.xml', data: enc.encode(wbx) }, { name: 'xl/_rels/workbook.xml.rels', data: enc.encode(rels) }, { name: 'xl/styles.xml', data: enc.encode(styles) },
+    { name: 'xl/worksheets/sheet1.xml', data: enc.encode(sheetXml(ev, [30, 12, 12, 11, 24, 10, 10, 11, 34, 30, 60, 60, 20, 20, 30, 8])) },
+    { name: 'xl/worksheets/sheet2.xml', data: enc.encode(sheetXml(hol, [12, 12, 10, 32, 24])) },
+    { name: 'xl/worksheets/sheet3.xml', data: enc.encode(sheetXml(guide, [40, 100])) }
+  ]);
+}
+
+/* =========================================================
+   Publishing: page + static fallback + feeds
+   ========================================================= */
+var MONF_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var MON_EN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function staticHTML(d) {
+  var A = {}; d.audiences.forEach(function (a) { A[a.id] = a; });
+  var items = d.events.filter(function (e) { return !e.hidden; }).map(function (e) { return { k: 'e', s: e.start, x: e }; })
+    .concat((d.closures || []).map(function (c) { return { k: 'c', s: c.start, x: c }; })).sort(function (a, b) { return a.s < b.s ? -1 : a.s > b.s ? 1 : 0; });
+  var dayEn = function (s) { var x = D(s); return x.getDate() + ' ' + MON_EN[x.getMonth()]; };
+  var dayJa = function (s) { var x = D(s); return (x.getMonth() + 1) + '月' + x.getDate() + '日'; };
+  var range = function (a, b, f, sep) { return a === b ? f(a) : f(a) + sep + f(b); };
+  var u = D(d.meta.updated);
+  var h = '\n<div id="static-agenda">\n<h1>' + esc(d.meta.title.en) + ' ' + esc(d.meta.year) + ' — ' + esc(d.meta.subtitle.en) + ' <span lang="ja">' + esc(d.meta.subtitle.ja) + '</span></h1>\n' +
+    '<p>Enishi International School, Nagoya. Last updated ' + u.getDate() + ' ' + MONF_EN[u.getMonth()] + ' ' + u.getFullYear() + ' / <span lang="ja">最終更新 ' + u.getFullYear() + '年' + (u.getMonth() + 1) + '月' + u.getDate() + '日</span></p>\n';
+  var cur = '';
+  items.forEach(function (it) {
+    var m = it.s.slice(0, 7);
+    if (m !== cur) { if (cur) h += '</ul>\n'; var md = D(m + '-01'); h += '<h2>' + MONF_EN[md.getMonth()] + ' ' + md.getFullYear() + ' <span lang="ja">' + md.getFullYear() + '年' + (md.getMonth() + 1) + '月</span></h2>\n<ul>\n'; cur = m; }
+    var x = it.x, end = x.end || x.start;
+    if (it.k === 'c') h += '<li><time datetime="' + x.start + '">' + esc(range(x.start, end, dayEn, '–')) + '</time>' + esc(x.name.en) + ' <span class="ja" lang="ja">' + esc(range(x.start, end, dayJa, '〜')) + ' ' + esc(x.name.ja) + '</span></li>\n';
+    else h += '<li><time datetime="' + x.start + '">' + esc(range(x.start, end, dayEn, '–')) + '</time><a href="#/event/' + esc(x.id) + '">' + esc(x.title.en) + '</a>' + (x.status === 'cancelled' ? ' (cancelled)' : '') +
+      ' <span class="ja" lang="ja">' + esc(range(x.start, end, dayJa, '〜')) + ' ' + esc(x.title.ja) + '</span>' +
+      '<span class="aud">' + esc(x.aud.map(function (a) { return A[a] ? A[a].name.en : a; }).join(' · ') + (x.parents ? ' · Parents invited' : '')) + '</span></li>\n';
+  });
+  if (cur) h += '</ul>\n';
+  return h + '</div>\n';
+}
+function metaHTML(d) {
+  var site = d.meta.siteUrl, img = new URL(d.meta.ogImage || 'compass/images/site/og.jpg', site).href;
+  var title = d.meta.title.en + ' ' + d.meta.year + ' — Enishi International School Events Calendar';
+  var desc = 'Events, holidays and activities at Enishi International School, Nagoya — ELC through High School. ' + d.meta.title.ja + '：' + d.meta.subtitle.ja + '（' + d.meta.year + '）';
+  return '\n<title>' + esc(title) + '</title>\n<meta name="description" content="' + esc(desc) + '">\n<link rel="canonical" href="' + esc(site) + '">\n' +
+    '<meta property="og:type" content="website">\n<meta property="og:site_name" content="Enishi International School">\n<meta property="og:title" content="' + esc(title) + '">\n' +
+    '<meta property="og:description" content="' + esc(desc) + '">\n<meta property="og:url" content="' + esc(site) + '">\n<meta property="og:image" content="' + esc(img) + '">\n' +
+    '<meta property="og:locale" content="en_US">\n<meta property="og:locale:alternate" content="ja_JP">\n<meta name="twitter:card" content="summary_large_image">\n';
+}
+/* --- calendar feed generation (kept in step with EISCompass.html) --- */
+function icsEsc(s) { return String(s || '').replace(/\\/g, '\\\\').replace(/\r?\n/g, '\\n').replace(/([,;])/g, '\\$1'); }
+function icsFold(line) { var out = [], cur = '', bytes = 0, enc = new TextEncoder(); for (var ch of line) { var b = enc.encode(ch).length; if (bytes + b > 73) { out.push(cur); cur = ' '; bytes = 1; } cur += ch; bytes += b; } out.push(cur); return out.join('\r\n'); }
+function ymd(s) { return s.replace(/-/g, ''); }
+function parseTime(t) { var m = /^(\d{1,2}):(\d{2})(?:\s*[-–~〜]\s*(\d{1,2}):(\d{2}))?$/.exec((t || '').trim()); if (!m) return null; return { s: pad(+m[1]) + m[2] + '00', e: m[3] ? pad(+m[3]) + m[4] + '00' : pad(Math.min(+m[1] + 1, 23)) + m[2] + '00' }; }
+function icsEvent(i, l, stamp, base, A) {
+  var pick = function (o) { return o ? (o[l] || o.en || '') : ''; };
+  var name = i.kind === 'closure' ? pick(i.name) : pick(i.title);
+  var lines = ['BEGIN:VEVENT', 'UID:' + (i.kind === 'closure' ? 'closure-' + i.start + '-' + ymd(i.end) : i.id) + '@enishi.ac.jp', 'DTSTAMP:' + stamp];
+  var t = i.kind === 'event' && parseTime(i.time);
+  if (t) lines.push('DTSTART;TZID=Asia/Tokyo:' + ymd(i.start) + 'T' + t.s, 'DTEND;TZID=Asia/Tokyo:' + ymd(i.start) + 'T' + t.e);
+  else lines.push('DTSTART;VALUE=DATE:' + ymd(i.start), 'DTEND;VALUE=DATE:' + ymd(addDays(i.end, 1)));
+  var desc = i.kind === 'closure' ? (i.type === 'noclass' ? (l === 'ja' ? '授業なし' : 'No classes') : (l === 'ja' ? '休校' : 'No school')) : pick(i.desc);
+  if (i.kind === 'event') {
+    var aud = (i.aud || []).map(function (a) { return A[a] ? pick(A[a].name) : a; }).join(', ');
+    if (aud) desc += (desc ? '\n\n' : '') + (l === 'ja' ? '対象：' : 'For: ') + aud + (i.parents ? (l === 'ja' ? '（保護者参加可）' : ' (parents invited)') : '');
+    if (base) desc += '\n' + base + '#/event/' + i.id;
+  }
+  lines.push('SUMMARY:' + icsEsc((i.status === 'cancelled' ? (l === 'ja' ? '【中止】' : '[Cancelled] ') : '') + name));
+  if (desc) lines.push('DESCRIPTION:' + icsEsc(desc));
+  if (i.kind === 'event' && pick(i.location)) lines.push('LOCATION:' + icsEsc(pick(i.location)));
+  if (i.kind === 'event' && base) lines.push('URL:' + base + '#/event/' + i.id);
+  if (i.status === 'cancelled') lines.push('STATUS:CANCELLED');
+  if (i.status === 'tentative') lines.push('STATUS:TENTATIVE');
+  lines.push('TRANSP:TRANSPARENT', 'END:VEVENT');
+  return lines;
+}
+function icsCalendar(name, items, l, stamp, base, A) {
+  var lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Enishi International School//EIS Compass//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+    'X-WR-CALNAME:' + icsEsc(name), 'X-WR-TIMEZONE:Asia/Tokyo', 'REFRESH-INTERVAL;VALUE=DURATION:PT12H', 'X-PUBLISHED-TTL:PT12H'];
+  if (items.some(function (i) { return i.kind === 'event' && parseTime(i.time); }))
+    lines.push('BEGIN:VTIMEZONE', 'TZID:Asia/Tokyo', 'BEGIN:STANDARD', 'DTSTART:19700101T000000', 'TZOFFSETFROM:+0900', 'TZOFFSETTO:+0900', 'TZNAME:JST', 'END:STANDARD', 'END:VTIMEZONE');
+  items.forEach(function (i) { lines = lines.concat(icsEvent(i, l, stamp, base, A)); });
+  lines.push('END:VCALENDAR');
+  return lines.map(icsFold).join('\r\n') + '\r\n';
+}
+function buildFeeds(d) {
+  var A = {}; d.audiences.forEach(function (a) { A[a.id] = a; });
+  var stamp = ymd(d.meta.updated) + 'T000000Z', base = d.meta.siteUrl;
+  var evs = d.events.filter(function (e) { return !e.hidden; }).map(function (e) { return Object.assign({ kind: 'event' }, e); });
+  var cls = (d.closures || []).map(function (c) { return Object.assign({ kind: 'closure' }, c); });
+  var feeds = [];
+  ['en', 'ja'].forEach(function (l) {
+    [{ id: 'all' }].concat(d.audiences).forEach(function (a) {
+      var list = a.id === 'all' ? evs : evs.filter(function (e) { return e.aud.indexOf(a.id) >= 0 || e.aud.indexOf('whole') >= 0; });
+      var items = list.concat(cls).sort(function (x, y) { return x.start < y.start ? -1 : x.start > y.start ? 1 : 0; });
+      var name = (l === 'ja' ? d.meta.title.ja : d.meta.title.en) + (a.id === 'all' ? '' : ' — ' + (a.name[l] || a.name.en));
+      feeds.push({ path: 'compass/feeds/' + l + '/' + a.id + '.ics', text: icsCalendar(name, items, l, stamp, base, A) });
+    });
+  });
+  return feeds;
+}
+function buildOutputs(d, tpl) {
+  var out = clone(d);
+  out.events.forEach(function (e) { ['title', 'desc', 'location'].forEach(function (k) { if (e[k] && !e[k].en && !e[k].ja) delete e[k]; }); if (!e.time) delete e.time; if (!e.status) delete e.status; if (!e.image) delete e.image; if (!e.updated) delete e.updated; });
+  out.events.sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
+  var json = JSON.stringify(out).replace(/<\//g, '<\\/');
+  var html = tpl.replace(DATA_RE, function (_, a, b, c) { return a + json + c; })
+    .replace(/<!--META:START-->[\s\S]*?<!--META:END-->/, function () { return '<!--META:START-->' + metaHTML(d) + '<!--META:END-->'; })
+    .replace(/<!--STATIC:START-->[\s\S]*?<!--STATIC:END-->/, function () { return '<!--STATIC:START-->' + staticHTML(d) + '<!--STATIC:END-->'; });
+  return { html: html, feeds: buildFeeds(d) };
+}
+
+/* =========================================================
+   Boot (and headless build mode used to produce the first release)
+   ========================================================= */
+var P = new URLSearchParams(location.search);
+if (P.get('build')) {
+  Promise.all([fetch(P.get('tpl')).then(function (r) { return r.text(); }), fetch(P.get('seed')).then(function (r) { return r.json(); })]).then(function (res) {
+    var tpl = res[0].replace(DATA_RE, function (_, a, b, c) { return a + JSON.stringify(res[1]).replace(/<\//g, '<\\/') + c; });
+    loadTemplate(tpl, 'EISCompass.html');
+    var out = buildOutputs(DATA, TEMPLATE), box = document.createElement('div');
+    var put = function (path, text) { var t = document.createElement('textarea'); t.setAttribute('data-out', path); t.textContent = text; box.appendChild(t); };
+    put('EISCompass.html', out.html);
+    out.feeds.forEach(function (f) { put(f.path, f.text); });
+    put('_validation.json', JSON.stringify(validate().map(function (x) { return { level: x.level, msg: x.msg, event: x.e && x.e.title.en, start: x.e && x.e.start }; }), null, 1));
+    return writeXlsx().arrayBuffer().then(function (b) {
+      var s = '', u8 = new Uint8Array(b); for (var i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000));
+      put('EIS-Compass-events.xlsx.b64', btoa(s));
+      return readXlsx(b).then(function (sheets) { put('_xlsx_roundtrip.json', JSON.stringify({ events: sheets.events.length, holidays: sheets.holidays.length, sample: sheets.events[1] })); });
+    }).then(function () { document.body.appendChild(box); document.title = 'BUILD-DONE'; });
+  }).catch(function (err) { document.title = 'BUILD-FAILED ' + err.message; });
+} else {
+  if (loadDraft()) updateCounts();
+  show(DATA ? 'events' : 'start');
+}
+})();
+</script>
+</body>
+</html>
