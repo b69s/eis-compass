@@ -38,7 +38,7 @@ Unsaved admin work is kept in that browser's local storage until you publish or 
 ## Notes
 
 - Photos: upload new ones to `compass/images/events/` (WebP or JPEG, about 1200 px wide, under 150 KB) and put the path in the `image` column. Photos appear as small thumbnails in the lists; the large photo in the event view is only shown when the file is at least 600 px wide (most current photos are ~200 px, so they show as thumbnails only).
-- Times are optional (`15:00` or `15:00-17:00`). Without a time, events are all-day everywhere, including in the feeds.
+- Times are optional: type `15:00` (start) or `15:00-17:00` (start–end) in the spreadsheet's `time` column. Excel time cells, `9:30`, `15:00〜17:00` and full-width digits are all understood and tidied on import. Timed events show the time on the website and appear at that time in subscribed calendars; events without a time are all-day.
 - Google Calendar refreshes subscribed feeds slowly (up to about 24 h). Apple Calendar refreshes more often.
 - The page uses system fonts (Hiragino / Yu Gothic / Noto for Japanese), so there are no font downloads.
 - If someone opens the page without JavaScript, or a search engine indexes it, they get a plain bilingual list of every event and holiday. The admin page writes this list when you publish.
