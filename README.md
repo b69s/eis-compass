@@ -11,6 +11,7 @@ One data source, three outputs: a mobile-first web page, a print layout, and sub
 | `website/compass/images/` | Event photos (108, about 12 KB each), logo, social preview image | **Yes** |
 | `admin/admin.html` | Private editor: open the page, import the spreadsheet, check, publish | **No** — keep it on a staff computer or shared drive |
 | `admin/EIS-Compass-events.xlsx` | All events as a spreadsheet (Events / Holidays / Guide sheets) | No |
+| `admin/Staff-Guide-Updating-the-Calendar.html` | Plain-language, step-by-step guide with screenshots for staff who update the calendar (opens in any browser, prints well) | No — keep it with `admin.html` in the shared folder |
 
 ## Updating events
 
