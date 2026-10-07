@@ -57,7 +57,7 @@ img{max-width:100%;display:block}
 .stripe{height:4px;background:linear-gradient(90deg,var(--sky) 0 33.3%,var(--orange) 33.3% 66.6%,var(--red) 66.6%)}
 .tabs{background:#fff;border-bottom:1px solid var(--line)}
 .tabs .wrap{display:flex;gap:4px}
-.tab{flex:1 1 0;max-width:180px;border:0;background:none;padding:12px 8px 10px;font-weight:650;color:var(--ink-3);border-bottom:3px solid transparent;font-size:15px}
+.tab{flex:1 1 0;max-width:180px;border:0;background:none;padding:12px 8px 10px;font-weight:650;color:var(--ink-3);border-bottom:3px solid transparent;font-size:15px;white-space:nowrap}
 .tab[aria-selected="true"]{color:var(--navy);border-bottom-color:var(--orange)}
 
 /* ---------- filter bar ---------- */
@@ -204,7 +204,7 @@ dialog::backdrop{background:rgba(10,22,52,.5)}
 .sheet-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--off)}
 .sheet-gap{height:44px}
 .dlg-body{padding:18px 20px 20px}
-.dlg-body h2{margin:6px 0 4px;font-size:22px;line-height:1.3}
+.dlg-body h2{margin:6px 0 4px;font-size:22px;line-height:1.3;padding-right:40px}
 .when{font-weight:650;color:var(--navy-2);margin:0 0 10px}
 .dlg-body .tags{display:flex;flex-wrap:wrap;gap:6px 12px;margin-bottom:12px}
 .desc{margin:0 0 14px;color:var(--ink-2)}
@@ -238,6 +238,7 @@ dialog::backdrop{background:rgba(10,22,52,.5)}
   dialog.sheet{margin:auto 0 0;width:100%;max-width:none;border-radius:18px 18px 0 0;max-height:92vh}
   .brand small{display:none}
   .brand b{font-size:20px}
+  .tab{flex:1 1 auto;padding:12px 4px 10px;font-size:14.5px}
   .seg button{padding:5px 9px}
   .icon-btn span{display:none}
   .icon-btn{padding:7px}
@@ -585,13 +586,13 @@ var S = {
     moreInfo:'More information', lkPdf:'PDF flyer', lkForm:'Sign-up form', lkDoc:'View document', lkMail:'Send an email', lkVideo:'Watch video'
   },
   ja: {
-    upcoming:'これから', calendar:'カレンダー', info:'ご案内', search:'イベントを検索', subscribe:'購読',
+    upcoming:'今後のイベント', calendar:'カレンダー', info:'ご案内', search:'イベントを検索', subscribe:'登録',
     everyone:'すべて', parents:'保護者参加可', today:'今日', tomorrow:'明日', thisWeek:'今週', nextWeek:'来週',
     showing:'{list}＋全校行事を表示中', showingWhole:'全校行事を表示中', showingPar:'保護者が参加できるイベント',
     nextOff:'次のお休み', offNow:'本日は休校です', inDays:'あと{n}日', until:'{d}まで',
     seeAll:'カレンダーをすべて見る', noMatch:'条件に合うイベントはありません。', clear:'絞り込みを解除', results:'「{q}」の検索結果：{n}件', noResults:'「{q}」に一致するイベントはありません。',
     addGoogle:'Googleカレンダー', addIcs:'Apple・Outlook', share:'共有', copied:'リンクをコピーしました', copyLink:'リンクをコピー',
-    subTitle:'EIS Compass を購読', subIntro:'EISのイベントをスマートフォンのカレンダーに追加できます。購読したカレンダーは日程変更時に自動で更新されるため、常に最新の予定を確認できます。',
+    subTitle:'EIS Compass をカレンダーに登録', subIntro:'EISのイベントをスマートフォンのカレンダーに追加できます。登録したカレンダーは日程変更時に自動で更新されるため、常に最新の予定を確認できます。',
     subNote:'Googleカレンダーでは変更の反映に最大24時間かかる場合があります。iPhoneでは「iPhone / Mac」をタップし、「照会」を確認してください。その他のアプリでは、リンクをコピーしてインターネットカレンダーとして追加してください。',
     allEvents:'すべてのイベント', plusWhole:'全校行事・休日を含みます',
     print:'印刷', printTitle:'印刷・PDF保存', range:'期間', thisMonth:'{m}', wholeYear:'年間すべて', language:'言語', both:'両方', onlyMine:'選択中の対象のみ', doPrint:'印刷する',
