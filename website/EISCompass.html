@@ -211,6 +211,14 @@ dialog::backdrop{background:rgba(10,22,52,.5)}
 .facts{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14.5px;margin:0 0 14px}
 .facts dt{color:var(--ink-3)}
 .facts dd{margin:0}
+.links{margin:0 0 16px}
+.links h3{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:0 0 6px}
+.link{display:flex;align-items:center;gap:10px;padding:11px 12px;border:1px solid var(--line-2);border-radius:10px;text-decoration:none;color:var(--navy);font-weight:650;font-size:15px;margin-top:6px;background:#fff}
+.link:hover{background:#f6f8fd}
+.link svg{flex:0 0 20px;height:20px;color:var(--orange)}
+.link span{flex:1;min-width:0;overflow-wrap:anywhere}
+.link small{display:block;font-weight:400;font-size:12.5px;color:var(--ink-3)}
+.link i{font-style:normal;color:var(--ink-3)}
 .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .actions .btn{font-size:14px;padding:10px 8px}
 .actions .btn.wide{grid-column:1/-1}
@@ -573,7 +581,8 @@ var S = {
     drills:'Safety drills', health:'Health checks', mandatory:'Mandatory', voluntary:'Voluntary', olympiads:'Academic Olympiads (PYP)',
     contact:'Contact', families:'What families should know', values:'Our values',
     legendNational:'National holiday', legendSchool:'School holiday', legendNoclass:'No classes', printed:'Printed {d}. The latest version is always online:',
-    prev:'Previous month', next:'Next month', noSchool:'No school'
+    prev:'Previous month', next:'Next month', noSchool:'No school',
+    moreInfo:'More information', lkPdf:'PDF flyer', lkForm:'Sign-up form', lkDoc:'View document', lkMail:'Send an email', lkVideo:'Watch video'
   },
   ja: {
     upcoming:'これから', calendar:'カレンダー', info:'ご案内', search:'イベントを検索', subscribe:'購読',
@@ -593,7 +602,8 @@ var S = {
     drills:'避難訓練', health:'健康診断', mandatory:'必須', voluntary:'任意', olympiads:'アカデミック・オリンピアード（PYP）',
     contact:'お問い合わせ', families:'ご家庭へのお知らせ', values:'私たちの価値観',
     legendNational:'祝日', legendSchool:'学校休日', legendNoclass:'授業なし', printed:'{d}印刷。最新版は常にオンラインでご覧いただけます：',
-    prev:'前の月', next:'次の月', noSchool:'休校'
+    prev:'前の月', next:'次の月', noSchool:'休校',
+    moreInfo:'関連リンク', lkPdf:'PDFチラシ', lkForm:'申込フォーム', lkDoc:'資料を見る', lkMail:'メールで問い合わせ', lkVideo:'動画を見る'
   }
 };
 var MON_EN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -937,6 +947,7 @@ function icsEvent(i, l, stamp, base) {
   if (i.kind === 'event') {
     var aud = (i.aud || []).map(function (a) { return AUD[a] ? pick(AUD[a].name) : a; }).join(', ');
     if (aud) desc += (desc ? '\n\n' : '') + (l === 'ja' ? '対象：' : 'For: ') + aud + (i.parents ? (l === 'ja' ? '（保護者参加可）' : ' (parents invited)') : '');
+    (i.links || []).forEach(function (lk) { if (!linkHref(lk.url)) return; var u = base ? new URL(lk.url, base).href : lk.url; desc += '\n' + (lk.label ? pick(lk.label) + ': ' : '') + u; });
     if (base) desc += '\n' + base + '#/event/' + i.id;
   }
   lines.push('SUMMARY:' + icsEsc((i.status === 'cancelled' ? (l === 'ja' ? '【中止】' : '[Cancelled] ') : '') + name));
@@ -960,7 +971,7 @@ function icsCalendar(name, items, l, stamp, base) {
 function pageBase() { var u = new URL(location.href); u.search = ''; u.hash = ''; return u.href; }
 function googleUrl(e) {
   var t = parseTime(e.time), dates = t ? ymd(e.start) + 'T' + t.s + '/' + ymd(e.start) + 'T' + t.e : ymd(e.start) + '/' + ymd(addDays(e.end, 1));
-  var p = new URLSearchParams({ action: 'TEMPLATE', text: L(e.title), dates: dates, details: L(e.desc) + '\n\n' + eventUrl(e) });
+  var p = new URLSearchParams({ action: 'TEMPLATE', text: L(e.title), dates: dates, details: L(e.desc) + (e.links || []).filter(function (l) { return linkHref(l.url); }).map(function (l) { return '\n' + linkInfo(l).label + ': ' + new URL(l.url, location.href).href; }).join('') + '\n\n' + eventUrl(e) });
   if (t) p.set('ctz', 'Asia/Tokyo');
   if (L(e.location)) p.set('location', L(e.location));
   return 'https://calendar.google.com/calendar/render?' + p.toString();
@@ -970,6 +981,32 @@ function downloadIcs(e) {
   var blob = new Blob([icsCalendar(L(e.title), [e], lang, stamp, pageBase())], { type: 'text/calendar;charset=utf-8' });
   var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = e.id + '.ics';
   document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+}
+
+/* ---------- links ---------- */
+function linkHref(u) {
+  u = String(u || '').trim();
+  if (/^(https?:\/\/|mailto:)/i.test(u)) return u;
+  if (/^[a-z][a-z0-9+.-]*:/i.test(u)) return null; // block javascript: and other schemes
+  return u;
+}
+function linkInfo(l) {
+  var u = l.url, host = '';
+  try { host = new URL(u, location.href).hostname.replace(/^www\./, ''); } catch (e) {}
+  var auto = /^mailto:/i.test(u) ? T('lkMail') : /\.pdf([?#]|$)/i.test(u) ? T('lkPdf') : /forms\.gle|docs\.google\.com\/forms|forms\.office\.com|forms\.microsoft/i.test(u) ? T('lkForm')
+    : /docs\.google\.com|drive\.google\.com|sharepoint\.com|onedrive|canva\.com/i.test(u) ? T('lkDoc') : /youtube\.com|youtu\.be|vimeo\.com/i.test(u) ? T('lkVideo') : (host || T('moreInfo'));
+  var label = l.label ? (l.label[lang] || l.label.en) : '';
+  return { label: label || auto, sub: /^mailto:/i.test(u) ? u.replace(/^mailto:/i, '') : (label && host && host !== location.hostname ? host : '') };
+}
+function linksHTML(e) {
+  var list = (e.links || []).filter(function (l) { return l && linkHref(l.url); });
+  if (!list.length) return '';
+  var icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>';
+  return '<div class="links"><h3>' + T('moreInfo') + '</h3>' + list.map(function (l) {
+    var info = linkInfo(l), mail = /^mailto:/i.test(l.url);
+    return '<a class="link" href="' + esc(linkHref(l.url)) + '"' + (mail ? '' : ' target="_blank" rel="noopener"') + '>' + icon +
+      '<span>' + esc(info.label) + (info.sub ? '<small>' + esc(info.sub) + '</small>' : '') + '</span>' + (mail ? '' : '<i aria-hidden="true">↗</i>') + '</a>';
+  }).join('') + '</div>';
 }
 
 /* ---------- event sheet ---------- */
@@ -984,7 +1021,7 @@ function openSheet(e) {
     '<h2 id="sheet-title">' + esc(L(e.title)) + '</h2><p class="when">' + esc(e.end === e.start ? fmtLong(e.start) : fmtRange(e.start, e.end)) + '</p>' +
     '<div class="tags">' + tags(e) + '</div>' +
     (L(e.desc) ? '<p class="desc">' + rich(L(e.desc)) + '</p>' : '') +
-    '<dl class="facts">' + facts + '</dl>' +
+    '<dl class="facts">' + facts + '</dl>' + linksHTML(e) +
     '<div class="actions"><a class="btn" target="_blank" rel="noopener" href="' + esc(googleUrl(e)) + '">' + T('addGoogle') + '</a>' +
     '<button type="button" class="btn" data-act="ics" data-id="' + esc(e.id) + '">' + T('addIcs') + '</button>' +
     '<button type="button" class="btn primary wide" data-act="share" data-id="' + esc(e.id) + '">' + T('share') + '</button></div></div>';

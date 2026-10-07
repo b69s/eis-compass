@@ -107,7 +107,7 @@ textarea.code{width:100%;min-height:55vh;font:13px/1.5 ui-monospace,SFMono-Regul
    State
    ========================================================= */
 var DATA = null, TEMPLATE = null, FILENAME = '', TAB = 'start', FILTER = { q: '', month: '' };
-var EV_COLS = ['id', 'start', 'end', 'time', 'audiences', 'parents_invited', 'no_classes', 'status', 'title_en', 'title_ja', 'description_en', 'description_ja', 'location_en', 'location_ja', 'image', 'hidden'];
+var EV_COLS = ['id', 'start', 'end', 'time', 'audiences', 'parents_invited', 'no_classes', 'status', 'title_en', 'title_ja', 'description_en', 'description_ja', 'location_en', 'location_ja', 'image', 'link_1', 'link_2', 'link_3', 'hidden'];
 var CL_COLS = ['start', 'end', 'type', 'name_en', 'name_ja'];
 var STATUSES = { '': 'Confirmed', tentative: 'To be confirmed', changed: 'Date changed', cancelled: 'Cancelled' };
 var CL_TYPES = { national: 'National holiday (no school)', school: 'School holiday (no school)', noclass: 'No classes (e.g. staff prep day)' };
@@ -146,8 +146,23 @@ function loadTemplate(text, name) {
 function normEvent(e) {
   e.title = e.title || { en: '', ja: '' }; e.desc = e.desc || { en: '', ja: '' }; e.location = e.location || { en: '', ja: '' };
   e.aud = e.aud || []; e.end = e.end || e.start; e.time = e.time || ''; e.status = e.status || ''; e.image = e.image || '';
+  e.links = e.links || [];
   return e;
 }
+/* Links: a cell is "URL", "Label | URL" or "English label | 日本語ラベル | URL" */
+function parseLink(v) {
+  v = String(v == null ? '' : v).trim(); if (!v) return null;
+  var parts = v.split('|').map(function (x) { return x.trim(); }), url = parts.pop(), l = { url: url };
+  if (parts.length >= 2) l.label = { en: parts[0], ja: parts[1] };
+  else if (parts.length === 1 && parts[0]) l.label = { en: parts[0], ja: parts[0] };
+  return url ? l : null;
+}
+function linkText(l) {
+  if (!l) return '';
+  if (!l.label) return l.url;
+  return (l.label.ja && l.label.ja !== l.label.en ? l.label.en + ' | ' + l.label.ja : l.label.en) + ' | ' + l.url;
+}
+function linkOk(u) { return /^(https?:\/\/|mailto:)/i.test(u) || !/^[a-z][a-z0-9+.-]*:/i.test(u); }
 function readFile(file, cb) {
   var r = new FileReader();
   r.onload = function () { cb(r.result); };
@@ -173,6 +188,7 @@ function validate() {
     e.aud.forEach(function (a) { if (!A[a]) add('err', 'Unknown audience "' + a + '"'); });
     if (ids[e.id]) add('err', 'Duplicate ID (same as another event): ' + e.id); ids[e.id] = 1;
     if (e.time && !/^\d{1,2}:\d{2}(\s*[-–~〜]\s*\d{1,2}:\d{2})?$/.test(e.time.trim())) add('warn', 'Time should look like 15:00 or 15:00-17:00');
+    (e.links || []).forEach(function (l, k) { if (!linkOk(l.url)) add('err', 'Link ' + (k + 1) + ' is not a web address (use https://…, mailto:… or a path on the website)'); else if (/^www\./i.test(l.url)) add('warn', 'Link ' + (k + 1) + ' should start with https://'); });
     if (e.status === 'changed' && !e.prevStart) add('info', 'Marked "Date changed" but no previous date recorded');
     var d = e.desc.en.trim();
     if (d) { (descs[d] = descs[d] || []).push(e); }
@@ -263,7 +279,7 @@ function fillEvents() {
   $('#ev-body').innerHTML = rows.map(function (r) {
     var e = r.e, iss = issuesFor(r.i, v);
     var flags = (e.parents ? '<span class="pill">Parents</span>' : '') + (e.noClasses ? '<span class="pill">No classes</span>' : '') + (e.status ? '<span class="pill warn">' + STATUSES[e.status] + '</span>' : '') +
-      (e.hidden ? '<span class="pill err">Hidden</span>' : '') + (e.image ? '<span class="pill">Photo</span>' : '') + (e.time ? '<span class="pill">' + esc(e.time) + '</span>' : '');
+      (e.hidden ? '<span class="pill err">Hidden</span>' : '') + (e.image ? '<span class="pill">Photo</span>' : '') + (e.links && e.links.length ? '<span class="pill">Links: ' + e.links.length + '</span>' : '') + (e.time ? '<span class="pill">' + esc(e.time) + '</span>' : '');
     var chk = iss.filter(function (x) { return x.level !== 'info'; });
     return '<tr data-i="' + r.i + '"><td>' + esc(e.start) + (e.end && e.end !== e.start ? '<span class="ja">→ ' + esc(e.end) + '</span>' : '') + '</td>' +
       '<td><b>' + esc(e.title.en) + '</b><span class="ja" lang="ja">' + esc(e.title.ja) + '</span></td>' +
@@ -295,6 +311,7 @@ function editEvent(i) {
     '<label>Status<select name="status">' + Object.keys(STATUSES).map(function (k) { return '<option value="' + k + '"' + (e.status === k ? ' selected' : '') + '>' + STATUSES[k] + '</option>'; }).join('') + '</select><small>"Date changed" shows a badge with the previous date</small></label>' +
     field('Location (English, optional)', 'loc_en', e.location.en) + field('場所（日本語・任意）', 'loc_ja', e.location.ja, { lang: 'ja' }) +
     field('Previous date (for "Date changed")', 'prevStart', e.prevStart || '', { type: 'date' }) +
+    [0, 1, 2].map(function (k) { return field('Link ' + (k + 1) + ' (optional)', 'link_' + (k + 1), linkText(e.links[k]), { full: true, ph: 'https://…   or   Flyer | チラシ | https://…', help: k === 0 ? 'Flyers, sign-up forms or extra information. Shown as buttons in the event window. Optional label before the address: “Label | URL” or “English | 日本語 | URL”.' : '' }); }).join('') +
     field('Photo path (optional)', 'image', e.image, { ph: 'compass/images/events/….webp', help: 'Upload the photo to this path on the website. Keep photos under ~150 KB.' }) +
     field('ID (used in links — leave unless you know why)', 'id', e.id, { help: 'Generated from the date and title when empty' }) +
     '</div></div><div class="df">' + (isNew ? '' : '<button type="button" class="btn danger" data-del>Delete</button><button type="button" class="btn" data-dup>Duplicate</button>') +
@@ -311,7 +328,8 @@ function editEvent(i) {
       aud: Array.prototype.map.call(f.querySelectorAll('[name=aud]:checked'), function (x) { return x.value; }),
       parents: f.parents.checked, title: { en: f.title_en.value.trim(), ja: f.title_ja.value.trim() },
       desc: { en: f.desc_en.value.trim(), ja: f.desc_ja.value.trim() }, location: { en: f.loc_en.value.trim(), ja: f.loc_ja.value.trim() },
-      image: f.image.value.trim(), status: f.status.value, updated: today()
+      image: f.image.value.trim(), status: f.status.value, updated: today(),
+      links: [f.link_1.value, f.link_2.value, f.link_3.value].map(parseLink).filter(Boolean)
     };
     if (f.noClasses.checked) n.noClasses = true;
     if (f.hidden.checked) n.hidden = true;
@@ -454,7 +472,15 @@ function csvSheets(text) {
 function toObjects(rows) {
   if (!rows || !rows.length) return [];
   var head = rows[0].map(function (h) { return String(h).trim().toLowerCase().replace(/\s+/g, '_'); });
-  return rows.slice(1).map(function (r, n) { var o = { _row: n + 2 }; head.forEach(function (h, k) { o[h] = r[k] == null ? '' : String(r[k]).trim(); }); return o; });
+  return rows.slice(1).map(function (r, n) {
+    var o = { _row: n + 2 };
+    head.forEach(function (h, k) {
+      var v = r[k] == null ? '' : String(r[k]).trim();
+      if (/^link_?\d$/.test(h) && r._hl && r._hl[k] && v.indexOf(r._hl[k]) < 0) v = (v && v !== r._hl[k] ? v + ' | ' : '') + r._hl[k];
+      o[h.replace(/^link(\d)$/, 'link_$1')] = v;
+    });
+    return o;
+  });
 }
 function parseDate(v) {
   v = String(v || '').trim(); if (!v) return '';
@@ -488,7 +514,8 @@ function rowToEvent(o, problems) {
     id: o.id || '', start: parseDate(o.start), end: parseDate(o.end) || parseDate(o.start), time: normTime(o.time),
     aud: mapAud(o.audiences, problems, o._row), parents: yes(o.parents_invited),
     title: { en: o.title_en || '', ja: o.title_ja || '' }, desc: { en: o.description_en || '', ja: o.description_ja || '' },
-    location: { en: o.location_en || '', ja: o.location_ja || '' }, image: o.image || '', status: ''
+    location: { en: o.location_en || '', ja: o.location_ja || '' }, image: o.image || '', status: '',
+    links: [o.link_1, o.link_2, o.link_3].map(parseLink).filter(Boolean)
   });
   var st = (o.status || '').toLowerCase();
   e.status = /cancel|中止/.test(st) ? 'cancelled' : /tbc|tentative|confirm|未定|未確定/.test(st) ? 'tentative' : /chang|変更/.test(st) ? 'changed' : '';
@@ -497,9 +524,10 @@ function rowToEvent(o, problems) {
   if (!validISO(e.start)) problems.push('Row ' + o._row + ' (' + (e.title.en || 'untitled') + '): start date "' + o.start + '" not understood — use YYYY-MM-DD');
   return e;
 }
-var COMPARE = ['start', 'end', 'time', 'aud', 'parents', 'noClasses', 'hidden', 'status', 'title', 'desc', 'location', 'image'];
+var COMPARE = ['start', 'end', 'time', 'aud', 'parents', 'noClasses', 'hidden', 'status', 'title', 'desc', 'location', 'image', 'links'];
 function sameVal(a, b) { return JSON.stringify(a == null ? '' : a) === JSON.stringify(b == null ? '' : b) || (!a && !b); }
 function previewImport(sheets, fname) {
+  var hasLinkCols = sheets.events && (sheets.events[0] || []).some(function (h) { return /^link[ _]?\d/i.test(String(h).trim()); });
   var problems = [], incoming = toObjects(sheets.events).filter(function (o) { return o.title_en || o.start; }).map(function (o) { return rowToEvent(o, problems); });
   var hol = sheets.holidays ? toObjects(sheets.holidays).filter(function (o) { return o.start; }).map(function (o) {
     return { start: parseDate(o.start), end: parseDate(o.end) || parseDate(o.start), type: CL_TYPES[(o.type || '').toLowerCase()] ? o.type.toLowerCase() : 'school', name: { en: o.name_en || '', ja: o.name_ja || '' } };
@@ -513,12 +541,13 @@ function previewImport(sheets, fname) {
     if (!o) { plan.added.push(n); return; }
     used[o.id] = 1; n.id = o.id;
     ['prevStart', 'updated'].forEach(function (k) { if (o[k]) n[k] = o[k]; });
+    if (!hasLinkCols) n.links = o.links || [];
     if (!n.status && o.status === 'changed') n.status = 'changed';
     var diffs = COMPARE.filter(function (k) { return !sameVal(o[k], n[k]); });
     if (diffs.length) plan.changed.push({ o: o, n: n, diffs: diffs }); else plan.same++;
   });
   if (incoming.length) plan.removed = old.filter(function (x) { return !used[x.id]; });
-  var showVal = function (k, v) { return k === 'aud' ? (v || []).join(', ') : typeof v === 'object' && v ? (v.en || '') + (v.ja ? ' / ' + v.ja : '') : String(v == null ? '' : v); };
+  var showVal = function (k, v) { return k === 'links' ? (v || []).map(linkText).join(', ') : k === 'aud' ? (v || []).join(', ') : typeof v === 'object' && v ? (v.en || '') + (v.ja ? ' / ' + v.ja : '') : String(v == null ? '' : v); };
   $('#dlg-in').innerHTML = '<div class="dh"><h3>Import “' + esc(fname) + '”</h3><button class="btn" data-x>Cancel</button></div><div class="db diff">' +
     '<div class="stat"><div><b>' + plan.added.length + '</b>new</div><div><b>' + plan.changed.length + '</b>changed</div><div><b>' + plan.removed.length + '</b>removed</div><div><b>' + plan.same + '</b>unchanged</div>' + (hol ? '<div><b>' + hol.length + '</b>holidays</div>' : '') + '</div>' +
     (problems.length ? '<h4>Problems</h4><ul>' + problems.map(function (p) { return '<li class="old" style="text-decoration:none">' + esc(p) + '</li>'; }).join('') + '</ul>' : '') +
@@ -578,8 +607,14 @@ function readXlsx(buf) {
     all(wb, 'sheet').forEach(function (s, idx) {
       var rid = s.getAttribute('r:id') || s.getAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships', 'id');
       var doc = xml(relMap[rid]); if (!doc) return;
+      var sheetRels = xml(relMap[rid].replace(/([^\/]+)$/, '_rels/$1.rels')), hlRel = {}, hl = {};
+      if (sheetRels) all(sheetRels, 'Relationship').forEach(function (r) { hlRel[r.getAttribute('Id')] = r.getAttribute('Target'); });
+      all(doc, 'hyperlink').forEach(function (h) {
+        var id = h.getAttribute('r:id') || h.getAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships', 'id');
+        if (id && hlRel[id]) hl[(h.getAttribute('ref') || '').split(':')[0]] = hlRel[id];
+      });
       var rows = all(doc, 'row').map(function (r) {
-        var arr = [];
+        var arr = []; arr._hl = {};
         all(r, 'c').forEach(function (c) {
           var ref = c.getAttribute('r') || '', col = 0, letters = ref.replace(/\d+/g, '');
           for (var j = 0; j < letters.length; j++) col = col * 26 + letters.charCodeAt(j) - 64;
@@ -588,6 +623,9 @@ function readXlsx(buf) {
           else if (t === 'inlineStr') val = all(c, 't').map(function (x) { return x.textContent; }).join('');
           else if (t === 'b') val = v && v.textContent === '1' ? 'yes' : '';
           else val = v ? v.textContent : '';
+          var f = all(c, 'f')[0], fm = f && /HYPERLINK\(\s*"([^"]+)"/i.exec(f.textContent);
+          if (fm) arr._hl[(col || arr.length + 1) - 1] = fm[1];
+          else if (hl[ref]) arr._hl[(col || arr.length + 1) - 1] = hl[ref];
           arr[(col || arr.length + 1) - 1] = val;
         });
         for (var z = 0; z < arr.length; z++) if (arr[z] == null) arr[z] = '';
@@ -639,7 +677,7 @@ function sheetXml(rows, widths, textCols) {
 function eventRows() {
   var A = audMap();
   return [EV_COLS].concat(DATA.events.slice().sort(function (a, b) { return a.start < b.start ? -1 : 1; }).map(function (e) {
-    return [e.id, e.start, e.end, e.time, e.aud.map(function (a) { return A[a] ? A[a].name.en : a; }).join(', '), e.parents ? 'yes' : '', e.noClasses ? 'yes' : '', e.status, e.title.en, e.title.ja, e.desc.en, e.desc.ja, e.location.en, e.location.ja, e.image, e.hidden ? 'yes' : ''];
+    return [e.id, e.start, e.end, e.time, e.aud.map(function (a) { return A[a] ? A[a].name.en : a; }).join(', '), e.parents ? 'yes' : '', e.noClasses ? 'yes' : '', e.status, e.title.en, e.title.ja, e.desc.en, e.desc.ja, e.location.en, e.location.ja, e.image, linkText(e.links[0]), linkText(e.links[1]), linkText(e.links[2]), e.hidden ? 'yes' : ''];
   }));
 }
 function writeXlsx() {
@@ -656,6 +694,7 @@ function writeXlsx() {
     ['title_en / title_ja, description_en / description_ja', 'English and Japanese text. Both languages are shown on the website.'],
     ['location_en / location_ja', 'Optional.'],
     ['image', 'Optional photo path, e.g. compass/images/events/2026-10-31-imf.webp'],
+    ['link_1 / link_2 / link_3', 'Optional links shown as buttons in the event window (flyers, sign-up forms, more information). Enter just the address (https://…), or add a label: Flyer | https://…  or  Flyer | チラシ | https://…  Without a label the button is named automatically (PDF flyer, Sign-up form, View document…). Excel hyperlinks (Insert > Link) also work. Flyers uploaded to the website can use a path such as compass/files/sports-day.pdf'],
     ['Holidays sheet: type', 'national, school or noclass']
   ]);
   var wbx = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Events" sheetId="1" r:id="rId1"/><sheet name="Holidays" sheetId="2" r:id="rId2"/><sheet name="Guide" sheetId="3" r:id="rId3"/></sheets></workbook>';
@@ -666,7 +705,7 @@ function writeXlsx() {
   return zip([
     { name: '[Content_Types].xml', data: enc.encode(ct) }, { name: '_rels/.rels', data: enc.encode(root) },
     { name: 'xl/workbook.xml', data: enc.encode(wbx) }, { name: 'xl/_rels/workbook.xml.rels', data: enc.encode(rels) }, { name: 'xl/styles.xml', data: enc.encode(styles) },
-    { name: 'xl/worksheets/sheet1.xml', data: enc.encode(sheetXml(ev, [30, 12, 12, 13, 24, 10, 10, 11, 34, 30, 60, 60, 20, 20, 30, 8], [1, 2, 3])) },
+    { name: 'xl/worksheets/sheet1.xml', data: enc.encode(sheetXml(ev, [30, 12, 12, 13, 24, 10, 10, 11, 34, 30, 60, 60, 20, 20, 30, 40, 40, 40, 8], [1, 2, 3])) },
     { name: 'xl/worksheets/sheet2.xml', data: enc.encode(sheetXml(hol, [12, 12, 10, 32, 24], [0, 1])) },
     { name: 'xl/worksheets/sheet3.xml', data: enc.encode(sheetXml(guide, [40, 100])) }
   ]);
@@ -725,6 +764,7 @@ function icsEvent(i, l, stamp, base, A) {
   if (i.kind === 'event') {
     var aud = (i.aud || []).map(function (a) { return A[a] ? pick(A[a].name) : a; }).join(', ');
     if (aud) desc += (desc ? '\n\n' : '') + (l === 'ja' ? '対象：' : 'For: ') + aud + (i.parents ? (l === 'ja' ? '（保護者参加可）' : ' (parents invited)') : '');
+    (i.links || []).forEach(function (lk) { var u = base ? new URL(lk.url, base).href : lk.url; desc += '\n' + (lk.label ? pick(lk.label) + ': ' : '') + u; });
     if (base) desc += '\n' + base + '#/event/' + i.id;
   }
   lines.push('SUMMARY:' + icsEsc((i.status === 'cancelled' ? (l === 'ja' ? '【中止】' : '[Cancelled] ') : '') + name));
@@ -763,7 +803,7 @@ function buildFeeds(d) {
 }
 function buildOutputs(d, tpl) {
   var out = clone(d);
-  out.events.forEach(function (e) { ['title', 'desc', 'location'].forEach(function (k) { if (e[k] && !e[k].en && !e[k].ja) delete e[k]; }); if (!e.time) delete e.time; if (!e.status) delete e.status; if (!e.image) delete e.image; if (!e.updated) delete e.updated; });
+  out.events.forEach(function (e) { ['title', 'desc', 'location'].forEach(function (k) { if (e[k] && !e[k].en && !e[k].ja) delete e[k]; }); if (!e.time) delete e.time; if (!e.status) delete e.status; if (!e.image) delete e.image; if (!e.updated) delete e.updated; if (!e.links || !e.links.length) delete e.links; });
   out.events.sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
   var json = JSON.stringify(out).replace(/<\//g, '<\\/');
   var html = tpl.replace(DATA_RE, function (_, a, b, c) { return a + json + c; })
