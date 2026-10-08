@@ -411,12 +411,27 @@ DESCRIPTION:No school
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:closure-2027-01-07-20270108@enishi.ac.jp
+UID:closure-2027-01-07-20270107@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20270107
-DTEND;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270108
 SUMMARY:No classes
 DESCRIPTION:No classes
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-08-parent-teacher-conferences@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270109
+SUMMARY:Parent Teacher Conferences
+DESCRIPTION:Parents meet one-on-one with each teacher to discuss their ch
+ ild's progress\, strengths\, and next steps. The school campus is closed
+  to students on this day.\n\nFor: Whole School (parents invited)\nhttps:
+ //enishi.ac.jp/EISCompass.html#/event/2027-01-08-parent-teacher-conferen
+ ces
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-08-parent-teacher
+ -conferences
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
