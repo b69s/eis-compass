@@ -104,7 +104,7 @@ BEGIN:VEVENT
 UID:2026-10-05-clubs-pause@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20261005
-DTEND;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261010
 SUMMARY:クラブ活動休止
 DESCRIPTION:この期間、放課後のクラブ活動はお休みです
  。【バスについて】午後の赤バスはクラブ活動がある
@@ -147,6 +147,22 @@ DESCRIPTION:保護者の皆様が各担当教員と個別に面談し、
  19-parent-teacher-conferences
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-19-parent-teacher
  -conferences
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-20-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261024
+SUMMARY:クラブ活動休止
+DESCRIPTION:この期間、放課後のクラブ活動はお休みです
+ 。【バスについて】午後の赤バスはクラブ活動がある
+ 日のみ運行するため、休止期間中は運行しません。午
+ 後の下校時は青バス・緑バスの時刻表をご確認くださ
+ い。朝の赤バスは通常どおり運行します。\n\n対象：
+ 全校\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-10-20-clubs-pau
+ se
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-20-clubs-pause
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -236,7 +252,7 @@ BEGIN:VEVENT
 UID:2026-12-14-clubs-pause@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20261214
-DTEND;VALUE=DATE:20270116
+DTEND;VALUE=DATE:20261219
 SUMMARY:クラブ活動休止
 DESCRIPTION:この期間、放課後のクラブ活動はお休みです
  。【バスについて】午後の赤バスはクラブ活動がある
@@ -309,6 +325,22 @@ URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-08-parent-teacher
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:2027-01-11-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270111
+DTEND;VALUE=DATE:20270116
+SUMMARY:クラブ活動休止
+DESCRIPTION:この期間、放課後のクラブ活動はお休みです
+ 。【バスについて】午後の赤バスはクラブ活動がある
+ 日のみ運行するため、休止期間中は運行しません。午
+ 後の下校時は青バス・緑バスの時刻表をご確認くださ
+ い。朝の赤バスは通常どおり運行します。\n\n対象：
+ 全校\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-01-11-clubs-pau
+ se
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-11-clubs-pause
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:2027-01-18-clubs-resume@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20270118
@@ -358,7 +390,7 @@ BEGIN:VEVENT
 UID:2027-03-15-clubs-pause@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20270315
-DTEND;VALUE=DATE:20270403
+DTEND;VALUE=DATE:20270320
 SUMMARY:クラブ活動休止
 DESCRIPTION:この期間、放課後のクラブ活動はお休みです
  。【バスについて】午後の赤バスはクラブ活動がある
@@ -424,6 +456,22 @@ DESCRIPTION:保護者の皆様が各担当教員と個別に面談し、
  30-parent-teacher-conferences
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-30-parent-teacher
  -conferences
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-31-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270403
+SUMMARY:クラブ活動休止
+DESCRIPTION:この期間、放課後のクラブ活動はお休みです
+ 。【バスについて】午後の赤バスはクラブ活動がある
+ 日のみ運行するため、休止期間中は運行しません。午
+ 後の下校時は青バス・緑バスの時刻表をご確認くださ
+ い。朝の赤バスは通常どおり運行します。\n\n対象：
+ 全校\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-03-31-clubs-pau
+ se
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-31-clubs-pause
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT

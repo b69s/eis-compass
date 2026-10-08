@@ -104,7 +104,7 @@ BEGIN:VEVENT
 UID:2026-10-05-clubs-pause@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20261005
-DTEND;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261010
 SUMMARY:Clubs Pause
 DESCRIPTION:After-school clubs are paused during this period. Bus reminde
  r: the afternoon Red bus runs only on club days\, so it does not run whi
@@ -145,6 +145,20 @@ DESCRIPTION:Parents meet one-on-one with each teacher to discuss their ch
  ces
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-19-parent-teacher
  -conferences
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-20-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261024
+SUMMARY:Clubs Pause
+DESCRIPTION:After-school clubs are paused during this period. Bus reminde
+ r: the afternoon Red bus runs only on club days\, so it does not run whi
+ le clubs are paused. Please check the Blue and Green bus schedules for a
+ fternoon pick-up. The morning Red bus runs as usual.\n\nFor: Whole Schoo
+ l\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-10-20-clubs-pause
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-20-clubs-pause
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -229,7 +243,7 @@ BEGIN:VEVENT
 UID:2026-12-14-clubs-pause@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20261214
-DTEND;VALUE=DATE:20270116
+DTEND;VALUE=DATE:20261219
 SUMMARY:Clubs Pause
 DESCRIPTION:After-school clubs are paused during this period. Bus reminde
  r: the afternoon Red bus runs only on club days\, so it does not run whi
@@ -300,6 +314,20 @@ URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-08-parent-teacher
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:2027-01-11-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270111
+DTEND;VALUE=DATE:20270116
+SUMMARY:Clubs Pause
+DESCRIPTION:After-school clubs are paused during this period. Bus reminde
+ r: the afternoon Red bus runs only on club days\, so it does not run whi
+ le clubs are paused. Please check the Blue and Green bus schedules for a
+ fternoon pick-up. The morning Red bus runs as usual.\n\nFor: Whole Schoo
+ l\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-01-11-clubs-pause
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-11-clubs-pause
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:2027-01-18-clubs-resume@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20270118
@@ -348,7 +376,7 @@ BEGIN:VEVENT
 UID:2027-03-15-clubs-pause@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20270315
-DTEND;VALUE=DATE:20270403
+DTEND;VALUE=DATE:20270320
 SUMMARY:Clubs Pause
 DESCRIPTION:After-school clubs are paused during this period. Bus reminde
  r: the afternoon Red bus runs only on club days\, so it does not run whi
@@ -412,6 +440,20 @@ DESCRIPTION:Parents meet one-on-one with each teacher to discuss their ch
  ces
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-30-parent-teacher
  -conferences
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-31-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270403
+SUMMARY:Clubs Pause
+DESCRIPTION:After-school clubs are paused during this period. Bus reminde
+ r: the afternoon Red bus runs only on club days\, so it does not run whi
+ le clubs are paused. Please check the Blue and Green bus schedules for a
+ fternoon pick-up. The morning Red bus runs as usual.\n\nFor: Whole Schoo
+ l\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-03-31-clubs-pause
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-31-clubs-pause
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
