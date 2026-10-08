@@ -117,6 +117,22 @@ URL:https://enishi.ac.jp/EISCompass.html#/event/2026-09-28-spirit-week
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-05-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261024
+SUMMARY:クラブ活動休止
+DESCRIPTION:この期間、放課後のクラブ活動はお休みです
+ 。【バスについて】午後の赤バスはクラブ活動がある
+ 日のみ運行するため、休止期間中は運行しません。午
+ 後の下校時は青バス・緑バスの時刻表をご確認くださ
+ い。朝の赤バスは通常どおり運行します。\n\n対象：
+ 全校\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-10-05-clubs-pau
+ se
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-05-clubs-pause
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:closure-2026-10-12-20261012@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20261012
@@ -175,6 +191,21 @@ DESCRIPTION:8年生が理科の授業と関連したカリキュラムに
  ota-college-trip
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-26-toyota-college
  -trip
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-clubs-resume@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
+SUMMARY:クラブ活動再開
+DESCRIPTION:本日から放課後のクラブ活動が再開します。
+ 【バスについて】午後の赤バスはクラブ活動がある日
+ のみ運行します。それ以外の日は、午後の下校時に青
+ バス・緑バスの時刻表をご確認ください。朝の赤バス
+ は通常どおり運行します。\n\n対象：全校\nhttps://enishi.
+ ac.jp/EISCompass.html#/event/2026-10-26-clubs-resume
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-26-clubs-resume
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -332,6 +363,22 @@ URL:https://enishi.ac.jp/EISCompass.html#/event/2026-12-10-choir-and-orch
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-12-14-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20270116
+SUMMARY:クラブ活動休止
+DESCRIPTION:この期間、放課後のクラブ活動はお休みです
+ 。【バスについて】午後の赤バスはクラブ活動がある
+ 日のみ運行するため、休止期間中は運行しません。午
+ 後の下校時は青バス・緑バスの時刻表をご確認くださ
+ い。朝の赤バスは通常どおり運行します。\n\n対象：
+ 全校\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-12-14-clubs-pau
+ se
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-12-14-clubs-pause
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-12-16-industry-visit-tech-company@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20261216
@@ -439,6 +486,21 @@ URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-14-g10-parent-inf
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:2027-01-18-clubs-resume@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:クラブ活動再開
+DESCRIPTION:本日から放課後のクラブ活動が再開します。
+ 【バスについて】午後の赤バスはクラブ活動がある日
+ のみ運行します。それ以外の日は、午後の下校時に青
+ バス・緑バスの時刻表をご確認ください。朝の赤バス
+ は通常どおり運行します。\n\n対象：全校\nhttps://enishi.
+ ac.jp/EISCompass.html#/event/2027-01-18-clubs-resume
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-18-clubs-resume
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:2027-01-22-open-campus@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20270122
@@ -540,6 +602,22 @@ URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-12-secondary-spor
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:2027-03-15-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270403
+SUMMARY:クラブ活動休止
+DESCRIPTION:この期間、放課後のクラブ活動はお休みです
+ 。【バスについて】午後の赤バスはクラブ活動がある
+ 日のみ運行するため、休止期間中は運行しません。午
+ 後の下校時は青バス・緑バスの時刻表をご確認くださ
+ い。朝の赤バスは通常どおり運行します。\n\n対象：
+ 全校\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-03-15-clubs-pau
+ se
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-15-clubs-pause
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:2027-03-18-japanese-culture-day@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20270318
@@ -634,6 +712,21 @@ DESCRIPTION:運動会に参加し、チームゲーム、運動競技、
  保護者参加可）\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-
  04-03-sports-day
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-04-03-sports-day
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-05-clubs-resume@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270405
+DTEND;VALUE=DATE:20270406
+SUMMARY:クラブ活動再開
+DESCRIPTION:本日から放課後のクラブ活動が再開します。
+ 【バスについて】午後の赤バスはクラブ活動がある日
+ のみ運行します。それ以外の日は、午後の下校時に青
+ バス・緑バスの時刻表をご確認ください。朝の赤バス
+ は通常どおり運行します。\n\n対象：全校\nhttps://enishi.
+ ac.jp/EISCompass.html#/event/2027-04-05-clubs-resume
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-04-05-clubs-resume
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -772,6 +865,23 @@ DESCRIPTION:PYPX、MYPX、CAS、EE、TOK、ファウンデーション～
  /event/2027-06-04-celebration-of-learning
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-04-celebration-of
  -learning
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-06-11-last-day-of-clubs@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270611
+DTEND;VALUE=DATE:20270612
+SUMMARY:クラブ活動最終日
+DESCRIPTION:今年度の放課後クラブ活動の最終日です。【
+ バスについて】午後の赤バスはクラブ活動がある日の
+ み運行するため、本日で運行を終了します。明日以降
+ 、午後の下校時は青バス・緑バスの時刻表をご確認く
+ ださい。朝の赤バスは通常どおり運行します。\n\n対
+ 象：全校\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-06-11-las
+ t-day-of-clubs
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-11-last-day-of-cl
+ ubs
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT

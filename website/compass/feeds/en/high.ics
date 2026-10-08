@@ -113,6 +113,20 @@ URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-03-dp-rafting-tri
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-10-05-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261024
+SUMMARY:Clubs Pause
+DESCRIPTION:After-school clubs are paused during this period. Bus reminde
+ r: the afternoon Red bus runs only on club days\, so it does not run whi
+ le clubs are paused. Please check the Blue and Green bus schedules for a
+ fternoon pick-up. The morning Red bus runs as usual.\n\nFor: Whole Schoo
+ l\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-10-05-clubs-pause
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-05-clubs-pause
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:closure-2026-10-12-20261012@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20261012
@@ -173,6 +187,20 @@ DESCRIPTION:Grade 11 and 12 Biology students will visit Nagoya University
  y-visit
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-23-nagoya-univers
  ity-biology-laboratory-visit
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-clubs-resume@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
+SUMMARY:Clubs Resume
+DESCRIPTION:After-school clubs start again today. Bus reminder: the after
+ noon Red bus runs only on club days. On other days\, please check the Bl
+ ue and Green bus schedules for afternoon pick-up. The morning Red bus ru
+ ns as usual.\n\nFor: Whole School\nhttps://enishi.ac.jp/EISCompass.html#
+ /event/2026-10-26-clubs-resume
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-26-clubs-resume
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -266,6 +294,20 @@ URL:https://enishi.ac.jp/EISCompass.html#/event/2026-12-05-sat-test-5
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:2026-12-14-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20270116
+SUMMARY:Clubs Pause
+DESCRIPTION:After-school clubs are paused during this period. Bus reminde
+ r: the afternoon Red bus runs only on club days\, so it does not run whi
+ le clubs are paused. Please check the Blue and Green bus schedules for a
+ fternoon pick-up. The morning Red bus runs as usual.\n\nFor: Whole Schoo
+ l\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-12-14-clubs-pause
+URL:https://enishi.ac.jp/EISCompass.html#/event/2026-12-14-clubs-pause
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:2026-12-21-winter-study-camp-g11-12@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20261221
@@ -337,6 +379,20 @@ DESCRIPTION:Parents meet one-on-one with each teacher to discuss their ch
  ces
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-08-parent-teacher
  -conferences
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-18-clubs-resume@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:Clubs Resume
+DESCRIPTION:After-school clubs start again today. Bus reminder: the after
+ noon Red bus runs only on club days. On other days\, please check the Bl
+ ue and Green bus schedules for afternoon pick-up. The morning Red bus ru
+ ns as usual.\n\nFor: Whole School\nhttps://enishi.ac.jp/EISCompass.html#
+ /event/2027-01-18-clubs-resume
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-01-18-clubs-resume
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -414,6 +470,20 @@ URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-06-sat-test-6
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:2027-03-15-clubs-pause@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270403
+SUMMARY:Clubs Pause
+DESCRIPTION:After-school clubs are paused during this period. Bus reminde
+ r: the afternoon Red bus runs only on club days\, so it does not run whi
+ le clubs are paused. Please check the Blue and Green bus schedules for a
+ fternoon pick-up. The morning Red bus runs as usual.\n\nFor: Whole Schoo
+ l\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-03-15-clubs-pause
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-15-clubs-pause
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:2027-03-18-japanese-culture-day@enishi.ac.jp
 DTSTAMP:20261008T000000Z
 DTSTART;VALUE=DATE:20270318
@@ -480,6 +550,20 @@ DESCRIPTION:Parents meet one-on-one with each teacher to discuss their ch
  ces
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-03-30-parent-teacher
  -conferences
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-05-clubs-resume@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270405
+DTEND;VALUE=DATE:20270406
+SUMMARY:Clubs Resume
+DESCRIPTION:After-school clubs start again today. Bus reminder: the after
+ noon Red bus runs only on club days. On other days\, please check the Bl
+ ue and Green bus schedules for afternoon pick-up. The morning Red bus ru
+ ns as usual.\n\nFor: Whole School\nhttps://enishi.ac.jp/EISCompass.html#
+ /event/2027-04-05-clubs-resume
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-04-05-clubs-resume
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -602,6 +686,22 @@ DESCRIPTION:An internationally recognized university entrance exam. Our s
  rnal students are welcome to take the test on campus.\n\nFor: High Schoo
  l\nhttps://enishi.ac.jp/EISCompass.html#/event/2027-06-05-sat-test-7
 URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-05-sat-test-7
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-06-11-last-day-of-clubs@enishi.ac.jp
+DTSTAMP:20261008T000000Z
+DTSTART;VALUE=DATE:20270611
+DTEND;VALUE=DATE:20270612
+SUMMARY:Last Day of Clubs
+DESCRIPTION:The last day of after-school clubs for this school year. Bus 
+ reminder: the afternoon Red bus runs only on club days\, so after today 
+ it no longer runs. Please check the Blue and Green bus schedules for aft
+ ernoon pick-up. The morning Red bus runs as usual.\n\nFor: Whole School\
+ nhttps://enishi.ac.jp/EISCompass.html#/event/2027-06-11-last-day-of-club
+ s
+URL:https://enishi.ac.jp/EISCompass.html#/event/2027-06-11-last-day-of-cl
+ ubs
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
