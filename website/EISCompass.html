@@ -688,6 +688,13 @@ function monthLabel(m, l) {
 function termFor(s) {
   var t = null; (DATA.terms || []).forEach(function (x) { if (x.start <= s) t = x; }); return t;
 }
+// The term shown for a month: the one covering most of its days (Jan -> Term 2 even though it starts on the 11th).
+function monthTerm(m) {
+  var count = {}, best = null, end = monthEnd(m);
+  for (var d = m + '-01'; d <= end; d = addDays(d, 1)) { var t = termFor(d); if (t) count[t.start] = (count[t.start] || 0) + 1; }
+  (DATA.terms || []).forEach(function (t) { if (count[t.start] && (!best || count[t.start] > count[best.start])) best = t; });
+  return best;
+}
 function audColor(e) { var a = AUD[(e.aud || [])[0]]; return a ? a.color : '#8a93ab'; }
 function barStyle(e) {
   var cs = (e.aud || []).map(function (a) { return AUD[a] && AUD[a].color; }).filter(Boolean);
@@ -844,7 +851,7 @@ function gridHTML(m) {
 function renderCalendar() {
   if (state.q) return searchHTML();
   var m = state.month, idx = MONTHS.indexOf(m);
-  var mStart = m + '-01', mEnd = monthEnd(m), t = termFor(mStart) || termFor(mEnd);
+  var mStart = m + '-01', mEnd = monthEnd(m), t = monthTerm(m);
   var items = ALL.filter(function (i) { return i.start <= mEnd && i.end >= mStart && visible(i); });
   var chev = function (d) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="' + (d < 0 ? 'M15 6l-6 6 6 6' : 'M9 6l6 6-6 6') + '"/></svg>'; };
   var h = '<div class="mpills" role="tablist">' + MONTHS.map(function (x) {
@@ -1102,7 +1109,7 @@ function buildPrint(months, pl, filtered) {
       return i.kind === 'closure' ? '<div class="r cl"><span class="d">' + esc(dl) + '</span><span class="x">' + nm(i.name) + '</span></div>'
         : '<div class="r"><span class="d">' + esc(dl) + '</span><span class="x"><i style="--c:' + audColor(i) + '"></i>' + nm(i.title) + '</span></div>';
     }).join('') + '</div>';
-    var t = termFor(end);
+    var t = monthTerm(m);
     return '<section class="pp"><div class="pp-h"><img src="compass/images/site/eis-logo.png" alt=""><div class="t"><small>' + lab('Events & Activities Calendar', 'イベント・活動カレンダー') + '</small>EIS Compass ' + esc(DATA.meta.year) + '</div>' +
       '<div class="m">' + (pl === 'both' ? monthLabel(m, 'en') + ' <small>' + monthLabel(m, 'ja') + (t ? ' · ' + esc(t.name.en) : '') + '</small>' : esc(monthLabel(m, pl)) + (t ? '<small>' + esc(t.name[pl] || t.name.en) + '</small>' : '')) + '</div></div>' +
       '<div class="pp-b">' + g + list + '</div>' +
