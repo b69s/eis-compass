@@ -27,6 +27,19 @@ One data source, three outputs: a mobile-first web page, a print layout, and sub
 
 Unsaved admin work is kept in that browser's local storage until you publish or discard it.
 
+## Publishing to Xserver (one command)
+
+```bash
+./publish.sh            # upload changed files to enishi.ac.jp
+./publish.sh --dry-run  # only list what would change
+```
+
+- Uploads `website/` to `/home/enishi2019/enishi.ac.jp/public_html/` over SSH (port 10022) with the key `~/.ssh/eis_xserver` — no password. Settings are in `publish.conf`.
+- Only changed files are sent. Nothing on the server is ever deleted.
+- Before each upload the live `EISCompass.html` is copied to `~/eis-compass-backups/` on the server (outside `public_html`, last 30 kept). To roll back, copy a backup over `public_html/EISCompass.html` (File Manager or SSH).
+- After uploading, the script checks that the live page matches your local copy.
+- Works from this Mac only (the key lives here). For another computer, create a new key there and register its public key in Xserver → SSH設定 → 公開鍵を登録 (手動). Xserver's 国外アクセス制限 is ON, so publishing needs a connection from Japan.
+
 ## Links you can share
 
 - `EISCompass.html` opens on the **Upcoming** view (today, this week, next day off).
