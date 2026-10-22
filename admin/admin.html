@@ -107,7 +107,7 @@ textarea.code{width:100%;min-height:55vh;font:13px/1.5 ui-monospace,SFMono-Regul
    State
    ========================================================= */
 var DATA = null, TEMPLATE = null, FILENAME = '', TAB = 'start', FILTER = { q: '', month: '' };
-var EV_COLS = ['id', 'start', 'end', 'time', 'audiences', 'parents_invited', 'no_classes', 'status', 'title_en', 'title_ja', 'description_en', 'description_ja', 'location_en', 'location_ja', 'image', 'link_1', 'link_2', 'link_3', 'hidden'];
+var EV_COLS = ['id', 'start', 'end', 'time', 'audiences', 'grades_en', 'grades_ja', 'parents_invited', 'no_classes', 'status', 'title_en', 'title_ja', 'description_en', 'description_ja', 'location_en', 'location_ja', 'image', 'link_1', 'link_2', 'link_3', 'hidden'];
 var CL_COLS = ['start', 'end', 'type', 'name_en', 'name_ja'];
 var STATUSES = { '': 'Confirmed', tentative: 'To be confirmed', changed: 'Date changed', cancelled: 'Cancelled' };
 var CL_TYPES = { national: 'National holiday (no school)', school: 'School holiday (no school)', noclass: 'No classes (e.g. staff prep day)' };
@@ -147,6 +147,7 @@ function normEvent(e) {
   e.title = e.title || { en: '', ja: '' }; e.desc = e.desc || { en: '', ja: '' }; e.location = e.location || { en: '', ja: '' };
   e.aud = e.aud || []; e.end = e.end || e.start; e.time = e.time || ''; e.status = e.status || ''; e.image = e.image || '';
   e.links = e.links || [];
+  e.grades = e.grades || { en: '', ja: '' };
   return e;
 }
 /* Links: a cell is "URL", "Label | URL" or "English label | 日本語ラベル | URL" */
@@ -183,6 +184,7 @@ function validate() {
     if (!e.title.en.trim()) add('err', 'English title is missing');
     if (!e.title.ja.trim()) add('warn', 'Japanese title is missing');
     if (e.desc.en.trim() && !e.desc.ja.trim()) add('warn', 'Japanese description is missing');
+    if (e.grades.en.trim() && !e.grades.ja.trim()) add('warn', 'Japanese participants text is missing');
     if (!e.desc.en.trim()) add('info', 'No description');
     if (!e.aud.length) add('err', 'No audience selected');
     e.aud.forEach(function (a) { if (!A[a]) add('err', 'Unknown audience "' + a + '"'); });
@@ -307,6 +309,7 @@ function editEvent(i) {
     field('Description (English)', 'desc_en', e.desc.en, { area: true }) + field('説明（日本語）', 'desc_ja', e.desc.ja, { area: true, lang: 'ja' }) +
     '<label class="full">Audience<span class="checks">' + A.map(function (a) { return '<label><input type="checkbox" name="aud" value="' + a.id + '"' + (e.aud.indexOf(a.id) >= 0 ? ' checked' : '') + '> <span class="dot" style="background:' + a.color + '"></span>' + esc(a.name.en) + '</label>'; }).join('') + '</span></label>' +
     '<label class="full">Options<span class="checks"><label><input type="checkbox" name="parents"' + (e.parents ? ' checked' : '') + '> Parents invited</label><label><input type="checkbox" name="noClasses"' + (e.noClasses ? ' checked' : '') + '> No classes for students this day</label><label><input type="checkbox" name="hidden"' + (e.hidden ? ' checked' : '') + '> Hidden (draft — not published)</label></span></label>' +
+    field('Participating grades/groups (English, optional)', 'grades_en', e.grades.en, { ph: 'e.g. Grades 10–11 Biology students', help: 'Shown on the event as “Participants”. Leave empty if the section label is enough.' }) + field('参加対象（日本語・任意）', 'grades_ja', e.grades.ja, { lang: 'ja', ph: '例：10〜11年生（生物選択者）' }) +
     field('Time (optional)', 'time', e.time, { ph: '15:00 or 15:00-17:00', help: 'Leave empty for all-day events' }) +
     '<label>Status<select name="status">' + Object.keys(STATUSES).map(function (k) { return '<option value="' + k + '"' + (e.status === k ? ' selected' : '') + '>' + STATUSES[k] + '</option>'; }).join('') + '</select><small>"Date changed" shows a badge with the previous date</small></label>' +
     field('Location (English, optional)', 'loc_en', e.location.en) + field('場所（日本語・任意）', 'loc_ja', e.location.ja, { lang: 'ja' }) +
@@ -329,7 +332,8 @@ function editEvent(i) {
       parents: f.parents.checked, title: { en: f.title_en.value.trim(), ja: f.title_ja.value.trim() },
       desc: { en: f.desc_en.value.trim(), ja: f.desc_ja.value.trim() }, location: { en: f.loc_en.value.trim(), ja: f.loc_ja.value.trim() },
       image: f.image.value.trim(), status: f.status.value, updated: today(),
-      links: [f.link_1.value, f.link_2.value, f.link_3.value].map(parseLink).filter(Boolean)
+      links: [f.link_1.value, f.link_2.value, f.link_3.value].map(parseLink).filter(Boolean),
+      grades: { en: f.grades_en.value.trim(), ja: f.grades_ja.value.trim() }
     };
     if (f.noClasses.checked) n.noClasses = true;
     if (f.hidden.checked) n.hidden = true;
@@ -515,7 +519,8 @@ function rowToEvent(o, problems) {
     aud: mapAud(o.audiences, problems, o._row), parents: yes(o.parents_invited),
     title: { en: o.title_en || '', ja: o.title_ja || '' }, desc: { en: o.description_en || '', ja: o.description_ja || '' },
     location: { en: o.location_en || '', ja: o.location_ja || '' }, image: o.image || '', status: '',
-    links: [o.link_1, o.link_2, o.link_3].map(parseLink).filter(Boolean)
+    links: [o.link_1, o.link_2, o.link_3].map(parseLink).filter(Boolean),
+    grades: { en: o.grades_en || '', ja: o.grades_ja || '' }
   });
   var st = (o.status || '').toLowerCase();
   e.status = /cancel|中止/.test(st) ? 'cancelled' : /tbc|tentative|confirm|未定|未確定/.test(st) ? 'tentative' : /chang|変更/.test(st) ? 'changed' : '';
@@ -524,9 +529,10 @@ function rowToEvent(o, problems) {
   if (!validISO(e.start)) problems.push('Row ' + o._row + ' (' + (e.title.en || 'untitled') + '): start date "' + o.start + '" not understood — use YYYY-MM-DD');
   return e;
 }
-var COMPARE = ['start', 'end', 'time', 'aud', 'parents', 'noClasses', 'hidden', 'status', 'title', 'desc', 'location', 'image', 'links'];
+var COMPARE = ['start', 'end', 'time', 'aud', 'parents', 'noClasses', 'hidden', 'status', 'title', 'desc', 'location', 'image', 'links', 'grades'];
 function sameVal(a, b) { return JSON.stringify(a == null ? '' : a) === JSON.stringify(b == null ? '' : b) || (!a && !b); }
 function previewImport(sheets, fname) {
+  var hasGradeCols = sheets.events && (sheets.events[0] || []).some(function (h) { return /^grades[ _]?en$/i.test(String(h).trim()); });
   var hasLinkCols = sheets.events && (sheets.events[0] || []).some(function (h) { return /^link[ _]?\d/i.test(String(h).trim()); });
   var problems = [], incoming = toObjects(sheets.events).filter(function (o) { return o.title_en || o.start; }).map(function (o) { return rowToEvent(o, problems); });
   var hol = sheets.holidays ? toObjects(sheets.holidays).filter(function (o) { return o.start; }).map(function (o) {
@@ -542,6 +548,7 @@ function previewImport(sheets, fname) {
     used[o.id] = 1; n.id = o.id;
     ['prevStart', 'updated'].forEach(function (k) { if (o[k]) n[k] = o[k]; });
     if (!hasLinkCols) n.links = o.links || [];
+    if (!hasGradeCols) n.grades = o.grades || { en: '', ja: '' };
     if (!n.status && o.status === 'changed') n.status = 'changed';
     var diffs = COMPARE.filter(function (k) { return !sameVal(o[k], n[k]); });
     if (diffs.length) plan.changed.push({ o: o, n: n, diffs: diffs }); else plan.same++;
@@ -677,7 +684,7 @@ function sheetXml(rows, widths, textCols) {
 function eventRows() {
   var A = audMap();
   return [EV_COLS].concat(DATA.events.slice().sort(function (a, b) { return a.start < b.start ? -1 : 1; }).map(function (e) {
-    return [e.id, e.start, e.end, e.time, e.aud.map(function (a) { return A[a] ? A[a].name.en : a; }).join(', '), e.parents ? 'yes' : '', e.noClasses ? 'yes' : '', e.status, e.title.en, e.title.ja, e.desc.en, e.desc.ja, e.location.en, e.location.ja, e.image, linkText(e.links[0]), linkText(e.links[1]), linkText(e.links[2]), e.hidden ? 'yes' : ''];
+    return [e.id, e.start, e.end, e.time, e.aud.map(function (a) { return A[a] ? A[a].name.en : a; }).join(', '), e.grades.en, e.grades.ja, e.parents ? 'yes' : '', e.noClasses ? 'yes' : '', e.status, e.title.en, e.title.ja, e.desc.en, e.desc.ja, e.location.en, e.location.ja, e.image, linkText(e.links[0]), linkText(e.links[1]), linkText(e.links[2]), e.hidden ? 'yes' : ''];
   }));
 }
 function writeXlsx() {
@@ -694,6 +701,7 @@ function writeXlsx() {
     ['title_en / title_ja, description_en / description_ja', 'English and Japanese text. Both languages are shown on the website.'],
     ['location_en / location_ja', 'Optional.'],
     ['image', 'Optional photo path, e.g. compass/images/events/2026-10-31-imf.webp'],
+    ['grades_en / grades_ja', 'Optional: which grades or groups take part, shown on the event as “Participants / 参加対象”. Use when the section label alone could mislead, e.g. Grades 10–11 Biology students / 10〜11年生（生物選択者）, or All Secondary students / 中等部の全生徒.'],
     ['link_1 / link_2 / link_3', 'Optional links shown as buttons in the event window (flyers, sign-up forms, more information). Enter just the address (https://…), or add a label: Flyer | https://…  or  Flyer | チラシ | https://…  Without a label the button is named automatically (PDF flyer, Sign-up form, View document…). Excel hyperlinks (Insert > Link) also work. Flyers uploaded to the website can use a path such as compass/files/sports-day.pdf'],
     ['Holidays sheet: type', 'national, school or noclass']
   ]);
@@ -705,7 +713,7 @@ function writeXlsx() {
   return zip([
     { name: '[Content_Types].xml', data: enc.encode(ct) }, { name: '_rels/.rels', data: enc.encode(root) },
     { name: 'xl/workbook.xml', data: enc.encode(wbx) }, { name: 'xl/_rels/workbook.xml.rels', data: enc.encode(rels) }, { name: 'xl/styles.xml', data: enc.encode(styles) },
-    { name: 'xl/worksheets/sheet1.xml', data: enc.encode(sheetXml(ev, [30, 12, 12, 13, 24, 10, 10, 11, 34, 30, 60, 60, 20, 20, 30, 40, 40, 40, 8], [1, 2, 3])) },
+    { name: 'xl/worksheets/sheet1.xml', data: enc.encode(sheetXml(ev, [30, 12, 12, 13, 24, 30, 26, 10, 10, 11, 34, 30, 60, 60, 20, 20, 30, 40, 40, 40, 8], [1, 2, 3])) },
     { name: 'xl/worksheets/sheet2.xml', data: enc.encode(sheetXml(hol, [12, 12, 10, 32, 24], [0, 1])) },
     { name: 'xl/worksheets/sheet3.xml', data: enc.encode(sheetXml(guide, [40, 100])) }
   ]);
@@ -764,6 +772,7 @@ function icsEvent(i, l, stamp, base, A) {
   if (i.kind === 'event') {
     var aud = (i.aud || []).map(function (a) { return A[a] ? pick(A[a].name) : a; }).join(', ');
     if (aud) desc += (desc ? '\n\n' : '') + (l === 'ja' ? '対象：' : 'For: ') + aud + (i.parents ? (l === 'ja' ? '（保護者参加可）' : ' (parents invited)') : '');
+    if (i.grades && pick(i.grades)) desc += (desc ? '\n' : '') + (l === 'ja' ? '参加対象：' : 'Participants: ') + pick(i.grades);
     (i.links || []).forEach(function (lk) { var u = base ? new URL(lk.url, base).href : lk.url; desc += '\n' + (lk.label ? pick(lk.label) + ': ' : '') + u; });
     if (base) desc += '\n' + base + '#/event/' + i.id;
   }
@@ -803,7 +812,7 @@ function buildFeeds(d) {
 }
 function buildOutputs(d, tpl) {
   var out = clone(d);
-  out.events.forEach(function (e) { ['title', 'desc', 'location'].forEach(function (k) { if (e[k] && !e[k].en && !e[k].ja) delete e[k]; }); if (!e.time) delete e.time; if (!e.status) delete e.status; if (!e.image) delete e.image; if (!e.updated) delete e.updated; if (!e.links || !e.links.length) delete e.links; });
+  out.events.forEach(function (e) { ['title', 'desc', 'location'].forEach(function (k) { if (e[k] && !e[k].en && !e[k].ja) delete e[k]; }); if (!e.time) delete e.time; if (!e.status) delete e.status; if (!e.image) delete e.image; if (!e.updated) delete e.updated; if (!e.links || !e.links.length) delete e.links; if (!e.grades || (!e.grades.en && !e.grades.ja)) delete e.grades; });
   out.events.sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
   var json = JSON.stringify(out).replace(/<\//g, '<\\/');
   var html = tpl.replace(DATA_RE, function (_, a, b, c) { return a + json + c; })
