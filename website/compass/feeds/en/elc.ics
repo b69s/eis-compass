@@ -214,22 +214,30 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-31-international-mindedness-festival@enishi.ac.jp
 DTSTAMP:20261028T000000Z
-DTSTART;TZID=Asia/Tokyo:20261031T100000
-DTEND;TZID=Asia/Tokyo:20261031T140000
+DTSTART;TZID=Asia/Tokyo:20261031T094500
+DTEND;TZID=Asia/Tokyo:20261031T135000
 SUMMARY:International Mindedness Festival
 DESCRIPTION:This year’s theme is “Festivals and Holidays Around the W
- orld”. A Saturday family event celebrating traditions\, cultures\, sto
- ries\, arts\, music and celebrations from around the world\, with studen
- t activities\, cultural displays\, performances\, arts and crafts\, and 
- interactive booths. Clean-up runs from 14:00 to 15:00\, and community me
- mbers are welcome to help. ELC and Primary students must attend with a p
- arent or guardian and may not be dropped off. School buses will not oper
- ate. More details will be shared soon.\n\nFor: Whole School (parents inv
- ited)\nEvent brochure (English): https://drive.google.com/file/d/1iK0N-L
- admFzOjYjQr4HX23_EzAvgl_oC/view?usp=sharing\nEvent brochure (Japanese): 
- https://drive.google.com/file/d/19MKvjdYx80BMoxM6uG35rMK8YX3sWpXI/view?u
- sp=sharing\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-10-31-inter
- national-mindedness-festival
+ orld” — a celebration of the many traditions\, celebrations and cult
+ ures in our school community. Gates open at 9:45 and the festival begins
+  at 10:00. From 10:00 to 13:00\, teachers and students run three booth s
+ essions with games\, crafts\, cultural activities and hands-on experienc
+ es from around the world. The Haunted House is open from 10:00 to 12:00\
+ , and there will be a costume parade: students may wear traditional or c
+ ultural clothing\, an outfit representing a festival or holiday\, or a H
+ alloween costume (dressing up is optional — regular clothes are very w
+ elcome). Food trucks and food prepared and sold by school parents will b
+ e available. From 13:00 to 13:50\, everyone moves to the gym for the fin
+ al event with games and dances. Please note that IMF is not a normal sch
+ ool day: ELC and Primary students must be accompanied and supervised by 
+ a parent or guardian throughout their visit and may not be dropped off a
+ nd collected later. School buses will not operate.\n\nFor: Whole School 
+ (parents invited)\nEvent brochure (English): https://drive.google.com/fi
+ le/d/1iK0N-LadmFzOjYjQr4HX23_EzAvgl_oC/view?usp=sharing\nEvent brochure 
+ (Japanese): https://drive.google.com/file/d/19MKvjdYx80BMoxM6uG35rMK8YX3
+ sWpXI/view?usp=sharing\nhttps://enishi.ac.jp/EISCompass.html#/event/2026
+ -10-31-international-mindedness-festival
+LOCATION:Enishi International School
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-31-international-
  mindedness-festival
 TRANSP:TRANSPARENT

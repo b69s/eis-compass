@@ -183,26 +183,34 @@ END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-31-international-mindedness-festival@enishi.ac.jp
 DTSTAMP:20261028T000000Z
-DTSTART;TZID=Asia/Tokyo:20261031T100000
-DTEND;TZID=Asia/Tokyo:20261031T140000
+DTSTART;TZID=Asia/Tokyo:20261031T094500
+DTEND;TZID=Asia/Tokyo:20261031T135000
 SUMMARY:インターナショナル・マインデッドネス・フェ
  スティバル
-DESCRIPTION:今年のテーマは「世界の祭りと祝日」です。
- 世界各地の伝統、文化、物語、芸術、音楽、お祝いを
- 紹介する、土曜日のご家族参加型イベントです。児童
- ・生徒の活動、文化展示、パフォーマンス、工作、体
- 験型ブースをお楽しみいただけます。午後2時～3時に
- 片付けを行います（学校コミュニティの皆さまのご協
- 力も歓迎します）。幼稚部・小学部の児童は必ず保護
- 者同伴でご参加ください（お子さまだけを送り届ける
- ことはできません）。当日はスクールバスの運行はあ
- りません。詳細は近日中にお知らせします。\n\n対象
- ：全校（保護者参加可）\nイベントパンフレット（英
- 語）: https://drive.google.com/file/d/1iK0N-LadmFzOjYjQr4HX23_EzAvgl_o
- C/view?usp=sharing\nイベントパンフレット（日本語）: https
- ://drive.google.com/file/d/19MKvjdYx80BMoxM6uG35rMK8YX3sWpXI/view?usp=sh
- aring\nhttps://enishi.ac.jp/EISCompass.html#/event/2026-10-31-internatio
- nal-mindedness-festival
+DESCRIPTION:今年のテーマは「世界の祝日とお祭り」です
+ 。学校コミュニティのさまざまな伝統、行事、文化を
+ みんなで楽しくお祝いする一日です。9:45開門、10:00に
+ フェスティバルが始まります。10:00～13:00には、教職
+ 員や生徒によるゲーム、クラフト、文化体験など、世
+ 界各地にちなんだ体験型ブースセッションを3回行い
+ ます。お化け屋敷は10:00～12:00。仮装パレードでは、
+ 伝統衣装や民族衣装、祝日やお祭りを表す衣装、ハロ
+ ウィンの仮装で参加できます（仮装は自由参加です。
+ 普段着での参加ももちろん歓迎します）。フードトラ
+ ックの出店や、保護者の皆様による食べ物の販売もあ
+ ります。13:00～13:50は体育館に移動し、ゲームやダン
+ スの最終イベントを行います。IMFは通常の登校日では
+ ありません。幼稚部・小学部の児童は、参加している
+ 間、必ず保護者または付き添いの大人と一緒に行動し
+ てください。お子様だけを学校に送り、後からお迎え
+ に来ることはできません。当日はスクールバスの運行
+ はありません。\n\n対象：全校（保護者参加可）\nイベ
+ ントパンフレット（英語）: https://drive.google.com/file/d/1i
+ K0N-LadmFzOjYjQr4HX23_EzAvgl_oC/view?usp=sharing\nイベントパンフ
+ レット（日本語）: https://drive.google.com/file/d/19MKvjdYx80BMo
+ xM6uG35rMK8YX3sWpXI/view?usp=sharing\nhttps://enishi.ac.jp/EISCompass.ht
+ ml#/event/2026-10-31-international-mindedness-festival
+LOCATION:エニシインターナショナルスクール
 URL:https://enishi.ac.jp/EISCompass.html#/event/2026-10-31-international-
  mindedness-festival
 TRANSP:TRANSPARENT
